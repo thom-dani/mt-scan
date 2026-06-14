@@ -1,13 +1,17 @@
 #pragma once
 #include <map>
 #include <vector>
-
+#include "resample.hpp"
 class MergeTreeScan
 {
 public:
     MergeTreeScan() = default;
 
-    void setParameters(const int target_res, const int alpha, const float n_points);
+    void setParameters(const int target_res, const int alpha, const float n_points, KernelType kernelType);
+    inline void setPrintLogs(const bool printLogs)
+    {
+        printLogs_ = printLogs;
+    }
     void execute(const float *ptr, int *labels);
 
 private:
@@ -59,4 +63,6 @@ private:
     int resY_;
     int alpha_;
     int nPoints_;
+    KernelType kernel_{KernelType::Gaussian};
+    bool printLogs_{false};
 };

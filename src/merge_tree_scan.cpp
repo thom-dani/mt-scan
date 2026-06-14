@@ -26,11 +26,12 @@
 
 #include <fstream>
 
-void MergeTreeScan::setParameters(const int target_res, const int n_points, const float alpha)
+void MergeTreeScan::setParameters(const int target_res, const int nPoints, const float alpha, const KernelType kernelType)
 {
     this->targetRes_ = target_res;
     this->alpha_ = alpha;
-    this->nPoints_ = n_points;
+    this->nPoints_ = nPoints;
+    this->kernel_ = kernelType;
 }
 
 void MergeTreeScan::normalizePoints(const float *points_ptr, const int targetRes, std::vector<float> &pointsNormalized)
@@ -72,66 +73,67 @@ void MergeTreeScan::normalizePoints(const float *points_ptr, const int targetRes
     }
 }
 
-void MergeTreeScan::execute(const float *points_ptr,
-                            int *labels_ptr)
+void MergeTreeScan::execute(const float *points_ptr, int *labels_ptr)
 {
+    using Clock = std::chrono::high_resolution_clock;
+    using Ms = std::chrono::duration<double>;
+
+    auto tock = [&](const char *step, Clock::time_point t0)
+    {
+        if (printLogs_)
+            std::cout << "TIMER " << step << " " << std::fixed << std::setprecision(4) << Ms(Clock::now() - t0).count() << "\n";
+        return Clock::now();
+    };
+
+    auto t0_total = Clock::now();
+    auto t = Clock::now();
 
     std::vector<float> pointsNormalized{};
     normalizePoints(points_ptr, this->targetRes_, pointsNormalized);
 
     std::vector<double> density;
-
 #ifdef USE_CUDA
     resample_gpu(pointsNormalized, this->resX_ + 1, this->resY_ + 1, this->alpha_, density);
 #else
-    resample_cpu(pointsNormalized, this->resX_ + 1, this->resY_ + 1, this->alpha_, density);
+    resample_cpu(pointsNormalized, this->resX_ + 1, this->resY_ + 1, this->alpha_, this->kernel_, density);
 #endif
+    t = tock("resample", t);
 
     std::vector<int> nodeVertexId{};
     std::vector<int> nodeCriticalType{};
     std::vector<std::pair<int, int>> edges{};
     std::vector<int> segmentationIds{};
-
     buildMergeTree(density, nodeVertexId, nodeCriticalType, edges, segmentationIds);
+    t = tock("buildMergeTree", t);
 
     std::vector<std::vector<int>> adjacencyList{};
     std::vector<int> bottomUpNodes{};
     int rootId{};
-    buildClusterTree(edges,
-                     nodeCriticalType,
-                     adjacencyList,
-                     bottomUpNodes,
-                     rootId);
+    buildClusterTree(edges, nodeCriticalType, adjacencyList, bottomUpNodes, rootId);
+    t = tock("buildClusterTree", t);
 
     std::vector<float> nodeEnergy;
-
     computeNodeEnergies(adjacencyList, bottomUpNodes, segmentationIds, density, nodeVertexId, nodeEnergy);
+    t = tock("computeNodeEnergies", t);
 
     std::vector<bool> isCluster;
     std::vector<float> clusterWeight;
-
     selectClusters(adjacencyList, nodeEnergy, bottomUpNodes, rootId, isCluster, clusterWeight);
+    t = tock("selectClusters", t);
 
     int minClusterSize{};
     std::vector<int> labels{};
-
-    computeLabels(adjacencyList,
-                  rootId,
-                  density,
-                  nodeVertexId,
-                  segmentationIds,
-                  pointsNormalized,
-                  clusterWeight,
-                  isCluster,
-                  this->resX_,
-                  minClusterSize,
-                  labels);
+    computeLabels(adjacencyList, rootId, density, nodeVertexId, segmentationIds,
+                  pointsNormalized, clusterWeight, isCluster, this->resX_,
+                  minClusterSize, labels);
+    t = tock("computeLabels", t);
 
     for (int i = 0; i < nPoints_; i++)
-    {
-
         labels_ptr[i] = labels[i];
-    }
+    tock("copyLabels", t);
+
+    if (printLogs_)
+        std::cout << "TIMER TOTAL " << " " << std::fixed << std::setprecision(4) << Ms(Clock::now() - t0_total).count() << "\n";
 }
 
 void MergeTreeScan::buildMergeTree(
@@ -153,10 +155,10 @@ void MergeTreeScan::buildMergeTree(
     image->SetSpacing(1.0, 1.0, 1.0);
     image->SetOrigin(0.0, 0.0, 0.0);
 
-    vtkNew<vtkXMLImageDataWriter> writer;
-    writer->SetFileName("../tmp/output.vti");
-    writer->SetInputData(image);
-    writer->Write();
+    // vtkNew<vtkXMLImageDataWriter> writer;
+    // writer->SetFileName("../tmp/output.vti");
+    // writer->SetInputData(image);
+    // writer->Write();
 
     vtkNew<vtkDoubleArray> scalars;
     scalars->SetName("density");
@@ -397,7 +399,6 @@ void MergeTreeScan::selectClusters(const std::vector<std::vector<int>> &adjacenc
         }
     }
 }
-
 void MergeTreeScan::computeLabels(
     const std::vector<std::vector<int>> &adjacencyList,
     const int &rootId,
@@ -410,9 +411,7 @@ void MergeTreeScan::computeLabels(
     const int &resX,
     const int &minClusterSize,
     std::vector<int> &labels)
-
 {
-
     int nNodes = adjacencyList.size();
     std::vector<int> nodeFlatMapId(nNodes, -1);
 
@@ -420,51 +419,42 @@ void MergeTreeScan::computeLabels(
     {
         std::vector<int> stack;
         stack.push_back(clusterId);
-
         while (!stack.empty())
         {
             int nodeId = stack.back();
             stack.pop_back();
-
             nodeFlatMapId[nodeId] = clusterId;
-
             for (int childId : adjacencyList[nodeId])
-            {
                 stack.push_back(childId);
-            }
         }
     };
 
+#pragma omp parallel for schedule(dynamic)
     for (int i = 0; i < nNodes; i++)
     {
         if (isCluster[i] && clusterWeight[i] > minClusterSize)
         {
             int flatMapId = segmentationIds[nodeVertexId[i]];
             if (flatMapId != i)
-            {
-                std::cout << "problem : " << flatMapId << ", " << i << std::endl;
-            }
-
+                std::cout << "problem : " << flatMapId << ", " << i << "\n";
             assignSubTreeFlatmapId(i);
         }
     }
 
     std::vector<int> segmentationId_cells{};
     vertexToCellValues(segmentationIds, density, this->resX_ + 1, this->resY_ + 1, segmentationId_cells);
+
     labels.resize(nPoints_, -1);
 
+#pragma omp parallel for schedule(static)
     for (int i = 0; i < nPoints_; i++)
     {
         float x = pointsNormalized[2 * i];
         float y = pointsNormalized[2 * i + 1];
-
         int cellX = static_cast<int>(x);
         int cellY = static_cast<int>(y);
-
         int idx = cellX + cellY * resX;
-
         int parentId = nodeFlatMapId[segmentationId_cells[idx]];
-
         labels[i] = parentId;
     }
 }

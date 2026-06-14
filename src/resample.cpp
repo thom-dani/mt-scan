@@ -6,6 +6,7 @@ void resample_cpu(
     const int nPointsX,
     const int nPointsY,
     const float alpha,
+    const KernelType kernelType,
     std::vector<double> &density)
 {
 
@@ -50,7 +51,7 @@ void resample_cpu(
 
                     if (dist2 <= radius_abs_2)
                     {
-                        double w = exp(-alpha * alpha * dist2);
+                        double w = kernel(dist2, alpha, kernelType);
                         local_grids[tid][i + j * nPointsX] += w;
                     }
                 }
@@ -65,4 +66,16 @@ void resample_cpu(
             density[idx] += local_grids[t][idx];
         }
     }
+}
+
+double kernel(const float x, const float parameter, const KernelType kernel)
+{
+    if (kernel == KernelType::Gaussian)
+        return exp(-parameter * parameter * x);
+
+    if (kernel == KernelType::Linear)
+        return x < parameter ? 1 - x / parameter : 0;
+    if (kernel == KernelType::Cylinder)
+        return 1;
+    return 1;
 }
