@@ -18,7 +18,7 @@ args = parser.parse_args()
 # ─────────────────────────────────────────────
 
 EXPERIMENT_ID   = "exp_001"
-DATASET_FOLDER  = "/workspace/data/dataset-synthetic-1"
+DATASET_FOLDER  = "/workspace/data/dataset-sample"
 RESULTS_FOLDER  = os.path.join(DATASET_FOLDER, "results")
 PLOTS_FOLDER    = os.path.join(RESULTS_FOLDER, EXPERIMENT_ID, "plots")
 
@@ -37,7 +37,7 @@ if os.path.exists(experiment_folder):
 os.makedirs(PLOTS_FOLDER)
 
 
-KERNEL          = "gaussian"       
+KERNEL          = "cylinder"       
 RESOLUTION      = 512
 DEVICE          = "cpu"
 
@@ -172,10 +172,9 @@ for csv_file in csv_files:
         save_plot(dataset_name, best_minpts_ari, best_alpha_ari, "ari")
 
         plots = {
-            "ari":        f"plots/{dataset_name}_ari.png",
-            "nmi":        f"plots/{dataset_name}_nmi.png",
-            "ami":        f"plots/{dataset_name}_ami.png",
-            "clustering": f"plots/{dataset_name}_clustering.png"
+            "ari":        f"plots/{dataset_name}_best_ari.png",
+            "nmi":        f"plots/{dataset_name}_best_nmi.png",
+            "ami":        f"plots/{dataset_name}_best_ami.png",
         }
 
         experiment["results"].append({
