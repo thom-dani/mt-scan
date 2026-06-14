@@ -1,3 +1,4 @@
-Build the Docker image: `docker build -t mt-scan -f docker/Dockerfile .`
-Enter container: `docker -it --rm -v mt-scan:/workspace mt-scan`
+Build the Docker image mt-scan-base  : `docker build -t mt-scan-base -f docker/Dockerfile.base .`
+Build the Docker image mt-scan  : `docker build -t mt-scan -f docker/Dockerfile .`
+Enter container: `docker run -it --rm -v ~/mt-scan:/workspace mt-scan`
 Build the project: `cmake -S . -B build -GNinja && cmake --build build`

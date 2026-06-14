@@ -1,35 +1,6 @@
-FROM kitware/paraview-for-ci:v5.13.3
-
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Install additional build tools
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    ninja-build \
-    git \
-    python3-pip \
-    python3-dev \
-    pkg-config \
-    && rm -rf /var/lib/apt/lists/*
-
-# Python dependencies
+FROM mt-scan-base:latest
 COPY requirements.txt /tmp/requirements.txt
 RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
-
-# Build TTK from source against the ParaView/VTK already in the image
-ARG TTK_COMMIT=23d59bf147656d031705c99d3249e001b5bfb9c9
-RUN git clone https://github.com/topology-tool-kit/ttk.git /opt/ttk-src && \
-    git -C /opt/ttk-src checkout ${TTK_COMMIT} && \
-    cmake -S /opt/ttk-src -B /opt/ttk-build \
-      -GNinja \
-      -DCMAKE_BUILD_TYPE=Release \
-      -DTTK_BUILD_PARAVIEW_PLUGINS=OFF \
-      -DTTK_BUILD_VTK_WRAPPERS=ON \
-      -DTTK_BUILD_STANDALONE_APPS=OFF \
-      -DTTK_ENABLE_OPENMP=ON \
-      -DVTK_DIR=/opt/paraview/install/lib/cmake/paraview-5.13/vtk && \
-    cmake --build /opt/ttk-build --parallel $(nproc) && \
-    cmake --install /opt/ttk-build && \
-    rm -rf /opt/ttk-src /opt/ttk-build
+ENV PYTHONPATH=/workspace/build
 
 WORKDIR /workspace
