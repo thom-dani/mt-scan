@@ -12,7 +12,7 @@ import sys
 
 
 #dataset = args.dataset
-pkl_file = f"/home/thomas/gri/data/benchmark_time/blobs_grid_1000.pkl"
+pkl_file = f"/worksapce/data/blobs_grid_1000.pkl"
 
 with open(pkl_file, "rb") as f:
     points = pickle.load(f)
