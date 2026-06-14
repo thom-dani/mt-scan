@@ -1,3 +1,5 @@
 pybind11
 numpy>=1.20
 matplotlib
+hdbscan==0.8.33
+scikit-learn==1.3.2
