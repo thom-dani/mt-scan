@@ -6,8 +6,8 @@
 namespace py = pybind11;
 py::array MergeTreeScanInterface(
     py::array arr,
-    int target_res,
-    float alpha)
+    float alpha,
+    int target_res)
 {
 
     auto buf = arr.request();

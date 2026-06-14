@@ -2,6 +2,7 @@
 #include <cmath>
 #include <vector>
 #include <queue>
+#include <map>
 
 #include <iostream>
 void findAxisBound(const float *points_ptr, const float n_points, float &x_max, float &x_min, float &y_max, float &y_min)
@@ -78,6 +79,7 @@ void inverseBFS_Order(const std::vector<std::vector<int>> &adjacencyList,
 
 void vertexToCellValues(
     const std::vector<int> &vertexValues,
+    const std::vector<double> &density,
     int nPointX,
     int nPointY,
     std::vector<int> &cellValues)
@@ -96,15 +98,15 @@ void vertexToCellValues(
             int v2 = x + (y + 1) * nPointX;
             int v3 = (x + 1) + (y + 1) * nPointX;
 
-            int sum =
-                vertexValues[v0] +
-                vertexValues[v1] +
-                vertexValues[v2] +
-                vertexValues[v3];
+            std::vector<int> cornerIds = {v0, v1, v2, v3};
+
+            int maxVertexId = *std::max_element(cornerIds.begin(), cornerIds.end(),
+                                                [&](const auto &a, const auto &b)
+                                                { return density[a] < density[b]; });
 
             int cellIndex = x + y * nCellX;
 
-            cellValues[cellIndex] = sum / 4; // average (integer)
+            cellValues[cellIndex] = vertexValues[maxVertexId];
         }
     }
 }

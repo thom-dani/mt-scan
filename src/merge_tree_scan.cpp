@@ -17,6 +17,7 @@
 #include <vtkDoubleArray.h>
 #include <vtkPointData.h>
 #include <vtkAlgorithmOutput.h>
+#include <vtkXMLImageDataWriter.h>
 
 #include <ttkMergeTree.h>
 
@@ -114,7 +115,12 @@ void MergeTreeScan::execute(const float *points_ptr,
     int minClusterSize{};
     std::vector<int> labels{};
 
-    computeLabels(adjacencyList, rootId, nodeVertexId, segmentationIds, pointsNormalized,
+    computeLabels(adjacencyList,
+                  rootId,
+                  density,
+                  nodeVertexId,
+                  segmentationIds,
+                  pointsNormalized,
                   clusterWeight,
                   isCluster,
                   this->resX_,
@@ -146,6 +152,11 @@ void MergeTreeScan::buildMergeTree(
                      0, 0);
     image->SetSpacing(1.0, 1.0, 1.0);
     image->SetOrigin(0.0, 0.0, 0.0);
+
+    vtkNew<vtkXMLImageDataWriter> writer;
+    writer->SetFileName("../tmp/output.vti");
+    writer->SetInputData(image);
+    writer->Write();
 
     vtkNew<vtkDoubleArray> scalars;
     scalars->SetName("density");
@@ -390,6 +401,7 @@ void MergeTreeScan::selectClusters(const std::vector<std::vector<int>> &adjacenc
 void MergeTreeScan::computeLabels(
     const std::vector<std::vector<int>> &adjacencyList,
     const int &rootId,
+    const std::vector<double> &density,
     const std::vector<int> &nodeVertexId,
     const std::vector<int> &segmentationIds,
     const std::vector<float> &pointsNormalized,
@@ -406,7 +418,6 @@ void MergeTreeScan::computeLabels(
 
     auto assignSubTreeFlatmapId = [&](int clusterId)
     {
-        std::vector<bool> visited(nNodes, false);
         std::vector<int> stack;
         stack.push_back(clusterId);
 
@@ -439,7 +450,7 @@ void MergeTreeScan::computeLabels(
     }
 
     std::vector<int> segmentationId_cells{};
-    vertexToCellValues(segmentationIds, this->resX_ + 1, this->resY_ + 1, segmentationId_cells);
+    vertexToCellValues(segmentationIds, density, this->resX_ + 1, this->resY_ + 1, segmentationId_cells);
     labels.resize(nPoints_, -1);
 
     for (int i = 0; i < nPoints_; i++)

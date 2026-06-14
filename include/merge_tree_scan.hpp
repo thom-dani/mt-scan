@@ -44,6 +44,7 @@ private:
     void computeLabels(
         const std::vector<std::vector<int>> &adjacencyList,
         const int &rootId,
+        const std::vector<double> &density,
         const std::vector<int> &nodeVertexId,
         const std::vector<int> &segmentationIds,
         const std::vector<float> &pointsNormalized,

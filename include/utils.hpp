@@ -16,6 +16,7 @@ void inverseBFS_Order(const std::vector<std::vector<int>> &adjacencyList,
 
 void vertexToCellValues(
     const std::vector<int> &vertexValues,
+    const std::vector<double> &density,
     int nPointX,
     int nPointY,
     std::vector<int> &cellValues);
