@@ -1,0 +1,26 @@
+{
+    "name": "MyProject",
+    "build": {
+        "dockerfile": "../docker/Dockerfile",
+        "context": ".."
+    },
+    "workspaceFolder": "/workspace",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "ms-python.python",
+                "ms-vscode.cpptools-extension-pack"
+            ],
+            "settings": {
+                "cmake.buildDirectory": "${workspaceFolder}/build",
+                "cmake.generator": "Ninja"
+            }
+        }
+    },
+    "postCreateCommand": "cmake -S . -B build -GNinja -DCMAKE_BUILD_TYPE=Debug"
+}
