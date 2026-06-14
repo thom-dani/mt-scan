@@ -91,34 +91,45 @@ def compute_scores(labels_gt, labels_pred):
 def find_best(sweep, metric):
     best = max(sweep, key=lambda x: x[metric])
     return best[metric], best["param"]
-def save_plot(dataset_name, min_pts, alpha, indicator):
-    data      = np.loadtxt(os.path.join(DATASET_FOLDER, dataset_name + ".csv"), delimiter=",", skiprows=1)
-    points    = data[:, :2].astype(np.float32)
-    labels_gt = data[:, 2].astype(int)
 
-    labels_mtscan  = mt_scan.compute_labels(points, RESOLUTION, alpha)
+def save_plot(dataset_name, min_pts, alpha, indicator):
+    data           = np.loadtxt(os.path.join(DATASET_FOLDER, dataset_name + ".csv"), delimiter=",", skiprows=1)
+    points         = data[:, :2].astype(np.float32)
+    labels_gt      = data[:, 2].astype(int)
+    labels_mtscan  = mt_scan.compute_labels(points, alpha, RESOLUTION)
     clusterer      = hdbscan.HDBSCAN(min_cluster_size=min_pts)
     labels_hdbscan = clusterer.fit_predict(points)
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
-    def scatter(ax, labels, title):
-        noise = labels == -1
-        if noise.any():
-            ax.scatter(points[noise, 0], points[noise, 1], c='gray', s=15, alpha=0.5)
-        ax.scatter(points[~noise, 0], points[~noise, 1], c=labels[~noise], cmap='tab10', s=15)
-        ax.set_title(title)
-        ax.grid(True, linestyle='--', alpha=0.5)
+    # --- ground truth ---
+    for l in [l for l in np.unique(labels_gt) if l != -1]:
+        axes[0].scatter(points[labels_gt == l, 0], points[labels_gt == l, 1], s=15)
+    if (labels_gt == -1).any():
+        axes[0].scatter(points[labels_gt == -1, 0], points[labels_gt == -1, 1], c='gray', s=15, alpha=0.5)
+    axes[0].set_title("ground_truth")
+    axes[0].grid(True, linestyle='--', alpha=0.5)
 
-    scatter(axes[0], labels_gt,     "ground_truth")
-    scatter(axes[1], labels_mtscan, "mt_scan")
-    scatter(axes[2], labels_hdbscan,"hdbscan")
+    # --- mt_scan ---
+    for l in [l for l in np.unique(labels_mtscan) if l != -1]:
+        axes[1].scatter(points[labels_mtscan == l, 0], points[labels_mtscan == l, 1], s=15)
+    if (labels_mtscan == -1).any():
+        axes[1].scatter(points[labels_mtscan == -1, 0], points[labels_mtscan == -1, 1], c='gray', s=15, alpha=0.5)
+    axes[1].set_title(f"mt_scan {alpha}")
+    axes[1].grid(True, linestyle='--', alpha=0.5)
+
+    # --- hdbscan ---
+    for l in [l for l in np.unique(labels_hdbscan) if l != -1]:
+        axes[2].scatter(points[labels_hdbscan == l, 0], points[labels_hdbscan == l, 1], s=15)
+    if (labels_hdbscan == -1).any():
+        axes[2].scatter(points[labels_hdbscan == -1, 0], points[labels_hdbscan == -1, 1], c='gray', s=15, alpha=0.5)
+    axes[2].set_title(f"hdbscan {min_pts}")
+    axes[2].grid(True, linestyle='--', alpha=0.5)
 
     plt.tight_layout()
     path = os.path.join(PLOTS_FOLDER, f"{dataset_name}_best_{indicator}.png")
     plt.savefig(path, dpi=150, bbox_inches='tight')
     plt.close()
-
 # ─────────────────────────────────────────────
 # MAIN LOOP
 # ─────────────────────────────────────────────
