@@ -30,6 +30,11 @@ public:
         nPoints_ = n;
     }
 
+    inline void setDebugMode(const bool mode)
+    {
+        debugMode_ = mode;
+    }
+
     inline void printClassParameters()
     {
         std::cout << "targetRes_: " << targetRes_ << "\n"
@@ -100,6 +105,10 @@ private:
         const int &minClusterSize,
         std::vector<int> &labels);
 
+    void saveFlatMapZones(
+        const std::vector<int> &nodeFlatMapId,
+        const std::vector<int> &segmentationId_cells);
+
     int targetRes_{};
     int resX_{};
     int resY_{};
@@ -108,4 +117,5 @@ private:
     KernelType kernel_{KernelType::Gaussian};
     bool printLogs_{false};
     bool distributionMode_{false};
+    bool debugMode_{false};
 };
