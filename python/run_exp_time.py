@@ -20,7 +20,7 @@ args = parser.parse_args()
 # EXPERIMENT PARAMETERS — fill these in
 # ─────────────────────────────────────────────
 
-EXPERIMENT_ID   = "exp_002"
+EXPERIMENT_ID   = "exp_003"
 DATASET_FOLDER  = "/workspace/data/time"
 EXPERIMENT_FOLDER = os.path.join(DATASET_FOLDER,"results", EXPERIMENT_ID)
 PLOTS_FOLDER    = os.path.join(EXPERIMENT_FOLDER, "plots")
@@ -38,7 +38,7 @@ os.makedirs(PLOTS_FOLDER)
 KERNEL          = "gaussian"       
 RESOLUTION      = 512
 DEVICE          = "cpu"
-ALPHA_RANGE     = list(range(25, 500, 25))
+ALPHA_RANGE     = list(range(10, 201, 10))
 MINPTS_RANGE    = [5, 10, 15]
 LOG_PATH = "./run.log"
 JSON_PATH = os.path.join(EXPERIMENT_FOLDER, "experiment.json")

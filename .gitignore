@@ -1,2 +1,5 @@
 build/
 tmp/
+*.aux
+*.log
+*.tex

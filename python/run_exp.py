@@ -17,7 +17,7 @@ args = parser.parse_args()
 # EXPERIMENT PARAMETERS — fill these in
 # ─────────────────────────────────────────────
 
-EXPERIMENT_ID   = "exp_001"
+EXPERIMENT_ID   = "exp_002"
 DATASET_FOLDER  = "/workspace/data/synthetic-1"
 RESULTS_FOLDER  = os.path.join(DATASET_FOLDER, "results")
 PLOTS_FOLDER    = os.path.join(RESULTS_FOLDER, EXPERIMENT_ID, "plots")
@@ -41,7 +41,7 @@ KERNEL          = "cylinder"
 RESOLUTION      = 512
 DEVICE          = "cpu"
 
-ALPHA_RANGE     = list(range(25, 500, 25))
+ALPHA_RANGE     = list(range(10, 201, 10))
 MINPTS_RANGE    = [5, 10, 15, 20, 25, 30, 40, 50]
 
 csv_files = [f for f in os.listdir(DATASET_FOLDER) if f.endswith(".csv")]
