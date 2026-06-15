@@ -16,7 +16,7 @@ EXPERIMENT_FOLDER=args.expfolder
 JSON_PATH = os.path.join(EXPERIMENT_FOLDER, "experiment.json")
 PLOTS_FOLDER = os.path.join(EXPERIMENT_FOLDER, "plots")
 
-def build_time_matrix(json_path: str) -> dict:
+def build_time_matrix_alpha(json_path: str) -> dict:
     with open(json_path) as f:
         experiment = json.load(f)
 
@@ -37,12 +37,10 @@ def build_time_matrix(json_path: str) -> dict:
     matrix = np.full((len(n_points_vals), len(alpha_vals)), np.nan)
 
     for entry in experiment["results"]["mtscan"]:
-        timers = entry.get("timers")
-        if timers is None:
-            continue
+        time_s=entry.get("time_s")
         i = n_pts_idx[entry["n_points"]]
         j = alpha_idx[entry["parameters"]["alpha"]]
-        matrix[i, j] = timers.get("TOTAL", np.nan)
+        matrix[i, j] = time_s
 
     return {
         "matrix":   matrix,
@@ -50,13 +48,48 @@ def build_time_matrix(json_path: str) -> dict:
         "alphas":   alpha_vals,
     }
 
+def build_time_matrix_minpts(json_path: str) -> dict:
+    with open(json_path) as f:
+        experiment = json.load(f)
 
+    # collect all unique axis values
+    n_points_set = set()
+    minpts_set    = set()
 
-def plot_time_vs_npoints(
+    for entry in experiment["results"]["hdbscan"]:
+        n_points_set.add(entry["n_points"])
+        minpts_set.add(entry["parameters"]["minpts"])
+
+    n_points_vals = sorted(n_points_set)
+    minpts_vals    = sorted(minpts_set)
+
+    n_pts_idx = {v: i for i, v in enumerate(n_points_vals)}
+    minpts_idx = {v: i for i, v in enumerate(minpts_vals)}
+
+    matrix = np.full((len(n_points_vals), len(minpts_vals)), np.nan)
+
+    for entry in experiment["results"]["hdbscan"]:
+        time_s=entry.get("time_s")
+        i = n_pts_idx[entry["n_points"]]
+        j = minpts_idx[entry["parameters"]["minpts"]]
+        matrix[i, j] = time_s
+
+    return {
+        "matrix":   matrix,
+        "n_points": n_points_vals,
+        "minpts":   minpts_vals,
+    }
+
+def save_plot(fig, path):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    fig.savefig(path, bbox_inches="tight", dpi=150)
+    plt.close(fig)
+
+def plot_time_vs_npoints_alpha(
     time_data,
     alpha_range,
     title,
-    save_path
+    ax
 ):
     matrix    = time_data["matrix"]
     n_points  = time_data["n_points"]
@@ -67,8 +100,6 @@ def plot_time_vs_npoints(
     alphas_to_plot = [a for a in alphas_to_plot if a in alphas]
 
     colors = cm.plasma(np.linspace(0.1, 0.9, len(alphas_to_plot)))
-
-    fig, ax = plt.subplots(figsize=(9, 5))
 
     for color, alpha in zip(colors, alphas_to_plot):
         j    = alphas.index(alpha)
@@ -91,12 +122,6 @@ def plot_time_vs_npoints(
     ax.grid(True, linestyle="--", alpha=0.4)
     ax.set_xscale("log")
 
-    plt.tight_layout()
-    if save_path:
-        plt.savefig(save_path, dpi=150, bbox_inches="tight")
-        print(f"Saved → {save_path}")
-    plt.show()
-
     return ax
 
 
@@ -105,7 +130,7 @@ def plot_time_vs_alpha(
     time_data,
     npoints_range,
     title,
-    save_path
+    ax
 ):
     matrix   = time_data["matrix"]
     n_points = time_data["n_points"]
@@ -115,8 +140,6 @@ def plot_time_vs_alpha(
     npts_to_plot = [n for n in npts_to_plot if n in n_points]
 
     colors = cm.viridis(np.linspace(0.1, 0.9, len(npts_to_plot)))
-
-    fig, ax = plt.subplots(figsize=(9, 5))
 
     for color, npts in zip(colors, npts_to_plot):
         i    = n_points.index(npts)
@@ -139,40 +162,133 @@ def plot_time_vs_alpha(
     ax.grid(True, linestyle="--", alpha=0.4)
 
     plt.tight_layout()
-    if save_path:
-        plt.savefig(save_path, dpi=150, bbox_inches="tight")
-        print(f"Saved → {save_path}")
-    plt.show()
+
+    return ax
+
+def plot_time_vs_npoints_minpts(
+    time_data,
+    minpts_range,
+    title,
+    ax
+):
+    matrix    = time_data["matrix"]
+    n_points  = time_data["n_points"]
+    minptss    = time_data["minpts"]
+
+    minpts_to_plot = minpts_range if minpts_range is not None else minpts
+    minpts_to_plot = [a for a in minpts_to_plot if a in minptss]
+
+    colors = cm.plasma(np.linspace(0.1, 0.9, len(minpts_to_plot)))
+
+    for color, minpts in zip(colors, minpts_to_plot):
+        j    = minptss.index(minpts)
+        col  = matrix[:, j]
+        mask = ~np.isnan(col)
+        ax.plot(
+            np.array(n_points)[mask],
+            col[mask],
+            marker="s",
+            linewidth=1.8,
+            markersize=4,
+            color=color,
+            linestyle="--",
+            label=f"minpts={minpts}",
+        )
+
+    ax.set_xlabel("n_points")
+    ax.set_ylabel("TOTAL time (s)")
+    ax.set_title(title)
+    ax.legend(title="minpts", bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=8)
+    ax.grid(True, linestyle="--", alpha=0.4)
+    ax.set_xscale("log")
+
+    return ax
+
+
+
+def plot_time_vs_minpts(
+    time_data,
+    npoints_range,
+    title,
+    ax
+):
+    matrix   = time_data["matrix"]
+    n_points = time_data["n_points"]
+    minpts   = time_data["minpts"]
+
+    npts_to_plot = npoints_range if npoints_range is not None else n_points
+    npts_to_plot = [n for n in npts_to_plot if n in n_points]
+
+    colors = cm.viridis(np.linspace(0.1, 0.9, len(npts_to_plot)))
+
+    for color, npts in zip(colors, npts_to_plot):
+        i    = n_points.index(npts)
+        row  = matrix[i, :]
+        mask = ~np.isnan(row)
+        ax.plot(
+            np.array(minpts)[mask],
+            row[mask],
+            marker="o",
+            linewidth=1.8,
+            markersize=4,
+            color=color,
+            label=f"n={npts:,}",
+        )
+
+    ax.set_xlabel("minpts")
+    ax.set_ylabel("TOTAL time (s)")
+    ax.set_title(title)
+    ax.legend(title="n_points", bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=8)
+    ax.grid(True, linestyle="--", alpha=0.4)
+
+    plt.tight_layout()
 
     return ax
 
 
 if __name__ == "__main__":
 
-    time_data = build_time_matrix(JSON_PATH)
+    time_data_mtscan = build_time_matrix_alpha(JSON_PATH)
+    time_data_hdbscan = build_time_matrix_minpts(JSON_PATH)
 
     #save_path=os.path.join(PLOTS_FOLDER, "time_vs_n_points.png")
-    save_path=f"{PLOTS_FOLDER}/time_vs_n_points.png"
+    save_path_1=f"{PLOTS_FOLDER}/time_vs_n_points.png"
+
+    fig1, ax1 = plt.subplots()
 
     alpha_range=[25, 50, 75, 100]
+    min_pts_range=[10, 15, 20, 50]
     title="Runtime vs number of points"
 
-    plot_time_vs_npoints(
-            time_data,
+    plot_time_vs_npoints_alpha(
+            time_data_mtscan,
             alpha_range,
             title,
-            save_path,
+            ax1
         )
+
+    plot_time_vs_npoints_minpts(
+            time_data_hdbscan,
+            min_pts_range,
+            title,
+            ax1
+        )
+
+    save_plot(fig1, save_path_1)
+
+    fig2, ax2 = plt.subplots()
 
     npoints_range= [100_000, 200_000, 500_000, 1_000_000]
     title="Runtime vs alpha"
     #save_path=os.path.join(PLOTS_FOLDER, "time_vs_alpha.png"),
-    save_path=f"{PLOTS_FOLDER}/time_vs_alpha.png"
+    save_path_2=f"{PLOTS_FOLDER}/time_vs_alpha.png"
 
     plot_time_vs_alpha(
-            time_data,
+            time_data_mtscan,
             npoints_range,
             title,
-            save_path
+            ax2
         )
+
+    save_plot(fig2, save_path_2)
 

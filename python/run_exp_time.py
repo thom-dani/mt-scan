@@ -20,8 +20,8 @@ args = parser.parse_args()
 # EXPERIMENT PARAMETERS — fill these in
 # ─────────────────────────────────────────────
 
-EXPERIMENT_ID   = "exp_001"
-DATASET_FOLDER  = "/workspace/data/time"
+EXPERIMENT_ID   = "exp_002"
+DATASET_FOLDER  = "/workspace/data/sample"
 EXPERIMENT_FOLDER = os.path.join(DATASET_FOLDER,"results", EXPERIMENT_ID)
 PLOTS_FOLDER    = os.path.join(EXPERIMENT_FOLDER, "plots")
 
@@ -39,7 +39,7 @@ KERNEL          = "gaussian"
 RESOLUTION      = 512
 DEVICE          = "cpu"
 ALPHA_RANGE     = list(range(25, 500, 25))
-MINPTS_RANGE    = [5, 10, 15, 20, 25, 30, 40, 50]
+MINPTS_RANGE    = [5, 10, 15]
 LOG_PATH = "./run.log"
 JSON_PATH = os.path.join(EXPERIMENT_FOLDER, "experiment.json")
 
@@ -144,7 +144,13 @@ run_id=0
 for csv_file in csv_files:
     dataset_name = csv_file.replace(".csv", "")
     print(f"\n── {dataset_name} ──")
+
+    
     try:
+
+        mt_scan.compute_labels(points, ALPHA_RANGE[0], RESOLUTION, KERNEL, False)
+        hdbscan.HDBSCAN(min_cluster_size=MINPTS_RANGE[0]).fit_predict(points)
+        
         data      = np.loadtxt(os.path.join(DATASET_FOLDER, csv_file), delimiter=",", skiprows=1)
         points    = data[:, :2].astype(np.float32)
 
@@ -165,18 +171,18 @@ for csv_file in csv_files:
             })
             run_id+=1
 
-        #for minpts in MINPTS_RANGE:
-        #    t_start = time.perf_counter()
-        #    clusterer   = hdbscan.HDBSCAN(min_cluster_size=minpts)
-        #    labels_pred = clusterer.fit_predict(points)
-        #    elapsed = time.perf_counter() - t_start
-#
-        #    experiment["results"]["hdbscan"].append({
-        #        "dataset":    dataset_name,
-        #        "n_points":   len(points),
-        #        "parameters": {"min_cluster_size": minpts},
-        #        "time_s":     elapsed
-        #    })
+        for minpts in MINPTS_RANGE:
+            t_start = time.perf_counter()
+            clusterer   = hdbscan.HDBSCAN(min_cluster_size=minpts)
+            labels_pred = clusterer.fit_predict(points)
+            elapsed = time.perf_counter() - t_start
+
+            experiment["results"]["hdbscan"].append({
+                "dataset":    dataset_name,
+                "n_points":   len(points),
+                "parameters": {"minpts": minpts},
+                "time_s":     elapsed
+            })
 
     except Exception as e:
         print(f"  ERROR on {dataset_name}: {e} — skipping")
