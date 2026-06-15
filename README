@@ -2,3 +2,4 @@ Build the Docker image mt-scan-base  : `docker build -t mt-scan-base -f docker/D
 Build the Docker image mt-scan  : `docker build -t mt-scan -f docker/Dockerfile .`
 Enter container: `docker run -it --rm -v ~/mt-scan:/workspace mt-scan`
 Build the project: `cmake -S . -B build -GNinja && cmake --build build`
+Run the docker with user id: `docker run -it --rm -u $(id -u):$(id -g) -v ~/mt-scan:/workspace mt-scan`
