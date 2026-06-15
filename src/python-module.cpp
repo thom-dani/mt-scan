@@ -9,7 +9,8 @@ py::array MergeTreeScanInterface(
     float alpha,
     int target_res,
     KernelType kernel,
-    bool print_logs)
+    bool print_logs,
+    bool debugMode)
 {
 
     auto buf = points.request();
@@ -29,6 +30,7 @@ py::array MergeTreeScanInterface(
 
     scan.setParameters(target_res, n_points, alpha, kernel);
     scan.setPrintLogs(print_logs);
+    scan.setDebugMode(debugMode);
     scan.execute(points_ptr, labels_ptr);
 
     return outputLabels;
@@ -38,7 +40,8 @@ namespace py = pybind11;
 py::array MergeTreeScanDistributionInterface(
     py::array points,
     py::array distribution,
-    bool print_logs)
+    bool print_logs,
+    bool debugMode)
 {
 
     auto buf = points.request();
@@ -64,6 +67,7 @@ py::array MergeTreeScanDistributionInterface(
     scan.setResolution(resX, resY);
     scan.setNumberOfPoints(n_points);
     scan.setDistributionMode(true);
+    scan.setDebugMode(debugMode);
     scan.setPrintLogs(print_logs);
 
     scan.execute(points_ptr, labels_ptr, distrib_ptr);
@@ -73,15 +77,15 @@ py::array MergeTreeScanDistributionInterface(
 
 PYBIND11_MODULE(mt_scan, m)
 {
-    m.def("compute_labels", [](py::array points, float alpha, int target_res, std::string kernel, bool print_logs)
+    m.def("compute_labels", [](py::array points, float alpha, int target_res, std::string kernel, bool print_logs, bool debug)
           {
         KernelType k;
 if      (kernel == "gaussian") k = KernelType::Gaussian;
 else if (kernel == "cylinder") k = KernelType::Cylinder;
 else if (kernel == "linear")   k = KernelType::Linear;
 else throw std::invalid_argument("kernel must be one of: gaussian, cylinder, linear");
-return MergeTreeScanInterface(points, alpha, target_res, k, print_logs); }, py::arg("points"), py::arg("alpha"), py::arg("target_res"), py::arg("kernel") = "gaussian", py::arg("print_logs") = false);
+return MergeTreeScanInterface(points, alpha, target_res, k, print_logs, debug); }, py::arg("points"), py::arg("alpha"), py::arg("target_res"), py::arg("kernel") = "gaussian", py::arg("print_logs") = false, py::arg("debug") = false);
 
-    m.def("compute_labels_distribution", [](py::array points, py::array distribution, bool print_logs)
-          { return MergeTreeScanDistributionInterface(points, distribution, print_logs); }, py::arg("points"), py::arg("distribution"), py::arg("print_logs") = false);
+    m.def("compute_labels_distribution", [](py::array points, py::array distribution, bool print_logs, bool debug)
+          { return MergeTreeScanDistributionInterface(points, distribution, print_logs, debug); }, py::arg("points"), py::arg("distribution"), py::arg("print_logs") = false, py::arg("debug") = false);
 }

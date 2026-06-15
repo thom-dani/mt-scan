@@ -179,11 +179,6 @@ void MergeTreeScan::buildMergeTree(
     image->SetSpacing(1.0, 1.0, 1.0);
     image->SetOrigin(0.0, 0.0, 0.0);
 
-    // vtkNew<vtkXMLImageDataWriter> writer;
-    // writer->SetFileName("../tmp/output.vti");
-    // writer->SetInputData(image);
-    // writer->Write();
-
     vtkNew<vtkDoubleArray> scalars;
     scalars->SetName("density");
     scalars->SetNumberOfComponents(1);
@@ -196,6 +191,14 @@ void MergeTreeScan::buildMergeTree(
 
     image->GetPointData()->SetScalars(scalars);
     image->GetPointData()->SetActiveScalars("density");
+
+    if (debugMode_)
+    {
+        vtkNew<vtkXMLImageDataWriter> writer;
+        writer->SetFileName("../tmp/sampled_density.vti");
+        writer->SetInputData(image);
+        writer->Write();
+    }
 
     vtkNew<ttkMergeTree> mergeTree{};
     mergeTree->SetInputDataObject(0, image);
@@ -481,4 +484,48 @@ void MergeTreeScan::computeLabels(
         int parentId = nodeFlatMapId[segmentationId_cells[idx]];
         labels[i] = parentId;
     }
+
+    if (debugMode_)
+    {
+        saveFlatMapZones(nodeFlatMapId, segmentationId_cells);
+    }
+}
+
+void MergeTreeScan::saveFlatMapZones(
+    const std::vector<int> &nodeFlatMapId,
+    const std::vector<int> &segmentationId_cells)
+{
+
+    const int nPoints_x = this->resX_ + 1;
+    const int nPoints_y = this->resY_ + 1;
+    const int nVertices = nPoints_x * nPoints_y;
+    const int nCells = this->resX_ * this->resY_;
+
+    vtkNew<vtkImageData>
+        image;
+    image->SetDimensions(nPoints_x, nPoints_y, 1);
+    image->SetExtent(0, nPoints_x - 1,
+                     0, nPoints_y - 1,
+                     0, 0);
+    image->SetSpacing(1.0, 1.0, 1.0);
+    image->SetOrigin(0.0, 0.0, 0.0);
+
+    vtkNew<vtkDoubleArray> flatmapId;
+    flatmapId->SetName("flatmapId");
+    flatmapId->SetNumberOfComponents(1);
+    flatmapId->SetNumberOfTuples(nCells);
+
+#pragma omp parallel for schedule(static)
+    for (int i = 0; i < nCells; i++)
+    {
+        flatmapId->SetValue(i, nodeFlatMapId[segmentationId_cells[i]]);
+    }
+
+    image->GetCellData()->SetScalars(flatmapId);
+    image->GetCellData()->SetActiveScalars("flatmapId");
+
+    vtkNew<vtkXMLImageDataWriter> writer;
+    writer->SetFileName("../tmp/flatmap.vti");
+    writer->SetInputData(image);
+    writer->Write();
 }
