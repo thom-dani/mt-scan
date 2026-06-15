@@ -62,8 +62,10 @@ py::array MergeTreeScanDistributionInterface(
     int *labels_ptr = outputLabels.mutable_data();
 
     scan.setResolution(resX, resY);
+    scan.setNumberOfPoints(n_points);
     scan.setDistributionMode(true);
     scan.setPrintLogs(print_logs);
+
     scan.execute(points_ptr, labels_ptr, distrib_ptr);
 
     return outputLabels;
