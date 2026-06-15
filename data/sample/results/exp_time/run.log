@@ -1,0 +1,360 @@
+==================================================
+  EXPERIMENT exp_001
+==================================================
+  Dataset folder : /workspace/data/sample
+  Results folder : /workspace/data/sample/results/exp_001
+  Device         : cpu
+  Kernel         : gaussian
+  Resolution     : 512
+  Alpha range    : [25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400, 425, 450, 475]
+  MinPts range   : [5, 10, 15, 20, 25, 30, 40, 50]
+  Datasets       : ['blobs_grid_100.csv', 'blobs_grid_200.csv']
+==================================================
+
+── blobs_grid_100 ──
+run_id:0
+TIMER resample 0.9974
+TIMER buildMergeTree 0.0658
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0016
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0400
+TIMER copyLabels 0.0002
+TIMER TOTAL  1.1052
+run_id:1
+TIMER resample 0.3107
+TIMER buildMergeTree 0.0771
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0015
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0373
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.4269
+run_id:2
+TIMER resample 0.1926
+TIMER buildMergeTree 0.0445
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0019
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0398
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.2791
+run_id:3
+TIMER resample 0.1284
+TIMER buildMergeTree 0.1187
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0020
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0392
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.2886
+run_id:4
+TIMER resample 0.1152
+TIMER buildMergeTree 0.0666
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0019
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0440
+TIMER copyLabels 0.0001
+TIMER TOTAL  0.2279
+run_id:5
+TIMER resample 0.0920
+TIMER buildMergeTree 0.0599
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0018
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0414
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.1954
+run_id:6
+TIMER resample 0.0802
+TIMER buildMergeTree 0.1858
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0019
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0427
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.3109
+run_id:7
+TIMER resample 0.0746
+TIMER buildMergeTree 0.0821
+TIMER buildClusterTree 0.0001
+TIMER computeNodeEnergies 0.0018
+TIMER selectClusters 0.0001
+TIMER computeLabels 0.0431
+TIMER copyLabels 0.0006
+TIMER TOTAL  0.2025
+run_id:8
+TIMER resample 0.0715
+TIMER buildMergeTree 0.1184
+TIMER buildClusterTree 0.0001
+TIMER computeNodeEnergies 0.0019
+TIMER selectClusters 0.0001
+TIMER computeLabels 0.0416
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.2338
+run_id:9
+TIMER resample 0.0636
+TIMER buildMergeTree 0.0601
+TIMER buildClusterTree 0.0001
+TIMER computeNodeEnergies 0.0018
+TIMER selectClusters 0.0001
+TIMER computeLabels 0.0443
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.1702
+run_id:10
+TIMER resample 0.0627
+TIMER buildMergeTree 0.0632
+TIMER buildClusterTree 0.0001
+TIMER computeNodeEnergies 0.0019
+TIMER selectClusters 0.0001
+TIMER computeLabels 0.0402
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.1685
+run_id:11
+TIMER resample 0.0581
+TIMER buildMergeTree 0.0663
+TIMER buildClusterTree 0.0002
+TIMER computeNodeEnergies 0.0019
+TIMER selectClusters 0.0001
+TIMER computeLabels 0.0396
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.1664
+run_id:12
+TIMER resample 0.0575
+TIMER buildMergeTree 0.0915
+TIMER buildClusterTree 0.0002
+TIMER computeNodeEnergies 0.0019
+TIMER selectClusters 0.0002
+TIMER computeLabels 0.0393
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.1909
+run_id:13
+TIMER resample 0.0565
+TIMER buildMergeTree 0.0806
+TIMER buildClusterTree 0.0003
+TIMER computeNodeEnergies 0.0020
+TIMER selectClusters 0.0002
+TIMER computeLabels 0.0412
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.1810
+run_id:14
+TIMER resample 0.0629
+TIMER buildMergeTree 0.1059
+TIMER buildClusterTree 0.0006
+TIMER computeNodeEnergies 0.0037
+TIMER selectClusters 0.0005
+TIMER computeLabels 0.0476
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.2215
+run_id:15
+TIMER resample 0.0577
+TIMER buildMergeTree 0.0750
+TIMER buildClusterTree 0.0003
+TIMER computeNodeEnergies 0.0019
+TIMER selectClusters 0.0003
+TIMER computeLabels 0.0408
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.1764
+run_id:16
+TIMER resample 0.0550
+TIMER buildMergeTree 0.0806
+TIMER buildClusterTree 0.0004
+TIMER computeNodeEnergies 0.0020
+TIMER selectClusters 0.0003
+TIMER computeLabels 0.0386
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.1771
+run_id:17
+TIMER resample 0.0495
+TIMER buildMergeTree 0.0971
+TIMER buildClusterTree 0.0005
+TIMER computeNodeEnergies 0.0019
+TIMER selectClusters 0.0004
+TIMER computeLabels 0.0425
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.1921
+run_id:18
+TIMER resample 0.0449
+TIMER buildMergeTree 0.0899
+TIMER buildClusterTree 0.0004
+TIMER computeNodeEnergies 0.0017
+TIMER selectClusters 0.0004
+TIMER computeLabels 0.0407
+TIMER copyLabels 0.0002
+TIMER TOTAL  0.1782
+
+── blobs_grid_200 ──
+run_id:19
+TIMER resample 2.0299
+TIMER buildMergeTree 0.0776
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0020
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0402
+TIMER copyLabels 0.0004
+TIMER TOTAL  2.1502
+run_id:20
+TIMER resample 0.5629
+TIMER buildMergeTree 0.0534
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0022
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0469
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.6658
+run_id:21
+TIMER resample 0.3058
+TIMER buildMergeTree 0.0621
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0018
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0433
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.4136
+run_id:22
+TIMER resample 0.1919
+TIMER buildMergeTree 0.0611
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0020
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0422
+TIMER copyLabels 0.0005
+TIMER TOTAL  0.2978
+run_id:23
+TIMER resample 0.1454
+TIMER buildMergeTree 0.0447
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0019
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0437
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.2361
+run_id:24
+TIMER resample 0.1224
+TIMER buildMergeTree 0.0535
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0021
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0433
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.2218
+run_id:25
+TIMER resample 0.1073
+TIMER buildMergeTree 0.0766
+TIMER buildClusterTree 0.0000
+TIMER computeNodeEnergies 0.0022
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0533
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.2400
+run_id:26
+TIMER resample 0.0910
+TIMER buildMergeTree 0.0782
+TIMER buildClusterTree 0.0001
+TIMER computeNodeEnergies 0.0021
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0439
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.2158
+run_id:27
+TIMER resample 0.0851
+TIMER buildMergeTree 0.1826
+TIMER buildClusterTree 0.0001
+TIMER computeNodeEnergies 0.0031
+TIMER selectClusters 0.0000
+TIMER computeLabels 0.0415
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.3128
+run_id:28
+TIMER resample 0.0825
+TIMER buildMergeTree 0.0780
+TIMER buildClusterTree 0.0001
+TIMER computeNodeEnergies 0.0021
+TIMER selectClusters 0.0001
+TIMER computeLabels 0.0476
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.2108
+run_id:29
+TIMER resample 0.0776
+TIMER buildMergeTree 0.3211
+TIMER buildClusterTree 0.0001
+TIMER computeNodeEnergies 0.0018
+TIMER selectClusters 0.0001
+TIMER computeLabels 0.0438
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.4449
+run_id:30
+TIMER resample 0.0739
+TIMER buildMergeTree 0.1106
+TIMER buildClusterTree 0.0001
+TIMER computeNodeEnergies 0.0018
+TIMER selectClusters 0.0001
+TIMER computeLabels 0.0419
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.2289
+run_id:31
+TIMER resample 0.0662
+TIMER buildMergeTree 0.0924
+TIMER buildClusterTree 0.0002
+TIMER computeNodeEnergies 0.0018
+TIMER selectClusters 0.0001
+TIMER computeLabels 0.0465
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.2077
+run_id:32
+TIMER resample 0.0656
+TIMER buildMergeTree 0.3482
+TIMER buildClusterTree 0.0002
+TIMER computeNodeEnergies 0.0020
+TIMER selectClusters 0.0002
+TIMER computeLabels 0.0422
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.4588
+run_id:33
+TIMER resample 0.0573
+TIMER buildMergeTree 0.1003
+TIMER buildClusterTree 0.0003
+TIMER computeNodeEnergies 0.0020
+TIMER selectClusters 0.0002
+TIMER computeLabels 0.0463
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.2069
+run_id:34
+TIMER resample 0.0635
+TIMER buildMergeTree 0.1198
+TIMER buildClusterTree 0.0003
+TIMER computeNodeEnergies 0.0021
+TIMER selectClusters 0.0003
+TIMER computeLabels 0.0475
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.2337
+run_id:35
+TIMER resample 0.0711
+TIMER buildMergeTree 0.1367
+TIMER buildClusterTree 0.0004
+TIMER computeNodeEnergies 0.0021
+TIMER selectClusters 0.0003
+TIMER computeLabels 0.0435
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.2546
+run_id:36
+TIMER resample 0.0600
+TIMER buildMergeTree 0.4258
+TIMER buildClusterTree 0.0004
+TIMER computeNodeEnergies 0.0021
+TIMER selectClusters 0.0004
+TIMER computeLabels 0.0499
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.5390
+run_id:37
+TIMER resample 0.0575
+TIMER buildMergeTree 0.0834
+TIMER buildClusterTree 0.0005
+TIMER computeNodeEnergies 0.0021
+TIMER selectClusters 0.0004
+TIMER computeLabels 0.0484
+TIMER copyLabels 0.0004
+TIMER TOTAL  0.1928
+
+Results saved to /workspace/data/sample/results/exp_001/experiment.json

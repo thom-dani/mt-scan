@@ -1,0 +1,4047 @@
+{
+  "experiment_id": "exp_001",
+  "timestamp": "2026-06-15T11:47:39.071486",
+  "parameters": {
+    "kernel": "gaussian",
+    "resolution": 512,
+    "device": "cpu",
+    "alpha_range": [
+      25,
+      50,
+      75,
+      100,
+      125,
+      150,
+      175,
+      200,
+      225,
+      250,
+      275,
+      300,
+      325,
+      350,
+      375,
+      400,
+      425,
+      450,
+      475
+    ],
+    "minpts_range": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      40,
+      50
+    ],
+    "dataset_list": [
+      "blobs_grid_600.csv",
+      "blobs_grid_300.csv",
+      "blobs_grid_100.csv",
+      "blobs_grid_800.csv",
+      "blobs_grid_500.csv",
+      "blobs_grid_700.csv",
+      "blobs_grid_900.csv",
+      "blobs_grid_200.csv",
+      "blobs_grid_1000.csv",
+      "blobs_grid_400.csv"
+    ]
+  },
+  "results": {
+    "mtscan": [
+      {
+        "run_id": 0,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 25,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 5.660436344000118,
+        "timers": {
+          "resample": 5.5683,
+          "buildMergeTree": 0.0496,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0018,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0384,
+          "copyLabels": 0.0017,
+          "TOTAL": 5.66
+        }
+      },
+      {
+        "run_id": 1,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.5949039709994395,
+        "timers": {
+          "resample": 1.5081,
+          "buildMergeTree": 0.0421,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0019,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0408,
+          "copyLabels": 0.0011,
+          "TOTAL": 1.5941
+        }
+      },
+      {
+        "run_id": 2,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 75,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.846705343999929,
+        "timers": {
+          "resample": 0.7374,
+          "buildMergeTree": 0.0584,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0462,
+          "copyLabels": 0.0011,
+          "TOTAL": 0.8453
+        }
+      },
+      {
+        "run_id": 3,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5479946909999853,
+        "timers": {
+          "resample": 0.451,
+          "buildMergeTree": 0.0474,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0459,
+          "copyLabels": 0.0011,
+          "TOTAL": 0.5474
+        }
+      },
+      {
+        "run_id": 4,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 125,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.45375370800047676,
+        "timers": {
+          "resample": 0.3426,
+          "buildMergeTree": 0.0641,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0027,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0422,
+          "copyLabels": 0.0011,
+          "TOTAL": 0.4528
+        }
+      },
+      {
+        "run_id": 5,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.39759000100002595,
+        "timers": {
+          "resample": 0.253,
+          "buildMergeTree": 0.0878,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0112,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0433,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.3966
+        }
+      },
+      {
+        "run_id": 6,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 175,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2976272420000896,
+        "timers": {
+          "resample": 0.188,
+          "buildMergeTree": 0.0562,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0495,
+          "copyLabels": 0.0011,
+          "TOTAL": 0.2969
+        }
+      },
+      {
+        "run_id": 7,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 200,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.27691918700020324,
+        "timers": {
+          "resample": 0.1636,
+          "buildMergeTree": 0.0581,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.051,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.2762
+        }
+      },
+      {
+        "run_id": 8,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 225,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.26289686000018264,
+        "timers": {
+          "resample": 0.1586,
+          "buildMergeTree": 0.0591,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0411,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.2622
+        }
+      },
+      {
+        "run_id": 9,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 250,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2543651599999066,
+        "timers": {
+          "resample": 0.132,
+          "buildMergeTree": 0.0694,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0484,
+          "copyLabels": 0.0013,
+          "TOTAL": 0.2533
+        }
+      },
+      {
+        "run_id": 10,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 275,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.252772773000288,
+        "timers": {
+          "resample": 0.1264,
+          "buildMergeTree": 0.0753,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0468,
+          "copyLabels": 0.0014,
+          "TOTAL": 0.2521
+        }
+      },
+      {
+        "run_id": 11,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 300,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.34030287099994894,
+        "timers": {
+          "resample": 0.1322,
+          "buildMergeTree": 0.1585,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0459,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.3402
+        }
+      },
+      {
+        "run_id": 12,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 325,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.22785490500064043,
+        "timers": {
+          "resample": 0.1097,
+          "buildMergeTree": 0.0695,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0451,
+          "copyLabels": 0.001,
+          "TOTAL": 0.2277
+        }
+      },
+      {
+        "run_id": 13,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 350,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.22200476199941477,
+        "timers": {
+          "resample": 0.0999,
+          "buildMergeTree": 0.0729,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0453,
+          "copyLabels": 0.0013,
+          "TOTAL": 0.2219
+        }
+      },
+      {
+        "run_id": 14,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 375,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4491846250002709,
+        "timers": {
+          "resample": 0.0922,
+          "buildMergeTree": 0.2997,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0533,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.449
+        }
+      },
+      {
+        "run_id": 15,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 400,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.22521064200009278,
+        "timers": {
+          "resample": 0.091,
+          "buildMergeTree": 0.0777,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0527,
+          "copyLabels": 0.0011,
+          "TOTAL": 0.2251
+        }
+      },
+      {
+        "run_id": 16,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 425,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.21214776700071525,
+        "timers": {
+          "resample": 0.0844,
+          "buildMergeTree": 0.0846,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0019,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0392,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.212
+        }
+      },
+      {
+        "run_id": 17,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 450,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.24970077499983745,
+        "timers": {
+          "resample": 0.0938,
+          "buildMergeTree": 0.0965,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.054,
+          "copyLabels": 0.002,
+          "TOTAL": 0.2492
+        }
+      },
+      {
+        "run_id": 18,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 475,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.24137594399962836,
+        "timers": {
+          "resample": 0.1103,
+          "buildMergeTree": 0.0863,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0407,
+          "copyLabels": 0.0011,
+          "TOTAL": 0.2412
+        }
+      },
+      {
+        "run_id": 19,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 25,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 3.2173114299994268,
+        "timers": {
+          "resample": 3.1301,
+          "buildMergeTree": 0.0452,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0391,
+          "copyLabels": 0.0007,
+          "TOTAL": 3.2172
+        }
+      },
+      {
+        "run_id": 20,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.9948318080005265,
+        "timers": {
+          "resample": 0.872,
+          "buildMergeTree": 0.0686,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0512,
+          "copyLabels": 0.0007,
+          "TOTAL": 0.9948
+        }
+      },
+      {
+        "run_id": 21,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 75,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.547549261000313,
+        "timers": {
+          "resample": 0.4383,
+          "buildMergeTree": 0.0569,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0494,
+          "copyLabels": 0.0007,
+          "TOTAL": 0.5474
+        }
+      },
+      {
+        "run_id": 22,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.43688871399990603,
+        "timers": {
+          "resample": 0.289,
+          "buildMergeTree": 0.0943,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0506,
+          "copyLabels": 0.0006,
+          "TOTAL": 0.4368
+        }
+      },
+      {
+        "run_id": 23,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 125,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3399328340001375,
+        "timers": {
+          "resample": 0.2148,
+          "buildMergeTree": 0.072,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0501,
+          "copyLabels": 0.0006,
+          "TOTAL": 0.3398
+        }
+      },
+      {
+        "run_id": 24,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.27146441100012453,
+        "timers": {
+          "resample": 0.1626,
+          "buildMergeTree": 0.0625,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0016,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0439,
+          "copyLabels": 0.0007,
+          "TOTAL": 0.2714
+        }
+      },
+      {
+        "run_id": 25,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 175,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.23448491800081683,
+        "timers": {
+          "resample": 0.1298,
+          "buildMergeTree": 0.06,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0417,
+          "copyLabels": 0.0006,
+          "TOTAL": 0.2344
+        }
+      },
+      {
+        "run_id": 26,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 200,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.23889373000019987,
+        "timers": {
+          "resample": 0.1143,
+          "buildMergeTree": 0.0684,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.053,
+          "copyLabels": 0.0007,
+          "TOTAL": 0.2388
+        }
+      },
+      {
+        "run_id": 27,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 225,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2198516810003639,
+        "timers": {
+          "resample": 0.1104,
+          "buildMergeTree": 0.0548,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0518,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.2197
+        }
+      },
+      {
+        "run_id": 28,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 250,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.23698603299999377,
+        "timers": {
+          "resample": 0.1052,
+          "buildMergeTree": 0.0819,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0016,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0475,
+          "copyLabels": 0.0006,
+          "TOTAL": 0.2369
+        }
+      },
+      {
+        "run_id": 29,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 275,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.22098426000047766,
+        "timers": {
+          "resample": 0.0871,
+          "buildMergeTree": 0.0791,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0106,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0431,
+          "copyLabels": 0.0006,
+          "TOTAL": 0.2209
+        }
+      },
+      {
+        "run_id": 30,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 300,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2380726900000809,
+        "timers": {
+          "resample": 0.089,
+          "buildMergeTree": 0.0946,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0513,
+          "copyLabels": 0.0006,
+          "TOTAL": 0.238
+        }
+      },
+      {
+        "run_id": 31,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 325,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.20671441899958154,
+        "timers": {
+          "resample": 0.0821,
+          "buildMergeTree": 0.0743,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.047,
+          "copyLabels": 0.0007,
+          "TOTAL": 0.2066
+        }
+      },
+      {
+        "run_id": 32,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 350,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.20985980599925824,
+        "timers": {
+          "resample": 0.0847,
+          "buildMergeTree": 0.0773,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0444,
+          "copyLabels": 0.0007,
+          "TOTAL": 0.2097
+        }
+      },
+      {
+        "run_id": 33,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 375,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.36174780300007114,
+        "timers": {
+          "resample": 0.0809,
+          "buildMergeTree": 0.229,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0482,
+          "copyLabels": 0.0007,
+          "TOTAL": 0.3616
+        }
+      },
+      {
+        "run_id": 34,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 400,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.22830883499955235,
+        "timers": {
+          "resample": 0.0781,
+          "buildMergeTree": 0.1004,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0461,
+          "copyLabels": 0.0007,
+          "TOTAL": 0.2281
+        }
+      },
+      {
+        "run_id": 35,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 425,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.23200858600011998,
+        "timers": {
+          "resample": 0.0799,
+          "buildMergeTree": 0.1071,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0413,
+          "copyLabels": 0.0006,
+          "TOTAL": 0.2318
+        }
+      },
+      {
+        "run_id": 36,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 450,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.18824071300059586,
+        "timers": {
+          "resample": 0.0682,
+          "buildMergeTree": 0.0773,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.039,
+          "copyLabels": 0.0007,
+          "TOTAL": 0.1881
+        }
+      },
+      {
+        "run_id": 37,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 475,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.17974391799998557,
+        "timers": {
+          "resample": 0.0628,
+          "buildMergeTree": 0.0759,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0372,
+          "copyLabels": 0.0007,
+          "TOTAL": 0.1796
+        }
+      },
+      {
+        "run_id": 38,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 25,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.2338695179996648,
+        "timers": {
+          "resample": 1.1183,
+          "buildMergeTree": 0.0703,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0425,
+          "copyLabels": 0.0002,
+          "TOTAL": 1.2338
+        }
+      },
+      {
+        "run_id": 39,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4542014859998744,
+        "timers": {
+          "resample": 0.3311,
+          "buildMergeTree": 0.063,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0575,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.4541
+        }
+      },
+      {
+        "run_id": 40,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 75,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3279475929994078,
+        "timers": {
+          "resample": 0.198,
+          "buildMergeTree": 0.0761,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0512,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.3279
+        }
+      },
+      {
+        "run_id": 41,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.26292149300024903,
+        "timers": {
+          "resample": 0.1407,
+          "buildMergeTree": 0.0671,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0525,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.2628
+        }
+      },
+      {
+        "run_id": 42,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 125,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.23501624500022444,
+        "timers": {
+          "resample": 0.1022,
+          "buildMergeTree": 0.0836,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0466,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.2349
+        }
+      },
+      {
+        "run_id": 43,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.17601261699928727,
+        "timers": {
+          "resample": 0.0693,
+          "buildMergeTree": 0.0608,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0435,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.1759
+        }
+      },
+      {
+        "run_id": 44,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 175,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.17550263500015717,
+        "timers": {
+          "resample": 0.0764,
+          "buildMergeTree": 0.0557,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0409,
+          "copyLabels": 0.0003,
+          "TOTAL": 0.1754
+        }
+      },
+      {
+        "run_id": 45,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 200,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.15690893899954972,
+        "timers": {
+          "resample": 0.0518,
+          "buildMergeTree": 0.064,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0,
+          "computeLabels": 0.038,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.1568
+        }
+      },
+      {
+        "run_id": 46,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 225,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.18293374700078857,
+        "timers": {
+          "resample": 0.061,
+          "buildMergeTree": 0.078,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0412,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.1828
+        }
+      },
+      {
+        "run_id": 47,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 250,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.15828523799973482,
+        "timers": {
+          "resample": 0.0479,
+          "buildMergeTree": 0.0626,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0448,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.1582
+        }
+      },
+      {
+        "run_id": 48,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 275,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3149289120001413,
+        "timers": {
+          "resample": 0.0582,
+          "buildMergeTree": 0.2094,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0019,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0448,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.3148
+        }
+      },
+      {
+        "run_id": 49,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 300,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.17114326499995514,
+        "timers": {
+          "resample": 0.0437,
+          "buildMergeTree": 0.0697,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0547,
+          "copyLabels": 0.0003,
+          "TOTAL": 0.1709
+        }
+      },
+      {
+        "run_id": 50,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 325,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.17977976899965142,
+        "timers": {
+          "resample": 0.0678,
+          "buildMergeTree": 0.0655,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0435,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.1796
+        }
+      },
+      {
+        "run_id": 51,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 350,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.28313642900047853,
+        "timers": {
+          "resample": 0.0396,
+          "buildMergeTree": 0.201,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0393,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.283
+        }
+      },
+      {
+        "run_id": 52,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 375,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.15453723399969022,
+        "timers": {
+          "resample": 0.0376,
+          "buildMergeTree": 0.0718,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0419,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.1544
+        }
+      },
+      {
+        "run_id": 53,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 400,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.32034716099951766,
+        "timers": {
+          "resample": 0.0518,
+          "buildMergeTree": 0.2152,
+          "buildClusterTree": 0.0007,
+          "computeNodeEnergies": 0.0028,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0491,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.3202
+        }
+      },
+      {
+        "run_id": 54,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 425,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5881319059999441,
+        "timers": {
+          "resample": 0.0378,
+          "buildMergeTree": 0.4883,
+          "buildClusterTree": 0.0005,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0582,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.588
+        }
+      },
+      {
+        "run_id": 55,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 450,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3146265350005706,
+        "timers": {
+          "resample": 0.0454,
+          "buildMergeTree": 0.2226,
+          "buildClusterTree": 0.0006,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0429,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.3144
+        }
+      },
+      {
+        "run_id": 56,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 475,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.17903091399966797,
+        "timers": {
+          "resample": 0.0491,
+          "buildMergeTree": 0.0816,
+          "buildClusterTree": 0.0006,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0005,
+          "computeLabels": 0.0445,
+          "copyLabels": 0.0002,
+          "TOTAL": 0.1788
+        }
+      },
+      {
+        "run_id": 57,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 25,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 9.393908134999947,
+        "timers": {
+          "resample": 9.218,
+          "buildMergeTree": 0.1165,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0555,
+          "copyLabels": 0.0016,
+          "TOTAL": 9.3938
+        }
+      },
+      {
+        "run_id": 58,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 2.6195642769998813,
+        "timers": {
+          "resample": 2.5135,
+          "buildMergeTree": 0.0498,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0519,
+          "copyLabels": 0.0018,
+          "TOTAL": 2.6195
+        }
+      },
+      {
+        "run_id": 59,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 75,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.4052812259997154,
+        "timers": {
+          "resample": 1.2527,
+          "buildMergeTree": 0.0909,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0549,
+          "copyLabels": 0.0045,
+          "TOTAL": 1.4052
+        }
+      },
+      {
+        "run_id": 60,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.153827435000494,
+        "timers": {
+          "resample": 0.7988,
+          "buildMergeTree": 0.2949,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0037,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0539,
+          "copyLabels": 0.0024,
+          "TOTAL": 1.1537
+        }
+      },
+      {
+        "run_id": 61,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 125,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.9450936699995509,
+        "timers": {
+          "resample": 0.6331,
+          "buildMergeTree": 0.2615,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0029,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0452,
+          "copyLabels": 0.0022,
+          "TOTAL": 0.945
+        }
+      },
+      {
+        "run_id": 62,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.6131975909993344,
+        "timers": {
+          "resample": 0.4387,
+          "buildMergeTree": 0.105,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0028,
+          "selectClusters": 0.0,
+          "computeLabels": 0.065,
+          "copyLabels": 0.0015,
+          "TOTAL": 0.6131
+        }
+      },
+      {
+        "run_id": 63,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 175,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.7178009870003734,
+        "timers": {
+          "resample": 0.2961,
+          "buildMergeTree": 0.3461,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0048,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0679,
+          "copyLabels": 0.0024,
+          "TOTAL": 0.7177
+        }
+      },
+      {
+        "run_id": 64,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 200,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4715815510007815,
+        "timers": {
+          "resample": 0.3064,
+          "buildMergeTree": 0.0999,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0604,
+          "copyLabels": 0.0024,
+          "TOTAL": 0.4715
+        }
+      },
+      {
+        "run_id": 65,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 225,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4787575759992251,
+        "timers": {
+          "resample": 0.2509,
+          "buildMergeTree": 0.1608,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0027,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0607,
+          "copyLabels": 0.0033,
+          "TOTAL": 0.4786
+        }
+      },
+      {
+        "run_id": 66,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 250,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.6280830710002192,
+        "timers": {
+          "resample": 0.2312,
+          "buildMergeTree": 0.3243,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0677,
+          "copyLabels": 0.0019,
+          "TOTAL": 0.628
+        }
+      },
+      {
+        "run_id": 67,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 275,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3972601550003674,
+        "timers": {
+          "resample": 0.1997,
+          "buildMergeTree": 0.0902,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.1014,
+          "copyLabels": 0.0029,
+          "TOTAL": 0.3971
+        }
+      },
+      {
+        "run_id": 68,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 300,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.7542400929996802,
+        "timers": {
+          "resample": 0.2191,
+          "buildMergeTree": 0.3888,
+          "buildClusterTree": 0.0005,
+          "computeNodeEnergies": 0.0065,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.1364,
+          "copyLabels": 0.0024,
+          "TOTAL": 0.7541
+        }
+      },
+      {
+        "run_id": 69,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 325,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.505580567000834,
+        "timers": {
+          "resample": 0.2179,
+          "buildMergeTree": 0.1968,
+          "buildClusterTree": 0.0005,
+          "computeNodeEnergies": 0.0064,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0815,
+          "copyLabels": 0.0019,
+          "TOTAL": 0.5054
+        }
+      },
+      {
+        "run_id": 70,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 350,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.34269641199989564,
+        "timers": {
+          "resample": 0.185,
+          "buildMergeTree": 0.1025,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0504,
+          "copyLabels": 0.0018,
+          "TOTAL": 0.3425
+        }
+      },
+      {
+        "run_id": 71,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 375,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2779679360000955,
+        "timers": {
+          "resample": 0.1308,
+          "buildMergeTree": 0.0832,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.059,
+          "copyLabels": 0.0017,
+          "TOTAL": 0.2778
+        }
+      },
+      {
+        "run_id": 72,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 400,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5737401759997738,
+        "timers": {
+          "resample": 0.1314,
+          "buildMergeTree": 0.3864,
+          "buildClusterTree": 0.0005,
+          "computeNodeEnergies": 0.0036,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0492,
+          "copyLabels": 0.0022,
+          "TOTAL": 0.5736
+        }
+      },
+      {
+        "run_id": 73,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 425,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.30047889400066197,
+        "timers": {
+          "resample": 0.1258,
+          "buildMergeTree": 0.12,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0027,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.049,
+          "copyLabels": 0.0021,
+          "TOTAL": 0.3003
+        }
+      },
+      {
+        "run_id": 74,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 450,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3085016599998198,
+        "timers": {
+          "resample": 0.1298,
+          "buildMergeTree": 0.1016,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0027,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0677,
+          "copyLabels": 0.0056,
+          "TOTAL": 0.3082
+        }
+      },
+      {
+        "run_id": 75,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 475,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.42110426599992934,
+        "timers": {
+          "resample": 0.1143,
+          "buildMergeTree": 0.2425,
+          "buildClusterTree": 0.0005,
+          "computeNodeEnergies": 0.0028,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0583,
+          "copyLabels": 0.0021,
+          "TOTAL": 0.4209
+        }
+      },
+      {
+        "run_id": 76,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 25,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 6.841915076999612,
+        "timers": {
+          "resample": 6.7094,
+          "buildMergeTree": 0.0658,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0632,
+          "copyLabels": 0.0011,
+          "TOTAL": 6.8418
+        }
+      },
+      {
+        "run_id": 77,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.9521805510003105,
+        "timers": {
+          "resample": 1.8033,
+          "buildMergeTree": 0.0786,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0019,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0658,
+          "copyLabels": 0.0024,
+          "TOTAL": 1.9521
+        }
+      },
+      {
+        "run_id": 78,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 75,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.0671573780000472,
+        "timers": {
+          "resample": 0.959,
+          "buildMergeTree": 0.0561,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0483,
+          "copyLabels": 0.0013,
+          "TOTAL": 1.067
+        }
+      },
+      {
+        "run_id": 79,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.7795208569996248,
+        "timers": {
+          "resample": 0.6426,
+          "buildMergeTree": 0.0791,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0541,
+          "copyLabels": 0.0013,
+          "TOTAL": 0.7794
+        }
+      },
+      {
+        "run_id": 80,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 125,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5188571999997293,
+        "timers": {
+          "resample": 0.3979,
+          "buildMergeTree": 0.0679,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0494,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.5187
+        }
+      },
+      {
+        "run_id": 81,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.46532395600024756,
+        "timers": {
+          "resample": 0.3178,
+          "buildMergeTree": 0.0918,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0521,
+          "copyLabels": 0.0014,
+          "TOTAL": 0.4652
+        }
+      },
+      {
+        "run_id": 82,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 175,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.44045671700041567,
+        "timers": {
+          "resample": 0.2688,
+          "buildMergeTree": 0.1145,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0043,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0515,
+          "copyLabels": 0.0011,
+          "TOTAL": 0.4404
+        }
+      },
+      {
+        "run_id": 83,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 200,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.6680995959995926,
+        "timers": {
+          "resample": 0.2152,
+          "buildMergeTree": 0.3733,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0035,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0744,
+          "copyLabels": 0.0013,
+          "TOTAL": 0.668
+        }
+      },
+      {
+        "run_id": 84,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 225,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5312207870001657,
+        "timers": {
+          "resample": 0.2689,
+          "buildMergeTree": 0.193,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.065,
+          "copyLabels": 0.0015,
+          "TOTAL": 0.5311
+        }
+      },
+      {
+        "run_id": 85,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 250,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.7520239360001142,
+        "timers": {
+          "resample": 0.2191,
+          "buildMergeTree": 0.4547,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0739,
+          "copyLabels": 0.0013,
+          "TOTAL": 0.7519
+        }
+      },
+      {
+        "run_id": 86,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 275,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.7037526260000959,
+        "timers": {
+          "resample": 0.1913,
+          "buildMergeTree": 0.4288,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0058,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0757,
+          "copyLabels": 0.0014,
+          "TOTAL": 0.7036
+        }
+      },
+      {
+        "run_id": 87,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 300,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5810161119998156,
+        "timers": {
+          "resample": 0.1712,
+          "buildMergeTree": 0.3554,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0501,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.5809
+        }
+      },
+      {
+        "run_id": 88,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 325,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5329326319997563,
+        "timers": {
+          "resample": 0.1228,
+          "buildMergeTree": 0.3413,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0028,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0642,
+          "copyLabels": 0.0013,
+          "TOTAL": 0.5328
+        }
+      },
+      {
+        "run_id": 89,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 350,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4006853870005216,
+        "timers": {
+          "resample": 0.1098,
+          "buildMergeTree": 0.2215,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.065,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.4005
+        }
+      },
+      {
+        "run_id": 90,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 375,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5875839749996885,
+        "timers": {
+          "resample": 0.1301,
+          "buildMergeTree": 0.4014,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0027,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0512,
+          "copyLabels": 0.0015,
+          "TOTAL": 0.5875
+        }
+      },
+      {
+        "run_id": 91,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 400,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.36481998300041596,
+        "timers": {
+          "resample": 0.1118,
+          "buildMergeTree": 0.203,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0027,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0439,
+          "copyLabels": 0.0026,
+          "TOTAL": 0.3646
+        }
+      },
+      {
+        "run_id": 92,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 425,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.27357558099993184,
+        "timers": {
+          "resample": 0.1196,
+          "buildMergeTree": 0.101,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0481,
+          "copyLabels": 0.0016,
+          "TOTAL": 0.2734
+        }
+      },
+      {
+        "run_id": 93,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 450,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.30716881599983026,
+        "timers": {
+          "resample": 0.108,
+          "buildMergeTree": 0.1389,
+          "buildClusterTree": 0.0005,
+          "computeNodeEnergies": 0.0028,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0552,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.307
+        }
+      },
+      {
+        "run_id": 94,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 475,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.44844507000016165,
+        "timers": {
+          "resample": 0.1024,
+          "buildMergeTree": 0.2915,
+          "buildClusterTree": 0.0005,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0497,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.4483
+        }
+      },
+      {
+        "run_id": 95,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 25,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 10.659473104999961,
+        "timers": {
+          "resample": 10.433,
+          "buildMergeTree": 0.1635,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0582,
+          "copyLabels": 0.0021,
+          "TOTAL": 10.6594
+        }
+      },
+      {
+        "run_id": 96,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 2.952283606000492,
+        "timers": {
+          "resample": 2.8327,
+          "buildMergeTree": 0.0546,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0587,
+          "copyLabels": 0.0034,
+          "TOTAL": 2.9521
+        }
+      },
+      {
+        "run_id": 97,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 75,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.53213408099964,
+        "timers": {
+          "resample": 1.4091,
+          "buildMergeTree": 0.0684,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0503,
+          "copyLabels": 0.0021,
+          "TOTAL": 1.532
+        }
+      },
+      {
+        "run_id": 98,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.9417248899999322,
+        "timers": {
+          "resample": 0.8187,
+          "buildMergeTree": 0.0601,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0585,
+          "copyLabels": 0.0018,
+          "TOTAL": 0.9416
+        }
+      },
+      {
+        "run_id": 99,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 125,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.7373050539999895,
+        "timers": {
+          "resample": 0.5891,
+          "buildMergeTree": 0.0805,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0631,
+          "copyLabels": 0.0024,
+          "TOTAL": 0.7372
+        }
+      },
+      {
+        "run_id": 100,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.6399395710004683,
+        "timers": {
+          "resample": 0.4451,
+          "buildMergeTree": 0.117,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0734,
+          "copyLabels": 0.0018,
+          "TOTAL": 0.6398
+        }
+      },
+      {
+        "run_id": 101,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 175,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5101594750003642,
+        "timers": {
+          "resample": 0.3498,
+          "buildMergeTree": 0.0851,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0708,
+          "copyLabels": 0.0018,
+          "TOTAL": 0.5101
+        }
+      },
+      {
+        "run_id": 102,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 200,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4599841449999076,
+        "timers": {
+          "resample": 0.289,
+          "buildMergeTree": 0.0976,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0688,
+          "copyLabels": 0.0017,
+          "TOTAL": 0.4599
+        }
+      },
+      {
+        "run_id": 103,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 225,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.43985780799994245,
+        "timers": {
+          "resample": 0.2557,
+          "buildMergeTree": 0.1145,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0649,
+          "copyLabels": 0.0019,
+          "TOTAL": 0.4397
+        }
+      },
+      {
+        "run_id": 104,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 250,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4392239830003746,
+        "timers": {
+          "resample": 0.2342,
+          "buildMergeTree": 0.1206,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0792,
+          "copyLabels": 0.0023,
+          "TOTAL": 0.4391
+        }
+      },
+      {
+        "run_id": 105,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 275,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.7134765569999217,
+        "timers": {
+          "resample": 0.2231,
+          "buildMergeTree": 0.4028,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0828,
+          "copyLabels": 0.0017,
+          "TOTAL": 0.7133
+        }
+      },
+      {
+        "run_id": 106,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 300,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3808534090003377,
+        "timers": {
+          "resample": 0.1878,
+          "buildMergeTree": 0.1182,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0702,
+          "copyLabels": 0.0017,
+          "TOTAL": 0.3807
+        }
+      },
+      {
+        "run_id": 107,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 325,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3590369549992829,
+        "timers": {
+          "resample": 0.1872,
+          "buildMergeTree": 0.0994,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0677,
+          "copyLabels": 0.0017,
+          "TOTAL": 0.3589
+        }
+      },
+      {
+        "run_id": 108,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 350,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3127204669999628,
+        "timers": {
+          "resample": 0.1562,
+          "buildMergeTree": 0.0841,
+          "buildClusterTree": 0.0108,
+          "computeNodeEnergies": 0.0027,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0568,
+          "copyLabels": 0.0019,
+          "TOTAL": 0.3126
+        }
+      },
+      {
+        "run_id": 109,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 375,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.6808050909994563,
+        "timers": {
+          "resample": 0.1922,
+          "buildMergeTree": 0.4126,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0027,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0711,
+          "copyLabels": 0.0014,
+          "TOTAL": 0.6807
+        }
+      },
+      {
+        "run_id": 110,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 400,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.418057152000074,
+        "timers": {
+          "resample": 0.1471,
+          "buildMergeTree": 0.2208,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0455,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.4179
+        }
+      },
+      {
+        "run_id": 111,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 425,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.28769064900006924,
+        "timers": {
+          "resample": 0.133,
+          "buildMergeTree": 0.0912,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0579,
+          "copyLabels": 0.0021,
+          "TOTAL": 0.2875
+        }
+      },
+      {
+        "run_id": 112,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 450,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5053843480000069,
+        "timers": {
+          "resample": 0.1048,
+          "buildMergeTree": 0.3254,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0028,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0696,
+          "copyLabels": 0.0017,
+          "TOTAL": 0.5052
+        }
+      },
+      {
+        "run_id": 113,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 475,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.27276204300051177,
+        "timers": {
+          "resample": 0.1136,
+          "buildMergeTree": 0.0993,
+          "buildClusterTree": 0.0005,
+          "computeNodeEnergies": 0.0027,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0546,
+          "copyLabels": 0.0015,
+          "TOTAL": 0.2726
+        }
+      },
+      {
+        "run_id": 114,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 25,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 13.07647509599974,
+        "timers": {
+          "resample": 12.9289,
+          "buildMergeTree": 0.0836,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0031,
+          "selectClusters": 0.0,
+          "computeLabels": 0.058,
+          "copyLabels": 0.0026,
+          "TOTAL": 13.0764
+        }
+      },
+      {
+        "run_id": 115,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 3.5992472019997876,
+        "timers": {
+          "resample": 3.4727,
+          "buildMergeTree": 0.0705,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0515,
+          "copyLabels": 0.002,
+          "TOTAL": 3.5992
+        }
+      },
+      {
+        "run_id": 116,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 75,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.6757250159998875,
+        "timers": {
+          "resample": 1.4937,
+          "buildMergeTree": 0.1083,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0685,
+          "copyLabels": 0.0024,
+          "TOTAL": 1.6756
+        }
+      },
+      {
+        "run_id": 117,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.132809355000063,
+        "timers": {
+          "resample": 0.952,
+          "buildMergeTree": 0.1137,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0,
+          "computeLabels": 0.062,
+          "copyLabels": 0.0025,
+          "TOTAL": 1.1327
+        }
+      },
+      {
+        "run_id": 118,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 125,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.7896693229995435,
+        "timers": {
+          "resample": 0.6323,
+          "buildMergeTree": 0.0861,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0662,
+          "copyLabels": 0.0023,
+          "TOTAL": 0.7896
+        }
+      },
+      {
+        "run_id": 119,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.6162146910000956,
+        "timers": {
+          "resample": 0.4853,
+          "buildMergeTree": 0.0634,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0623,
+          "copyLabels": 0.0024,
+          "TOTAL": 0.6161
+        }
+      },
+      {
+        "run_id": 120,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 175,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.533273425000516,
+        "timers": {
+          "resample": 0.3955,
+          "buildMergeTree": 0.0859,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0471,
+          "copyLabels": 0.0021,
+          "TOTAL": 0.5332
+        }
+      },
+      {
+        "run_id": 121,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 200,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.46620694200009893,
+        "timers": {
+          "resample": 0.3318,
+          "buildMergeTree": 0.0819,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0,
+          "computeLabels": 0.048,
+          "copyLabels": 0.0017,
+          "TOTAL": 0.4661
+        }
+      },
+      {
+        "run_id": 122,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 225,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4488832139995793,
+        "timers": {
+          "resample": 0.2724,
+          "buildMergeTree": 0.1257,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0451,
+          "copyLabels": 0.0029,
+          "TOTAL": 0.4488
+        }
+      },
+      {
+        "run_id": 123,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 250,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4139111380000031,
+        "timers": {
+          "resample": 0.2502,
+          "buildMergeTree": 0.0905,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0683,
+          "copyLabels": 0.0021,
+          "TOTAL": 0.4138
+        }
+      },
+      {
+        "run_id": 124,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 275,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.44236155599992344,
+        "timers": {
+          "resample": 0.22,
+          "buildMergeTree": 0.1499,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0675,
+          "copyLabels": 0.0022,
+          "TOTAL": 0.4422
+        }
+      },
+      {
+        "run_id": 125,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 300,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.35863678399982746,
+        "timers": {
+          "resample": 0.1943,
+          "buildMergeTree": 0.097,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0623,
+          "copyLabels": 0.0022,
+          "TOTAL": 0.3585
+        }
+      },
+      {
+        "run_id": 126,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 325,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.33744950700020127,
+        "timers": {
+          "resample": 0.1736,
+          "buildMergeTree": 0.1131,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0048,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0426,
+          "copyLabels": 0.0026,
+          "TOTAL": 0.3373
+        }
+      },
+      {
+        "run_id": 127,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 350,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.30029005899996264,
+        "timers": {
+          "resample": 0.1584,
+          "buildMergeTree": 0.0866,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0496,
+          "copyLabels": 0.0026,
+          "TOTAL": 0.3001
+        }
+      },
+      {
+        "run_id": 128,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 375,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.28175604399984877,
+        "timers": {
+          "resample": 0.1408,
+          "buildMergeTree": 0.0905,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0457,
+          "copyLabels": 0.0017,
+          "TOTAL": 0.2816
+        }
+      },
+      {
+        "run_id": 129,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 400,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3070763830000942,
+        "timers": {
+          "resample": 0.152,
+          "buildMergeTree": 0.0921,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0575,
+          "copyLabels": 0.0023,
+          "TOTAL": 0.3069
+        }
+      },
+      {
+        "run_id": 130,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 425,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2788685310006258,
+        "timers": {
+          "resample": 0.1352,
+          "buildMergeTree": 0.0897,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0034,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0475,
+          "copyLabels": 0.002,
+          "TOTAL": 0.2787
+        }
+      },
+      {
+        "run_id": 131,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 450,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4156590259999575,
+        "timers": {
+          "resample": 0.1226,
+          "buildMergeTree": 0.2363,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0507,
+          "copyLabels": 0.0023,
+          "TOTAL": 0.4155
+        }
+      },
+      {
+        "run_id": 132,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 475,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.28376613999989786,
+        "timers": {
+          "resample": 0.1394,
+          "buildMergeTree": 0.0926,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0458,
+          "copyLabels": 0.0024,
+          "TOTAL": 0.2836
+        }
+      },
+      {
+        "run_id": 133,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 25,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 2.8325425659995744,
+        "timers": {
+          "resample": 2.7045,
+          "buildMergeTree": 0.0602,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0649,
+          "copyLabels": 0.0004,
+          "TOTAL": 2.8325
+        }
+      },
+      {
+        "run_id": 134,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.8676082680003674,
+        "timers": {
+          "resample": 0.7414,
+          "buildMergeTree": 0.0656,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0037,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0561,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.8675
+        }
+      },
+      {
+        "run_id": 135,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 75,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4875214479998249,
+        "timers": {
+          "resample": 0.382,
+          "buildMergeTree": 0.0568,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0456,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.4874
+        }
+      },
+      {
+        "run_id": 136,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4045890710003732,
+        "timers": {
+          "resample": 0.2897,
+          "buildMergeTree": 0.0677,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0446,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.4045
+        }
+      },
+      {
+        "run_id": 137,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 125,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.31591904499964585,
+        "timers": {
+          "resample": 0.1933,
+          "buildMergeTree": 0.0648,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0021,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0551,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.3158
+        }
+      },
+      {
+        "run_id": 138,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.28911015700032294,
+        "timers": {
+          "resample": 0.1571,
+          "buildMergeTree": 0.0666,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0623,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.289
+        }
+      },
+      {
+        "run_id": 139,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 175,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.39190675300051225,
+        "timers": {
+          "resample": 0.1304,
+          "buildMergeTree": 0.2007,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0578,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.3918
+        }
+      },
+      {
+        "run_id": 140,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 200,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.23648479899929953,
+        "timers": {
+          "resample": 0.1217,
+          "buildMergeTree": 0.067,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.002,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0449,
+          "copyLabels": 0.0007,
+          "TOTAL": 0.2364
+        }
+      },
+      {
+        "run_id": 141,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 225,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5424848989996462,
+        "timers": {
+          "resample": 0.1189,
+          "buildMergeTree": 0.3522,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0679,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.5424
+        }
+      },
+      {
+        "run_id": 142,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 250,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.23184058900005766,
+        "timers": {
+          "resample": 0.0981,
+          "buildMergeTree": 0.0862,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0443,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.2317
+        }
+      },
+      {
+        "run_id": 143,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 275,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.32862661500075774,
+        "timers": {
+          "resample": 0.0713,
+          "buildMergeTree": 0.2099,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0437,
+          "copyLabels": 0.0008,
+          "TOTAL": 0.3285
+        }
+      },
+      {
+        "run_id": 144,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 300,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.25613557399992715,
+        "timers": {
+          "resample": 0.0963,
+          "buildMergeTree": 0.0946,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0618,
+          "copyLabels": 0.0004,
+          "TOTAL": 0.256
+        }
+      },
+      {
+        "run_id": 145,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 325,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3349963460004801,
+        "timers": {
+          "resample": 0.0916,
+          "buildMergeTree": 0.1986,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0414,
+          "copyLabels": 0.0004,
+          "TOTAL": 0.3349
+        }
+      },
+      {
+        "run_id": 146,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 350,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5021775279992653,
+        "timers": {
+          "resample": 0.072,
+          "buildMergeTree": 0.3788,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0476,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.502
+        }
+      },
+      {
+        "run_id": 147,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 375,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.21302903600007994,
+        "timers": {
+          "resample": 0.063,
+          "buildMergeTree": 0.0866,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0594,
+          "copyLabels": 0.0007,
+          "TOTAL": 0.2126
+        }
+      },
+      {
+        "run_id": 148,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 400,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3469108760000381,
+        "timers": {
+          "resample": 0.0644,
+          "buildMergeTree": 0.2195,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.059,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.3467
+        }
+      },
+      {
+        "run_id": 149,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 425,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5413731990001907,
+        "timers": {
+          "resample": 0.0702,
+          "buildMergeTree": 0.425,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.042,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.5412
+        }
+      },
+      {
+        "run_id": 150,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 450,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5466448839997611,
+        "timers": {
+          "resample": 0.0611,
+          "buildMergeTree": 0.4287,
+          "buildClusterTree": 0.0005,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0525,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.5464
+        }
+      },
+      {
+        "run_id": 151,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 475,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.22969084800024575,
+        "timers": {
+          "resample": 0.0598,
+          "buildMergeTree": 0.1132,
+          "buildClusterTree": 0.0005,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0005,
+          "computeLabels": 0.0524,
+          "copyLabels": 0.0005,
+          "TOTAL": 0.2295
+        }
+      },
+      {
+        "run_id": 152,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 25,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 13.752437541999825,
+        "timers": {
+          "resample": 13.6337,
+          "buildMergeTree": 0.0489,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0,
+          "computeLabels": 0.06,
+          "copyLabels": 0.0073,
+          "TOTAL": 13.7523
+        }
+      },
+      {
+        "run_id": 153,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 3.5885240529996736,
+        "timers": {
+          "resample": 3.4438,
+          "buildMergeTree": 0.0639,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0758,
+          "copyLabels": 0.0023,
+          "TOTAL": 3.5884
+        }
+      },
+      {
+        "run_id": 154,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 75,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.8463009360002616,
+        "timers": {
+          "resample": 1.6645,
+          "buildMergeTree": 0.0803,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0049,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0935,
+          "copyLabels": 0.0028,
+          "TOTAL": 1.8462
+        }
+      },
+      {
+        "run_id": 155,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.1605348030007008,
+        "timers": {
+          "resample": 1.0223,
+          "buildMergeTree": 0.0646,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0686,
+          "copyLabels": 0.0024,
+          "TOTAL": 1.1604
+        }
+      },
+      {
+        "run_id": 156,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 125,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.8618475359999138,
+        "timers": {
+          "resample": 0.7274,
+          "buildMergeTree": 0.0719,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0574,
+          "copyLabels": 0.0025,
+          "TOTAL": 0.8617
+        }
+      },
+      {
+        "run_id": 157,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.6510816760001035,
+        "timers": {
+          "resample": 0.5148,
+          "buildMergeTree": 0.0702,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0613,
+          "copyLabels": 0.0023,
+          "TOTAL": 0.651
+        }
+      },
+      {
+        "run_id": 158,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 175,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.596986243000174,
+        "timers": {
+          "resample": 0.4217,
+          "buildMergeTree": 0.1095,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0605,
+          "copyLabels": 0.0024,
+          "TOTAL": 0.5969
+        }
+      },
+      {
+        "run_id": 159,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 200,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5138318529998287,
+        "timers": {
+          "resample": 0.3437,
+          "buildMergeTree": 0.1011,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0,
+          "computeLabels": 0.064,
+          "copyLabels": 0.0023,
+          "TOTAL": 0.5137
+        }
+      },
+      {
+        "run_id": 160,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 225,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.39949159800016787,
+        "timers": {
+          "resample": 0.2674,
+          "buildMergeTree": 0.0817,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0457,
+          "copyLabels": 0.002,
+          "TOTAL": 0.3994
+        }
+      },
+      {
+        "run_id": 161,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 250,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4553969449998476,
+        "timers": {
+          "resample": 0.2681,
+          "buildMergeTree": 0.113,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0692,
+          "copyLabels": 0.0023,
+          "TOTAL": 0.4553
+        }
+      },
+      {
+        "run_id": 162,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 275,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3774263459999929,
+        "timers": {
+          "resample": 0.2189,
+          "buildMergeTree": 0.0944,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0584,
+          "copyLabels": 0.0028,
+          "TOTAL": 0.3773
+        }
+      },
+      {
+        "run_id": 163,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 300,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3242165199999363,
+        "timers": {
+          "resample": 0.1734,
+          "buildMergeTree": 0.0941,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0504,
+          "copyLabels": 0.0034,
+          "TOTAL": 0.3241
+        }
+      },
+      {
+        "run_id": 164,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 325,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.39625006200003554,
+        "timers": {
+          "resample": 0.228,
+          "buildMergeTree": 0.1151,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0027,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0474,
+          "copyLabels": 0.0025,
+          "TOTAL": 0.3961
+        }
+      },
+      {
+        "run_id": 165,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 350,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3097701679998863,
+        "timers": {
+          "resample": 0.1669,
+          "buildMergeTree": 0.0864,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0027,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0509,
+          "copyLabels": 0.0024,
+          "TOTAL": 0.3097
+        }
+      },
+      {
+        "run_id": 166,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 375,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.288103054000203,
+        "timers": {
+          "resample": 0.148,
+          "buildMergeTree": 0.0856,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0026,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0483,
+          "copyLabels": 0.003,
+          "TOTAL": 0.288
+        }
+      },
+      {
+        "run_id": 167,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 400,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3317367760000707,
+        "timers": {
+          "resample": 0.1474,
+          "buildMergeTree": 0.1135,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0653,
+          "copyLabels": 0.0023,
+          "TOTAL": 0.3316
+        }
+      },
+      {
+        "run_id": 168,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 425,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.36233961900052236,
+        "timers": {
+          "resample": 0.1636,
+          "buildMergeTree": 0.1286,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0644,
+          "copyLabels": 0.0025,
+          "TOTAL": 0.3622
+        }
+      },
+      {
+        "run_id": 169,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 450,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.272521969999616,
+        "timers": {
+          "resample": 0.1207,
+          "buildMergeTree": 0.0941,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0513,
+          "copyLabels": 0.003,
+          "TOTAL": 0.2723
+        }
+      },
+      {
+        "run_id": 170,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 475,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2904787369998303,
+        "timers": {
+          "resample": 0.1302,
+          "buildMergeTree": 0.1025,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0519,
+          "copyLabels": 0.0026,
+          "TOTAL": 0.2903
+        }
+      },
+      {
+        "run_id": 171,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 25,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 5.1809757459996035,
+        "timers": {
+          "resample": 5.0406,
+          "buildMergeTree": 0.0778,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0593,
+          "copyLabels": 0.0009,
+          "TOTAL": 5.1809
+        }
+      },
+      {
+        "run_id": 172,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.4881745750008122,
+        "timers": {
+          "resample": 1.3799,
+          "buildMergeTree": 0.0556,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0488,
+          "copyLabels": 0.0011,
+          "TOTAL": 1.4881
+        }
+      },
+      {
+        "run_id": 173,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 75,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.8549070380004196,
+        "timers": {
+          "resample": 0.7387,
+          "buildMergeTree": 0.0691,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0022,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0436,
+          "copyLabels": 0.001,
+          "TOTAL": 0.8548
+        }
+      },
+      {
+        "run_id": 174,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.6292387199991936,
+        "timers": {
+          "resample": 0.4918,
+          "buildMergeTree": 0.0681,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0656,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.6291
+        }
+      },
+      {
+        "run_id": 175,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 125,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.46156324799994763,
+        "timers": {
+          "resample": 0.3281,
+          "buildMergeTree": 0.0689,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0,
+          "computeLabels": 0.061,
+          "copyLabels": 0.001,
+          "TOTAL": 0.4615
+        }
+      },
+      {
+        "run_id": 176,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.37042385099994135,
+        "timers": {
+          "resample": 0.2372,
+          "buildMergeTree": 0.0744,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0,
+          "computeLabels": 0.055,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.3703
+        }
+      },
+      {
+        "run_id": 177,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 175,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3534817670006305,
+        "timers": {
+          "resample": 0.2047,
+          "buildMergeTree": 0.0858,
+          "buildClusterTree": 0.0,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0595,
+          "copyLabels": 0.001,
+          "TOTAL": 0.3534
+        }
+      },
+      {
+        "run_id": 178,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 200,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3198398909999014,
+        "timers": {
+          "resample": 0.1794,
+          "buildMergeTree": 0.0821,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0,
+          "computeLabels": 0.0546,
+          "copyLabels": 0.001,
+          "TOTAL": 0.3197
+        }
+      },
+      {
+        "run_id": 179,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 225,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3179809399998703,
+        "timers": {
+          "resample": 0.1749,
+          "buildMergeTree": 0.0808,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0585,
+          "copyLabels": 0.001,
+          "TOTAL": 0.3179
+        }
+      },
+      {
+        "run_id": 180,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 250,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.28574117599964666,
+        "timers": {
+          "resample": 0.1559,
+          "buildMergeTree": 0.0778,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0484,
+          "copyLabels": 0.001,
+          "TOTAL": 0.2856
+        }
+      },
+      {
+        "run_id": 181,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 275,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.26921994500025903,
+        "timers": {
+          "resample": 0.1248,
+          "buildMergeTree": 0.0885,
+          "buildClusterTree": 0.0001,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0523,
+          "copyLabels": 0.0009,
+          "TOTAL": 0.2691
+        }
+      },
+      {
+        "run_id": 182,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 300,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.27486871400014934,
+        "timers": {
+          "resample": 0.1192,
+          "buildMergeTree": 0.1035,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0001,
+          "computeLabels": 0.0485,
+          "copyLabels": 0.0009,
+          "TOTAL": 0.2747
+        }
+      },
+      {
+        "run_id": 183,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 325,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.34507122300055926,
+        "timers": {
+          "resample": 0.0993,
+          "buildMergeTree": 0.1902,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0027,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0512,
+          "copyLabels": 0.001,
+          "TOTAL": 0.3449
+        }
+      },
+      {
+        "run_id": 184,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 350,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2642002210004648,
+        "timers": {
+          "resample": 0.1179,
+          "buildMergeTree": 0.0937,
+          "buildClusterTree": 0.0002,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0484,
+          "copyLabels": 0.0012,
+          "TOTAL": 0.2641
+        }
+      },
+      {
+        "run_id": 185,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 375,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2537030080002296,
+        "timers": {
+          "resample": 0.1021,
+          "buildMergeTree": 0.0912,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0002,
+          "computeLabels": 0.0563,
+          "copyLabels": 0.001,
+          "TOTAL": 0.2536
+        }
+      },
+      {
+        "run_id": 186,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 400,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.24817428900041705,
+        "timers": {
+          "resample": 0.0929,
+          "buildMergeTree": 0.1055,
+          "buildClusterTree": 0.0003,
+          "computeNodeEnergies": 0.0023,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0457,
+          "copyLabels": 0.001,
+          "TOTAL": 0.248
+        }
+      },
+      {
+        "run_id": 187,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 425,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2473579890001929,
+        "timers": {
+          "resample": 0.0829,
+          "buildMergeTree": 0.1175,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0003,
+          "computeLabels": 0.0425,
+          "copyLabels": 0.001,
+          "TOTAL": 0.2472
+        }
+      },
+      {
+        "run_id": 188,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 450,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.22932649300037156,
+        "timers": {
+          "resample": 0.0873,
+          "buildMergeTree": 0.0876,
+          "buildClusterTree": 0.0004,
+          "computeNodeEnergies": 0.0024,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0499,
+          "copyLabels": 0.001,
+          "TOTAL": 0.2291
+        }
+      },
+      {
+        "run_id": 189,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 475,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.37566403599976184,
+        "timers": {
+          "resample": 0.0878,
+          "buildMergeTree": 0.2341,
+          "buildClusterTree": 0.0005,
+          "computeNodeEnergies": 0.0025,
+          "selectClusters": 0.0004,
+          "computeLabels": 0.0491,
+          "copyLabels": 0.001,
+          "TOTAL": 0.3755
+        }
+      }
+    ],
+    "hdbscan": []
+  }
+}

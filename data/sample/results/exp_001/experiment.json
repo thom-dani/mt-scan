@@ -1,0 +1,467 @@
+{
+  "experiment_id": "exp_001",
+  "timestamp": "2026-06-15T11:08:00.600417",
+  "parameters": {
+    "kernel": "gaussian",
+    "resolution": 512,
+    "device": "cpu",
+    "alpha_range": [
+      25,
+      50,
+      75,
+      100,
+      125,
+      150,
+      175,
+      200,
+      225,
+      250,
+      275,
+      300,
+      325,
+      350,
+      375,
+      400,
+      425,
+      450,
+      475
+    ],
+    "minpts_range": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      40,
+      50
+    ],
+    "dataset_list": [
+      "blobs_grid_100.csv",
+      "blobs_grid_200.csv"
+    ]
+  },
+  "results": {
+    "mtscan": [
+      {
+        "run_id": 0,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 25,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.1057964199999333
+      },
+      {
+        "run_id": 1,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.42769321099967783
+      },
+      {
+        "run_id": 2,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 75,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2799541130002581
+      },
+      {
+        "run_id": 3,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2897370930004399
+      },
+      {
+        "run_id": 4,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 125,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.22849778999989212
+      },
+      {
+        "run_id": 5,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.19641197500004637
+      },
+      {
+        "run_id": 6,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 175,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.31193569999959436
+      },
+      {
+        "run_id": 7,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 200,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.20516424299967184
+      },
+      {
+        "run_id": 8,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 225,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.23459020599966607
+      },
+      {
+        "run_id": 9,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 250,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.17116042099996776
+      },
+      {
+        "run_id": 10,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 275,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.16928494400008276
+      },
+      {
+        "run_id": 11,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 300,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.16744233700001132
+      },
+      {
+        "run_id": 12,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 325,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1919698979995701
+      },
+      {
+        "run_id": 13,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 350,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.18241353400026128
+      },
+      {
+        "run_id": 14,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 375,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2221841789996688
+      },
+      {
+        "run_id": 15,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 400,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.17732345800004623
+      },
+      {
+        "run_id": 16,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 425,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.17730157200003305
+      },
+      {
+        "run_id": 17,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 450,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.19226042800028154
+      },
+      {
+        "run_id": 18,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 475,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.17835688200011646
+      },
+      {
+        "run_id": 19,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 25,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 2.150312422999832
+      },
+      {
+        "run_id": 20,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.6658945200001654
+      },
+      {
+        "run_id": 21,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 75,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.41369407399997726
+      },
+      {
+        "run_id": 22,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.29791045199999644
+      },
+      {
+        "run_id": 23,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 125,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2362321969999357
+      },
+      {
+        "run_id": 24,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2219105170001967
+      },
+      {
+        "run_id": 25,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 175,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.24006558700011738
+      },
+      {
+        "run_id": 26,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 200,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.21585700500008898
+      },
+      {
+        "run_id": 27,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 225,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.31294398999989426
+      },
+      {
+        "run_id": 28,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 250,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2109205319998182
+      },
+      {
+        "run_id": 29,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 275,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.44502360000024055
+      },
+      {
+        "run_id": 30,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 300,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2290050310002698
+      },
+      {
+        "run_id": 31,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 325,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.20787212599998384
+      },
+      {
+        "run_id": 32,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 350,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.45889391699984117
+      },
+      {
+        "run_id": 33,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 375,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.20701038000015615
+      },
+      {
+        "run_id": 34,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 400,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.23388164699963454
+      },
+      {
+        "run_id": 35,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 425,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.25473581200003537
+      },
+      {
+        "run_id": 36,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 450,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.539194974000111
+      },
+      {
+        "run_id": 37,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 475,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.19294164800021463
+      }
+    ],
+    "hdbscan": []
+  }
+}
