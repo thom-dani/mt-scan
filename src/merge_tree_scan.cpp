@@ -73,7 +73,26 @@ void MergeTreeScan::normalizePoints(const float *points_ptr, const int targetRes
     }
 }
 
-void MergeTreeScan::execute(const float *points_ptr, int *labels_ptr)
+void MergeTreeScan::distributionFromSample(
+    const float *points_ptr,
+    const int targetRes,
+    std::vector<float> &pointsNormalized,
+    std::vector<double> &density)
+{
+
+    normalizePoints(points_ptr, this->targetRes_, pointsNormalized);
+#ifdef USE_CUDA
+    resample_gpu(pointsNormalized, this->resX_ + 1, this->resY_ + 1, this->alpha_, density);
+#else
+    resample_cpu(pointsNormalized, this->resX_ + 1, this->resY_ + 1, this->alpha_, this->kernel_, density);
+#endif
+}
+
+void MergeTreeScan::execute(
+    const float *points_ptr,
+    int *labels_ptr,
+    const float *distribution_ptr)
+
 {
     using Clock = std::chrono::high_resolution_clock;
     using Ms = std::chrono::duration<double>;
@@ -89,14 +108,22 @@ void MergeTreeScan::execute(const float *points_ptr, int *labels_ptr)
     auto t = Clock::now();
 
     std::vector<float> pointsNormalized{};
-    normalizePoints(points_ptr, this->targetRes_, pointsNormalized);
-
     std::vector<double> density;
-#ifdef USE_CUDA
-    resample_gpu(pointsNormalized, this->resX_ + 1, this->resY_ + 1, this->alpha_, density);
-#else
-    resample_cpu(pointsNormalized, this->resX_ + 1, this->resY_ + 1, this->alpha_, this->kernel_, density);
-#endif
+
+    if (!distributionMode_)
+    {
+        distributionFromSample(points_ptr, targetRes_, pointsNormalized, density);
+    }
+
+    else
+    {
+        pointsNormalized.resize(2 * nPoints_);
+        std::copy(points_ptr, points_ptr + 2 * nPoints_, pointsNormalized.begin());
+        int nVertices = (resX_ + 1) * (resY_ + 1);
+        density.resize(nVertices);
+        std::copy(distribution_ptr, distribution_ptr + nVertices, density.begin());
+    }
+
     t = tock("resample", t);
 
     std::vector<int> nodeVertexId{};

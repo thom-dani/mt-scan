@@ -17,7 +17,7 @@ args = parser.parse_args()
 # EXPERIMENT PARAMETERS — fill these in
 # ─────────────────────────────────────────────
 
-EXPERIMENT_ID   = "exp_002"
+EXPERIMENT_ID   = "exp_003"
 DATASET_FOLDER  = "/workspace/data/synthetic-1"
 RESULTS_FOLDER  = os.path.join(DATASET_FOLDER, "results")
 PLOTS_FOLDER    = os.path.join(RESULTS_FOLDER, EXPERIMENT_ID, "plots")
@@ -32,19 +32,19 @@ if os.path.exists(experiment_folder):
         shutil.rmtree(experiment_folder)
         print(f"Overwriting existing experiment '{EXPERIMENT_ID}'")
     else:
-        raise FileExistsError(f"There is already an experiment with id '{EXPERIMENT_ID}'. Use --overwrite 1 to overwrite it.")
+        raise FileExistsError(f"There is already an experiment with id {EXPERIMENT_ID} for the dataset {DATASET_FOLDER}.")
 
 os.makedirs(PLOTS_FOLDER)
 
 
-KERNEL          = "cylinder"       
+KERNEL          = "gaussian"       
 RESOLUTION      = 512
 DEVICE          = "cpu"
 
 ALPHA_RANGE     = list(range(10, 201, 10))
 MINPTS_RANGE    = [5, 10, 15, 20, 25, 30, 40, 50]
 
-csv_files = [f for f in os.listdir(DATASET_FOLDER) if f.endswith(".csv")]
+csv_files = sorted([f for f in os.listdir(DATASET_FOLDER) if f.endswith(".csv")])
 
 print("=" * 50)
 print(f"  EXPERIMENT {EXPERIMENT_ID}")

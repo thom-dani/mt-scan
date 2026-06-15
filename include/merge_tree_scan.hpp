@@ -8,14 +8,38 @@ public:
     MergeTreeScan() = default;
 
     void setParameters(const int target_res, const int alpha, const float n_points, KernelType kernelType);
+
     inline void setPrintLogs(const bool printLogs)
     {
         printLogs_ = printLogs;
     }
-    void execute(const float *ptr, int *labels);
+
+    inline void setResolution(const int resX, const int resY)
+    {
+        resX_ = resX;
+        resY_ = resY;
+    }
+
+    inline void setDistributionMode(const bool mode)
+    {
+        distributionMode_ = mode;
+    }
+
+    void execute(
+        const float *ptr,
+        int *labels,
+        const float *distribution_ptr = nullptr);
 
 private:
-    void normalizePoints(const float *points_ptr, const int targetRes, std::vector<float> &pointsNormalized);
+    void distributionFromSample(
+        const float *points_ptr,
+        const int targetRes,
+        std::vector<float> &pointsNormalized,
+        std::vector<double> &density);
+
+    void normalizePoints(const float *points_ptr,
+                         const int targetRes,
+                         std::vector<float> &pointsNormalized);
 
     void buildMergeTree(
         const std::vector<double> &density,
@@ -65,4 +89,5 @@ private:
     int nPoints_;
     KernelType kernel_{KernelType::Gaussian};
     bool printLogs_{false};
+    bool distributionMode_{false};
 };
