@@ -21,7 +21,7 @@ args = parser.parse_args()
 # ─────────────────────────────────────────────
 
 EXPERIMENT_ID   = "exp_002"
-DATASET_FOLDER  = "/workspace/data/sample"
+DATASET_FOLDER  = "/workspace/data/time"
 EXPERIMENT_FOLDER = os.path.join(DATASET_FOLDER,"results", EXPERIMENT_ID)
 PLOTS_FOLDER    = os.path.join(EXPERIMENT_FOLDER, "plots")
 
@@ -147,13 +147,14 @@ for csv_file in csv_files:
 
     
     try:
-
-        mt_scan.compute_labels(points, ALPHA_RANGE[0], RESOLUTION, KERNEL, False)
-        hdbscan.HDBSCAN(min_cluster_size=MINPTS_RANGE[0]).fit_predict(points)
         
         data      = np.loadtxt(os.path.join(DATASET_FOLDER, csv_file), delimiter=",", skiprows=1)
         points    = data[:, :2].astype(np.float32)
 
+        mt_scan.compute_labels(points, ALPHA_RANGE[0], RESOLUTION, KERNEL, False)
+        hdbscan.HDBSCAN(min_cluster_size=MINPTS_RANGE[0]).fit_predict(points)
+        
+        
         for alpha in ALPHA_RANGE:
 
             print(f"run_id:{run_id}")

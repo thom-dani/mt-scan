@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--overwrite", action="store_true",
+parser.add_argument("-o", "--overwrite", action="store_true",
                     help="Overwrite an existing experiment with the same ID")
 args = parser.parse_args()
 
@@ -18,7 +18,7 @@ args = parser.parse_args()
 # ─────────────────────────────────────────────
 
 EXPERIMENT_ID   = "exp_001"
-DATASET_FOLDER  = "/workspace/data/dataset-sample"
+DATASET_FOLDER  = "/workspace/data/synthetic-1"
 RESULTS_FOLDER  = os.path.join(DATASET_FOLDER, "results")
 PLOTS_FOLDER    = os.path.join(RESULTS_FOLDER, EXPERIMENT_ID, "plots")
 

@@ -104,36 +104,33 @@ void MergeTreeScan::execute(const float *points_ptr, int *labels_ptr)
     std::vector<std::pair<int, int>> edges{};
     std::vector<int> segmentationIds{};
     buildMergeTree(density, nodeVertexId, nodeCriticalType, edges, segmentationIds);
-    t = tock("buildMergeTree", t);
 
     std::vector<std::vector<int>> adjacencyList{};
     std::vector<int> bottomUpNodes{};
     int rootId{};
     buildClusterTree(edges, nodeCriticalType, adjacencyList, bottomUpNodes, rootId);
-    t = tock("buildClusterTree", t);
+    t = tock("clusterTree", t);
 
     std::vector<float> nodeEnergy;
     computeNodeEnergies(adjacencyList, bottomUpNodes, segmentationIds, density, nodeVertexId, nodeEnergy);
-    t = tock("computeNodeEnergies", t);
 
     std::vector<bool> isCluster;
     std::vector<float> clusterWeight;
     selectClusters(adjacencyList, nodeEnergy, bottomUpNodes, rootId, isCluster, clusterWeight);
-    t = tock("selectClusters", t);
 
     int minClusterSize{};
     std::vector<int> labels{};
     computeLabels(adjacencyList, rootId, density, nodeVertexId, segmentationIds,
                   pointsNormalized, clusterWeight, isCluster, this->resX_,
                   minClusterSize, labels);
-    t = tock("computeLabels", t);
 
     for (int i = 0; i < nPoints_; i++)
         labels_ptr[i] = labels[i];
-    tock("copyLabels", t);
+
+    tock("computeLabels", t);
 
     if (printLogs_)
-        std::cout << "TIMER TOTAL " << " " << std::fixed << std::setprecision(4) << Ms(Clock::now() - t0_total).count() << "\n";
+        std::cout << "TIMER total " << " " << std::fixed << std::setprecision(4) << Ms(Clock::now() - t0_total).count() << "\n";
 }
 
 void MergeTreeScan::buildMergeTree(

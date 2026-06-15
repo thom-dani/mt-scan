@@ -8,13 +8,49 @@ import matplotlib.cm as cm
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--expfolder", type=str)
+parser.add_argument("-e", "--expfolder", type=str)
 
 args = parser.parse_args() 
 
 EXPERIMENT_FOLDER=args.expfolder
 JSON_PATH = os.path.join(EXPERIMENT_FOLDER, "experiment.json")
 PLOTS_FOLDER = os.path.join(EXPERIMENT_FOLDER, "plots")
+
+
+def build_time_matrix_bars(json_path: str) -> dict:
+    with open(json_path) as f:
+        experiment = json.load(f)
+
+    n_points_set = set()
+    alpha_set    = set()
+
+    for entry in experiment["results"]["mtscan"]:
+        n_points_set.add(entry["n_points"])
+        alpha_set.add(entry["parameters"]["alpha"])
+
+    n_points_vals = sorted(n_points_set)
+    alpha_vals    = sorted(alpha_set)
+
+    n_pts_idx = {v: i for i, v in enumerate(n_points_vals)}
+    alpha_idx = {v: i for i, v in enumerate(alpha_vals)}
+
+    matrix = np.full((len(n_points_vals), len(alpha_vals), 4), np.nan)
+
+    for entry in experiment["results"]["mtscan"]:
+        timers=entry.get("timers", {})
+        time_resample=timers.get("resample")
+        time_tree=timers.get("clusterTree")
+        time_labels=timers.get("computeLabels")
+        time_total=timers.get("total")
+        i = n_pts_idx[entry["n_points"]]
+        j = alpha_idx[entry["parameters"]["alpha"]]
+        matrix[i, j] = [time_resample, time_tree, time_labels, time_total]
+
+    return {
+        "matrix":   matrix,
+        "n_points": n_points_vals,
+        "alphas":   alpha_vals,
+    }
 
 def build_time_matrix_alpha(json_path: str) -> dict:
     with open(json_path) as f:
@@ -245,11 +281,34 @@ def plot_time_vs_minpts(
 
     return ax
 
+def plot_bars(time_data, alpha, title, ax):
+    matrix   = time_data["matrix"]
+    n_points = time_data["n_points"]
+    alphas   = time_data["alphas"]
+
+    j = alphas.index(alpha)
+
+    labels       = ["resample", "clusterTree", "computeLabels"]
+    colors       = ["#4C72B0", "#DD8452", "#55A868"]
+    bottom       = np.zeros(len(n_points))
+
+    for k, (label, color) in enumerate(zip(labels, colors)):
+        values = matrix[:, j, k]
+        ax.bar(range(len(n_points)), values, bottom=bottom, label=label, color=color)
+        bottom += np.nan_to_num(values)
+
+    ax.set_xticks(range(len(n_points)))
+    ax.set_xticklabels([str(n) for n in n_points], rotation=45, ha="right")
+    ax.set_xlabel("n_points")
+    ax.set_ylabel("time (s)")
+    ax.set_title(title)
+    ax.legend()
 
 if __name__ == "__main__":
 
     time_data_mtscan = build_time_matrix_alpha(JSON_PATH)
     time_data_hdbscan = build_time_matrix_minpts(JSON_PATH)
+    time_data_bars = build_time_matrix_bars(JSON_PATH)
 
     #save_path=os.path.join(PLOTS_FOLDER, "time_vs_n_points.png")
     save_path_1=f"{PLOTS_FOLDER}/time_vs_n_points.png"
@@ -292,3 +351,17 @@ if __name__ == "__main__":
 
     save_plot(fig2, save_path_2)
 
+    fig3, ax3 = plt.subplots()
+
+    alpha=50
+    title=f"Details runtime vs number of points, alpha={alpha}"
+
+    save_path_3=f"{PLOTS_FOLDER}/bar_plot.png"
+    plot_bars(
+            time_data_bars,
+            alpha,
+            title,
+            ax3
+        )
+
+    save_plot(fig3, save_path_3)

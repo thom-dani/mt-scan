@@ -12,7 +12,7 @@ py::array MergeTreeScanInterface(
     bool print_logs)
 {
 
-    auto buf = arr.request();
+    auto buf = points.request();
 
     if (buf.ndim != 2 || buf.shape[1] != 2)
     {
