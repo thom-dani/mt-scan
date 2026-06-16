@@ -25,6 +25,29 @@ public:
         distributionMode_ = mode;
     }
 
+    inline void setNumberOfPoints(const int n)
+    {
+        nPoints_ = n;
+    }
+
+    inline void setDebugMode(const bool mode)
+    {
+        debugMode_ = mode;
+    }
+
+    inline void printClassParameters()
+    {
+        std::cout << "targetRes_: " << targetRes_ << "\n"
+                  << "resX_: " << resX_ << "\n"
+                  << "resY_: " << resY_ << "\n"
+                  << "alpha_: " << alpha_ << "\n"
+                  << "nPoints_: " << nPoints_ << "\n"
+                  << "kernel_: " << static_cast<int>(kernel_) << "\n"
+                  << "printLogs_: " << std::boolalpha << printLogs_ << "\n"
+                  << "distributionMode_: " << std::boolalpha << distributionMode_
+                  << std::endl;
+    }
+
     void execute(
         const float *ptr,
         int *labels,
@@ -82,12 +105,17 @@ private:
         const int &minClusterSize,
         std::vector<int> &labels);
 
-    int targetRes_;
-    int resX_;
-    int resY_;
-    int alpha_;
-    int nPoints_;
+    void saveFlatMapZones(
+        const std::vector<int> &nodeFlatMapId,
+        const std::vector<int> &segmentationId_cells);
+
+    int targetRes_{};
+    int resX_{};
+    int resY_{};
+    int alpha_{};
+    int nPoints_{};
     KernelType kernel_{KernelType::Gaussian};
     bool printLogs_{false};
     bool distributionMode_{false};
+    bool debugMode_{false};
 };
