@@ -42,18 +42,19 @@ lines.append(r"\end{itemize}")
 lines.append(r"\vspace{1cm}")
 
 lines.append(r"\small")
-lines.append(r"\begin{longtable}{|l|c|c|c|c|l|}")
+lines.append(r"\begin{longtable}{|l|c|c|c|c|c|l|}")
 lines.append(r"\hline")
-lines.append(r"\textbf{Dataset} & \textbf{Best ARI (MT-Scan)} & \textbf{Best ARI (HDBSCAN)} & \textbf{Best $\alpha$} & \textbf{Best minpts} & \textbf{Plot} \\")
+lines.append(r"\textbf{Dataset} & \textbf{n\_points} & \textbf{Best ARI (MT-Scan)} & \textbf{Best ARI (HDBSCAN)} & \textbf{Best $\alpha$} & \textbf{Best minpts} & \textbf{Plot} \\")
 lines.append(r"\hline")
 lines.append(r"\endfirsthead")
 lines.append(r"\hline")
-lines.append(r"\textbf{Dataset} & \textbf{Best ARI (MT-Scan)} & \textbf{Best ARI (HDBSCAN)} & \textbf{Best $\alpha$} & \textbf{Best minpts} & \textbf{Plot} \\")
+lines.append(r"\textbf{Dataset} & \textbf{n\_points} & \textbf{Best ARI (MT-Scan)} & \textbf{Best ARI (HDBSCAN)} & \textbf{Best $\alpha$} & \textbf{Best minpts} & \textbf{Plot} \\")
 lines.append(r"\hline")
 lines.append(r"\endhead")
 
 for result in experiment["results"]:
     dataset     = result["dataset_name"].replace("_", r"\_")
+    n_points    = result["n_points"]
     ari_mtscan  = result["mtscan"]["best_ari"]
     ari_hdbscan = result["hdbscan"]["best_ari"]
     best_alpha  = result["mtscan"]["best_alpha_ari"]
@@ -62,6 +63,7 @@ for result in experiment["results"]:
 
     row = (
         f"{dataset} & "
+        f"{n_points} & "
         f"{ari_mtscan:.4f} & "
         f"{ari_hdbscan:.4f} & "
         f"{best_alpha} & "

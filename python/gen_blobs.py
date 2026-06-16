@@ -17,7 +17,7 @@ def save_dataset(name, X, y):
 
 
 
-n_points_range = range(100_000, 1_000_001, 100_000)
+n_points_range = range(100_000, 2_000_001, 100_000)
 
 for n in n_points_range:
 
@@ -25,4 +25,3 @@ for n in n_points_range:
             "blobs_grid",
             *make_blobs(n_samples=n, centers=9, n_features=2, cluster_std=0.4, random_state=42)
         )
-

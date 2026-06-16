@@ -156,7 +156,6 @@ def plot_time_vs_npoints_alpha(
     ax.set_title(title)
     ax.legend(title="alpha", bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=8)
     ax.grid(True, linestyle="--", alpha=0.4)
-    ax.set_xscale("log")
 
     return ax
 
@@ -236,7 +235,6 @@ def plot_time_vs_npoints_minpts(
     ax.set_title(title)
     ax.legend(title="minpts", bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=8)
     ax.grid(True, linestyle="--", alpha=0.4)
-    ax.set_xscale("log")
 
     return ax
 
@@ -315,7 +313,7 @@ if __name__ == "__main__":
 
     fig1, ax1 = plt.subplots()
 
-    alpha_range=[25, 50, 75, 100]
+    alpha_range=[10, 50, 100]#, 100]
     min_pts_range=[10, 15, 20, 50]
     title="Runtime vs number of points"
 
@@ -332,12 +330,12 @@ if __name__ == "__main__":
             title,
             ax1
         )
-
+    ax1.set_yscale("log")   # set scale FIRST
     save_plot(fig1, save_path_1)
 
     fig2, ax2 = plt.subplots()
 
-    npoints_range= [100_000, 200_000, 500_000, 1_000_000]
+    npoints_range= [100_000, 200_000, 500_000, 1_000_000, 1_500_000, 2_000_000]
     title="Runtime vs alpha"
     #save_path=os.path.join(PLOTS_FOLDER, "time_vs_alpha.png"),
     save_path_2=f"{PLOTS_FOLDER}/time_vs_alpha.png"
@@ -353,7 +351,7 @@ if __name__ == "__main__":
 
     fig3, ax3 = plt.subplots()
 
-    alpha=50
+    alpha=10
     title=f"Details runtime vs number of points, alpha={alpha}"
 
     save_path_3=f"{PLOTS_FOLDER}/bar_plot.png"
