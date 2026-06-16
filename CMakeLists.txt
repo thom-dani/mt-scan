@@ -34,16 +34,21 @@ find_package(VTK REQUIRED COMPONENTS
 set(CMAKE_PREFIX_PATH /usr/local/lib/cmake/ttkVTK/)
 find_package(TTKVTK REQUIRED)
 
-
-
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
+
+option(USE_CUDA "Enable CUDA support" OFF)
+
+if(USE_CUDA)
+    add_compile_definitions(USE_CUDA)
+endif()
 
 if(USE_CUDA)
     set(SOURCES
         src/merge_tree_scan.cpp
         src/utils.cpp
+        src/resample.cpp
         src/resample.cu
     )
 else()
@@ -58,6 +63,7 @@ pybind11_add_module(mt_scan
     src/python-module.cpp
     ${SOURCES}
 )
+
 
 if(USE_CUDA)
     set_target_properties(mt_scan PROPERTIES CUDA_SEPARABLE_COMPILATION ON)

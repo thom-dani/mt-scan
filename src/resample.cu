@@ -59,7 +59,8 @@ void resample_gpu(
     const int nPointsX,
     const int nPointsY,
     const float alpha,
-    std::vector<double> &density)
+    std::vector<double> &density,
+    const bool printLogs)
 {
     auto t_start = std::chrono::high_resolution_clock::now();
 
@@ -92,7 +93,6 @@ void resample_gpu(
     cudaEventCreate(&stop_kernel);
     cudaEventRecord(start_kernel);
 
-    std::cout << "before kernel" << std::endl;
 
     resampleKernelAtomic<<<grid, block>>>(
         d_points,
@@ -102,8 +102,6 @@ void resample_gpu(
         radius_abs_2,
         alpha,
         d_output);
-
-    std::cout << "after kernel" << std::endl;
 
     cudaGetLastError();
     cudaDeviceSynchronize();
@@ -133,11 +131,13 @@ void resample_gpu(
             t_end - t_start)
             .count();
 
+
     duration_total *= 1000;
-    std::cout << "(" << nPointsX << " x "
-              << nPointsY << "), "
-              << n_points
-              << alpha << ", "
-              << t_kernel << ", "
-              << duration_total << std::endl;
+    if(printLogs){
+        std::cout 
+        << n_points
+        << alpha << ", "
+        << t_kernel << ", "
+        << duration_total << std::endl;
+    }
 }

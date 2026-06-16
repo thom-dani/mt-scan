@@ -1,7 +1,11 @@
-Build the Docker image mt-scan-base  : `docker build -t mt-scan-base -f docker/Dockerfile.base .`
+Build the Docker image mt-scan-base (with cuda) : `docker build -t mt-scan-base -f docker/Dockerfile.base --build-arg ENABLE_CUDA=ON .`
+
+Build the Docker image mt-scan-base (without  cuda) : `docker build -t mt-scan-base -f docker/Dockerfile.base .`
 
 Build the Docker image mt-scan  : `docker build -t mt-scan -f docker/Dockerfile --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) .`
 
 Enter container: `docker run -it --rm -v ~/mt-scan:/workspace mt-scan`
 
-Build the project: `cmake -S . -B build -GNinja && cmake --build build`
+Build the project (without CUDA): `cmake -S . -B build -GNinja && cmake --build build`
+
+Build the project (with CUDA): `cmake -S . -B build -GNinja -DUSE_CUDA=ON && cmake --build build`

@@ -23,4 +23,5 @@ void resample_gpu(
     const int nPointsX,
     const int nPointsY,
     const float alpha,
-    std::vector<double> &density);
+    std::vector<double> &density,
+    const bool printLogs=false);

@@ -82,7 +82,7 @@ void MergeTreeScan::distributionFromSample(
 
     normalizePoints(points_ptr, this->targetRes_, pointsNormalized);
 #ifdef USE_CUDA
-    resample_gpu(pointsNormalized, this->resX_ + 1, this->resY_ + 1, this->alpha_, density);
+    resample_gpu(pointsNormalized, this->resX_ + 1, this->resY_ + 1, this->alpha_, density, printLogs_);
 #else
     resample_cpu(pointsNormalized, this->resX_ + 1, this->resY_ + 1, this->alpha_, this->kernel_, density);
 #endif

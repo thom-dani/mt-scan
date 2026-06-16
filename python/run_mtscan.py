@@ -15,7 +15,7 @@ def main():
     points = np.loadtxt(CSV_FILE, delimiter=",", skiprows = 1)
     points = points[:,:2].astype(np.float32)
 
-    labels = mt_scan.compute_labels(points, args.alpha, 512)
+    labels = mt_scan.compute_labels(points, args.alpha, 512, print_logs=True)
 
 
 
