@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import mt_scan
 
-CSV_FILE    = "../data/dataset-synthetic-1/spherical_6_2.csv"
+CSV_FILE    = "../data/synthetic-1/spherical_6_2.csv"
 OUTPUT_PLOT = "../tmp/labels.png"
 
 def main():

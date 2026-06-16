@@ -3,7 +3,8 @@ FROM kitware/paraview-for-ci:v5.13.3
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONPATH=/workspace/build
 
-# Install additional build tools
+# Install build tools + CUDA toolkit
+ARG ENABLE_CUDA=OFF
 RUN apt-get update && apt-get install -y \
     build-essential \
     ninja-build \
@@ -11,7 +12,18 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     python3-dev \
     pkg-config \
+    wget \
+    && if [ "$ENABLE_CUDA" = "ON" ]; then \
+        wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.1-1_all.deb && \
+        dpkg -i cuda-keyring_1.1-1_all.deb && \
+        rm cuda-keyring_1.1-1_all.deb && \
+        apt-get update && \
+        apt-get install -y cuda-toolkit-12-0; \
+    fi \
     && rm -rf /var/lib/apt/lists/*
+
+ENV PATH=/usr/local/cuda/bin:$PATH
+ENV LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
 # Build TTK from source against the ParaView/VTK already in the image
 ARG TTK_COMMIT=23d59bf147656d031705c99d3249e001b5bfb9c9
@@ -24,6 +36,7 @@ RUN git clone https://github.com/topology-tool-kit/ttk.git /opt/ttk-src && \
     -DTTK_BUILD_VTK_WRAPPERS=ON \
     -DTTK_BUILD_STANDALONE_APPS=OFF \
     -DTTK_ENABLE_OPENMP=ON \
+    -DTTK_ENABLE_CUDA=${ENABLE_CUDA} \
     -DVTK_DIR=/opt/paraview/install/lib/cmake/paraview-5.13/vtk && \
     cmake --build /opt/ttk-build --parallel $(nproc) && \
     cmake --install /opt/ttk-build && \
@@ -32,6 +45,5 @@ RUN git clone https://github.com/topology-tool-kit/ttk.git /opt/ttk-src && \
 # Python dependencies
 COPY requirements.txt /tmp/requirements.txt
 RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
-
 
 WORKDIR /workspace
