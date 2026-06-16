@@ -15,22 +15,26 @@ import re
 python3 -u run_exp_time.py > run.log
 '''
 parser = argparse.ArgumentParser()
-parser.add_argument("-o", "--overwrite", action="store_true",
-                    help="Overwrite an existing experiment with the same ID")
+parser.add_argument("-o", "--overwrite", action="store_true", help="Overwrite an existing experiment with the same ID")
+parser.add_argument("-i", "--id", type=str, default=None)
+parser.add_argument("-r", "--resolution", type=int, default=512)
+parser.add_argument("-t", "--testmode", action="store_true")
 parser.add_argument("--hdbscangpu", action="store_true",
                     help="Use cuML HDSBCAN")
+
 args = parser.parse_args()
-
-if(args.hdbscangpu):
-    import cupy as cp
-    from cuml.cluster import HDBSCAN as cuHDBSCAN
-
 # ─────────────────────────────────────────────
 # EXPERIMENT PARAMETERS — fill these in
 # ─────────────────────────────────────────────
 
 EXPERIMENT_ID   = "exp_004"
+if(args.id is not None):
+    EXPERIMENT_ID = f"{args.id}"
+
 DATASET_FOLDER  = "/workspace/data/time"
+if(args.testmode):
+    DATASET_FOLDER="/workspace/data/sample"
+
 EXPERIMENT_FOLDER = os.path.join(DATASET_FOLDER,"results", EXPERIMENT_ID)
 PLOTS_FOLDER    = os.path.join(EXPERIMENT_FOLDER, "plots")
 
@@ -45,14 +49,13 @@ if os.path.exists(EXPERIMENT_FOLDER):
 os.makedirs(PLOTS_FOLDER)
 
 KERNEL          = "gaussian"       
-RESOLUTION      = 512
+RESOLUTION=args.resolution
 MTSCAN_DEVICE          = "gpu"
 ALPHA_RANGE     = list(range(10, 151, 10))
 HDBSCAN_DEVICE = "cpu"
 MINPTS_RANGE    = [5, 20, 50]
 LOG_PATH = "./run.log"
 JSON_PATH = os.path.join(EXPERIMENT_FOLDER, "experiment.json")
-
 
 os.makedirs(os.path.dirname(JSON_PATH), exist_ok=True)
 
@@ -64,7 +67,8 @@ print(f"  EXPERIMENT {EXPERIMENT_ID}")
 print("=" * 50)
 print(f"  Dataset folder : {DATASET_FOLDER}")
 print(f"  Results folder : {EXPERIMENT_FOLDER}")
-print(f"  Device         : {DEVICE}")
+print(f"  Device mtscan  : {MTSCAN_DEVICE}")
+print(f"  Device hdbscan  : {MTSCAN_DEVICE}")
 print(f"  Kernel         : {KERNEL}")
 print(f"  Resolution     : {RESOLUTION}")
 print(f"  Alpha range    : {list(ALPHA_RANGE)}")
@@ -83,7 +87,7 @@ experiment = {
     "parameters": {
         "kernel":       KERNEL,
         "resolution":   RESOLUTION,
-        "device":       DEVICE,
+        "device":       MTSCAN_DEVICE,
         "alpha_range":  ALPHA_RANGE,
         "minpts_range": MINPTS_RANGE,
         "dataset_list": []
@@ -181,27 +185,16 @@ for csv_file in csv_files:
         experiment["results"]["mtscan"].append({
                 "dataset":    dataset_name,
                 "n_points":   len(points),
-                "parameters": {"alpha": alpha, "resolution": RESOLUTION, "kernel": KERNEL},
                 "time_s":     float("nan")
             })
         print(f"  [MTSCAN]: ERROR on {dataset_name}: {e} — skipping")
     try:    
-        if(args.hdsbcangpu):
-                _ = cuHDBSCAN(min_cluster_size=50).fit_predict(cp.array(X_f32[:500]))
-        else:
-            hdbscan.HDBSCAN(min_cluster_size=MINPTS_RANGE[0]).fit_predict(points)
+        hdbscan.HDBSCAN(min_cluster_size=MINPTS_RANGE[0]).fit_predict(points)
 
         for minpts in MINPTS_RANGE:
             t_start = time.perf_counter()
-            if(args.hdsbcangpu):
-                points_gpu = cp.asarray(points, dtype=cp.float32)
-                gpu_model = cuHDBSCAN(min_cluster_size=minpts)
-                cp.cuda.Stream.null.synchronize()
-                gpu_labels_cu = gpu_model.fit_predict(points_gpu)
-                cp.cuda.Stream.null.synchronize()
-            else:
-                clusterer   = hdbscan.HDBSCAN(min_cluster_size=minpts)
-                labels_pred = clusterer.fit_predict(points)
+            clusterer   = hdbscan.HDBSCAN(min_cluster_size=minpts)
+            labels_pred = clusterer.fit_predict(points)
             elapsed = time.perf_counter() - t_start
 
             experiment["results"]["hdbscan"].append({
@@ -215,7 +208,6 @@ for csv_file in csv_files:
         experiment["results"]["hdbscan"].append({
                 "dataset":    dataset_name,
                 "n_points":   len(points),
-                "parameters": {"minpts": minpts},
                 "time_s":     float("nan")
             })
         print(f"  [HDBSCAN]: ERROR on {dataset_name}: {e} — skipping")
