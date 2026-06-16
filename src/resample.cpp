@@ -49,7 +49,7 @@ void resample_cpu(
 
                     float dist2 = dx * dx + dy * dy;
 
-                    if (dist2 <= radius_abs_2)
+                    if (dist2 < radius_abs_2)
                     {
                         double w = kernel(dist2, alpha, kernelType);
                         local_grids[tid][i + j * nPointsX] += w;

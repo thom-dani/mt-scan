@@ -123,7 +123,7 @@ void MergeTreeScan::execute(
         density.resize(nVertices);
         std::copy(distribution_ptr, distribution_ptr + nVertices, density.begin());
     }
-
+    
     t = tock("resample", t);
 
     std::vector<int> nodeVertexId{};
