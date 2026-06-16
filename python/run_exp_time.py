@@ -11,16 +11,25 @@ import time
 import sys
 import re
 
+'''
+python3 -u run_exp_time.py > run.log
+'''
 parser = argparse.ArgumentParser()
 parser.add_argument("-o", "--overwrite", action="store_true",
                     help="Overwrite an existing experiment with the same ID")
+parser.add_argument("--hdbscangpu", action="store_true",
+                    help="Use cuML HDSBCAN")
 args = parser.parse_args()
+
+if(args.hdbscangpu):
+    import cupy as cp
+    from cuml.cluster import HDBSCAN as cuHDBSCAN
 
 # ─────────────────────────────────────────────
 # EXPERIMENT PARAMETERS — fill these in
 # ─────────────────────────────────────────────
 
-EXPERIMENT_ID   = "exp_003"
+EXPERIMENT_ID   = "exp_004"
 DATASET_FOLDER  = "/workspace/data/time"
 EXPERIMENT_FOLDER = os.path.join(DATASET_FOLDER,"results", EXPERIMENT_ID)
 PLOTS_FOLDER    = os.path.join(EXPERIMENT_FOLDER, "plots")
@@ -37,11 +46,13 @@ os.makedirs(PLOTS_FOLDER)
 
 KERNEL          = "gaussian"       
 RESOLUTION      = 512
-DEVICE          = "cpu"
-ALPHA_RANGE     = list(range(10, 201, 10))
-MINPTS_RANGE    = [5, 10, 15]
+MTSCAN_DEVICE          = "gpu"
+ALPHA_RANGE     = list(range(10, 151, 10))
+HDBSCAN_DEVICE = "cpu"
+MINPTS_RANGE    = [5, 20, 50]
 LOG_PATH = "./run.log"
 JSON_PATH = os.path.join(EXPERIMENT_FOLDER, "experiment.json")
+
 
 os.makedirs(os.path.dirname(JSON_PATH), exist_ok=True)
 
@@ -144,22 +155,17 @@ run_id=0
 for csv_file in csv_files:
     dataset_name = csv_file.replace(".csv", "")
     print(f"\n── {dataset_name} ──")
-
     
+    data      = np.loadtxt(os.path.join(DATASET_FOLDER, csv_file), delimiter=",", skiprows=1)
+    points    = data[:, :2].astype(np.float32)        
+        
     try:
-        
-        data      = np.loadtxt(os.path.join(DATASET_FOLDER, csv_file), delimiter=",", skiprows=1)
-        points    = data[:, :2].astype(np.float32)
-
         mt_scan.compute_labels(points, ALPHA_RANGE[0], RESOLUTION, KERNEL, False)
-        hdbscan.HDBSCAN(min_cluster_size=MINPTS_RANGE[0]).fit_predict(points)
-        
-        
         for alpha in ALPHA_RANGE:
 
             print(f"run_id:{run_id}")
             t_start = time.perf_counter()
-            labels_pred = mt_scan.compute_labels(points, alpha, RESOLUTION, KERNEL, True)
+            labels_pred = mt_scan.compute_labels(points=points, alpha=alpha, target_res=RESOLUTION, kernel=KERNEL, print_logs=True)
             elapsed = time.perf_counter() - t_start
 
 
@@ -171,11 +177,31 @@ for csv_file in csv_files:
                 "time_s":     elapsed
             })
             run_id+=1
+    except Exception as e:
+        experiment["results"]["mtscan"].append({
+                "dataset":    dataset_name,
+                "n_points":   len(points),
+                "parameters": {"alpha": alpha, "resolution": RESOLUTION, "kernel": KERNEL},
+                "time_s":     float("nan")
+            })
+        print(f"  [MTSCAN]: ERROR on {dataset_name}: {e} — skipping")
+    try:    
+        if(args.hdsbcangpu):
+                _ = cuHDBSCAN(min_cluster_size=50).fit_predict(cp.array(X_f32[:500]))
+        else:
+            hdbscan.HDBSCAN(min_cluster_size=MINPTS_RANGE[0]).fit_predict(points)
 
         for minpts in MINPTS_RANGE:
             t_start = time.perf_counter()
-            clusterer   = hdbscan.HDBSCAN(min_cluster_size=minpts)
-            labels_pred = clusterer.fit_predict(points)
+            if(args.hdsbcangpu):
+                points_gpu = cp.asarray(points, dtype=cp.float32)
+                gpu_model = cuHDBSCAN(min_cluster_size=minpts)
+                cp.cuda.Stream.null.synchronize()
+                gpu_labels_cu = gpu_model.fit_predict(points_gpu)
+                cp.cuda.Stream.null.synchronize()
+            else:
+                clusterer   = hdbscan.HDBSCAN(min_cluster_size=minpts)
+                labels_pred = clusterer.fit_predict(points)
             elapsed = time.perf_counter() - t_start
 
             experiment["results"]["hdbscan"].append({
@@ -186,8 +212,15 @@ for csv_file in csv_files:
             })
 
     except Exception as e:
-        print(f"  ERROR on {dataset_name}: {e} — skipping")
-        continue
+        experiment["results"]["hdbscan"].append({
+                "dataset":    dataset_name,
+                "n_points":   len(points),
+                "parameters": {"minpts": minpts},
+                "time_s":     float("nan")
+            })
+        print(f"  [HDBSCAN]: ERROR on {dataset_name}: {e} — skipping")
+
+    
 
 with open(JSON_PATH, "w") as f:
     json.dump(experiment, f, indent=2)

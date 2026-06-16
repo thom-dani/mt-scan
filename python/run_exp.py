@@ -9,38 +9,44 @@ import matplotlib.pyplot as plt
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-o", "--overwrite", action="store_true",
-                    help="Overwrite an existing experiment with the same ID")
+parser.add_argument("-o", "--overwrite", action="store_true", help="Overwrite an existing experiment with the same ID")
+parser.add_argument("-i", "--id", type=str, default=None)
+parser.add_argument("-r", "--resolution", type=int, default=512)
+parser.add_argument("-t", "--testmode", action="store_true")
+
 args = parser.parse_args()
+
 
 # ─────────────────────────────────────────────
 # EXPERIMENT PARAMETERS — fill these in
 # ─────────────────────────────────────────────
 
 EXPERIMENT_ID   = "exp_003"
+if(args.id is not None):
+    EXPERIMENT_ID = f"{args.id}"
+
 DATASET_FOLDER  = "/workspace/data/synthetic-1"
+
+if(args.testmode):
+    DATASET_FOLDER="/workspace/data/sample"
+
 RESULTS_FOLDER  = os.path.join(DATASET_FOLDER, "results")
-PLOTS_FOLDER    = os.path.join(RESULTS_FOLDER, EXPERIMENT_ID, "plots")
+EXPERIMENT_FOLDER = os.path.join(DATASET_FOLDER,"results", EXPERIMENT_ID)
+PLOTS_FOLDER    = os.path.join(EXPERIMENT_FOLDER, "plots")
 
-
-
-experiment_folder = os.path.join(RESULTS_FOLDER, EXPERIMENT_ID)
-
-if os.path.exists(experiment_folder):
+if os.path.exists(EXPERIMENT_FOLDER):
     if args.overwrite:
         import shutil
-        shutil.rmtree(experiment_folder)
+        shutil.rmtree(EXPERIMENT_FOLDER)
         print(f"Overwriting existing experiment '{EXPERIMENT_ID}'")
     else:
-        raise FileExistsError(f"There is already an experiment with id {EXPERIMENT_ID} for the dataset {DATASET_FOLDER}.")
+        raise FileExistsError(f"There is already an experiment with id {EXPERIMENT_ID}")
 
 os.makedirs(PLOTS_FOLDER)
 
-
-KERNEL          = "gaussian"       
-RESOLUTION      = 512
-DEVICE          = "cpu"
-
+KERNEL          = "gaussian" 
+RESOLUTION=args.resolution
+DEVICE          = "gpu"
 ALPHA_RANGE     = list(range(10, 201, 10))
 MINPTS_RANGE    = [5, 10, 15, 20, 25, 30, 40, 50]
 
@@ -50,7 +56,7 @@ print("=" * 50)
 print(f"  EXPERIMENT {EXPERIMENT_ID}")
 print("=" * 50)
 print(f"  Dataset folder : {DATASET_FOLDER}")
-print(f"  Results folder : {experiment_folder}")
+print(f"  Results folder : {EXPERIMENT_FOLDER}")
 print(f"  Device         : {DEVICE}")
 print(f"  Kernel         : {KERNEL}")
 print(f"  Resolution     : {RESOLUTION}")
@@ -96,7 +102,7 @@ def save_plot(dataset_name, min_pts, alpha, indicator):
     data           = np.loadtxt(os.path.join(DATASET_FOLDER, dataset_name + ".csv"), delimiter=",", skiprows=1)
     points         = data[:, :2].astype(np.float32)
     labels_gt      = data[:, 2].astype(int)
-    labels_mtscan  = mt_scan.compute_labels(points, alpha, RESOLUTION)
+    labels_mtscan  = mt_scan.compute_labels(points,alpha=alpha, target_res=RESOLUTION, kernel=KERNEL)
     clusterer      = hdbscan.HDBSCAN(min_cluster_size=min_pts)
     labels_hdbscan = clusterer.fit_predict(points)
 
@@ -145,9 +151,10 @@ for csv_file in csv_files:
         labels_gt = data[:, 2].astype(int)
 
         # ── MTSCAN ──────────────────────────────
+
         mtscan_sweep = []
         for alpha in ALPHA_RANGE:
-            labels_pred     = mt_scan.compute_labels(points, alpha, RESOLUTION)
+            labels_pred     = mt_scan.compute_labels(points,alpha=alpha, target_res=RESOLUTION, kernel=KERNEL, debug=True)
             scores          = compute_scores(labels_gt, labels_pred)
             scores["param"] = alpha
             mtscan_sweep.append(scores)
@@ -157,6 +164,7 @@ for csv_file in csv_files:
         best_ami_mtscan, best_alpha_ami = find_best(mtscan_sweep, "ami")
 
         # ── HDBSCAN ─────────────────────────────
+
         hdbscan_sweep = []
         for minpts in MINPTS_RANGE:
             clusterer       = hdbscan.HDBSCAN(min_cluster_size=minpts)
