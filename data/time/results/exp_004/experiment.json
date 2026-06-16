@@ -1,0 +1,5639 @@
+{
+  "experiment_id": "exp_004",
+  "timestamp": "2026-06-16T15:59:40.265171",
+  "parameters": {
+    "kernel": "gaussian",
+    "resolution": 512,
+    "device": "gpu",
+    "alpha_range": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150
+    ],
+    "minpts_range": [
+      5,
+      20,
+      50
+    ],
+    "dataset_list": [
+      "blobs_grid_100.csv",
+      "blobs_grid_1000.csv",
+      "blobs_grid_200.csv",
+      "blobs_grid_300.csv",
+      "blobs_grid_400.csv",
+      "blobs_grid_500.csv",
+      "blobs_grid_600.csv",
+      "blobs_grid_700.csv",
+      "blobs_grid_800.csv",
+      "blobs_grid_900.csv",
+      "blobs_grid_1100.csv",
+      "blobs_grid_1200.csv",
+      "blobs_grid_1300.csv",
+      "blobs_grid_1400.csv",
+      "blobs_grid_1500.csv",
+      "blobs_grid_1600.csv",
+      "blobs_grid_1700.csv",
+      "blobs_grid_1800.csv",
+      "blobs_grid_1900.csv",
+      "blobs_grid_2000.csv"
+    ]
+  },
+  "results": {
+    "mtscan": [
+      {
+        "run_id": 0,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.24033638299442828,
+        "timers": {
+          "resample": 0.178,
+          "clusterTree": 0.0296,
+          "computeLabels": 0.0323,
+          "total": 0.2399
+        }
+      },
+      {
+        "run_id": 1,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10426298301899806,
+        "timers": {
+          "resample": 0.0403,
+          "clusterTree": 0.0309,
+          "computeLabels": 0.0328,
+          "total": 0.1039
+        }
+      },
+      {
+        "run_id": 2,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07619893498485908,
+        "timers": {
+          "resample": 0.0182,
+          "clusterTree": 0.0288,
+          "computeLabels": 0.0289,
+          "total": 0.076
+        }
+      },
+      {
+        "run_id": 3,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08023268397664651,
+        "timers": {
+          "resample": 0.0114,
+          "clusterTree": 0.0323,
+          "computeLabels": 0.0363,
+          "total": 0.08
+        }
+      },
+      {
+        "run_id": 4,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08414648502366617,
+        "timers": {
+          "resample": 0.0082,
+          "clusterTree": 0.0401,
+          "computeLabels": 0.0356,
+          "total": 0.0838
+        }
+      },
+      {
+        "run_id": 5,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07186531397746876,
+        "timers": {
+          "resample": 0.0063,
+          "clusterTree": 0.029,
+          "computeLabels": 0.0364,
+          "total": 0.0716
+        }
+      },
+      {
+        "run_id": 6,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.06887199601624161,
+        "timers": {
+          "resample": 0.0048,
+          "clusterTree": 0.0352,
+          "computeLabels": 0.0287,
+          "total": 0.0687
+        }
+      },
+      {
+        "run_id": 7,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.0783018940128386,
+        "timers": {
+          "resample": 0.0044,
+          "clusterTree": 0.045,
+          "computeLabels": 0.0286,
+          "total": 0.0781
+        }
+      },
+      {
+        "run_id": 8,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.06432213599327952,
+        "timers": {
+          "resample": 0.0038,
+          "clusterTree": 0.0314,
+          "computeLabels": 0.029,
+          "total": 0.0641
+        }
+      },
+      {
+        "run_id": 9,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.0641534449532628,
+        "timers": {
+          "resample": 0.0035,
+          "clusterTree": 0.0319,
+          "computeLabels": 0.0286,
+          "total": 0.064
+        }
+      },
+      {
+        "run_id": 10,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.06536942603997886,
+        "timers": {
+          "resample": 0.003,
+          "clusterTree": 0.0333,
+          "computeLabels": 0.0288,
+          "total": 0.0651
+        }
+      },
+      {
+        "run_id": 11,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.06834840500960127,
+        "timers": {
+          "resample": 0.0029,
+          "clusterTree": 0.0358,
+          "computeLabels": 0.0295,
+          "total": 0.0682
+        }
+      },
+      {
+        "run_id": 12,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13723682099953294,
+        "timers": {
+          "resample": 0.0026,
+          "clusterTree": 0.1017,
+          "computeLabels": 0.0326,
+          "total": 0.137
+        }
+      },
+      {
+        "run_id": 13,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07066633499925956,
+        "timers": {
+          "resample": 0.0025,
+          "clusterTree": 0.0384,
+          "computeLabels": 0.0296,
+          "total": 0.0705
+        }
+      },
+      {
+        "run_id": 14,
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.0725916750379838,
+        "timers": {
+          "resample": 0.0024,
+          "clusterTree": 0.0375,
+          "computeLabels": 0.0325,
+          "total": 0.0724
+        }
+      },
+      {
+        "run_id": 15,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.7300000700051896,
+        "timers": {
+          "resample": 1.6502,
+          "clusterTree": 0.0481,
+          "computeLabels": 0.0317,
+          "total": 1.7299
+        }
+      },
+      {
+        "run_id": 16,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.43837762001203373,
+        "timers": {
+          "resample": 0.3507,
+          "clusterTree": 0.049,
+          "computeLabels": 0.0386,
+          "total": 0.4383
+        }
+      },
+      {
+        "run_id": 17,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.24417304300004616,
+        "timers": {
+          "resample": 0.1607,
+          "clusterTree": 0.0439,
+          "computeLabels": 0.0395,
+          "total": 0.2441
+        }
+      },
+      {
+        "run_id": 18,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1709611980477348,
+        "timers": {
+          "resample": 0.0959,
+          "clusterTree": 0.0363,
+          "computeLabels": 0.0386,
+          "total": 0.1709
+        }
+      },
+      {
+        "run_id": 19,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12737135199131444,
+        "timers": {
+          "resample": 0.0666,
+          "clusterTree": 0.0289,
+          "computeLabels": 0.0318,
+          "total": 0.1273
+        }
+      },
+      {
+        "run_id": 20,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11715956102125347,
+        "timers": {
+          "resample": 0.0495,
+          "clusterTree": 0.036,
+          "computeLabels": 0.0316,
+          "total": 0.1171
+        }
+      },
+      {
+        "run_id": 21,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09779629402328283,
+        "timers": {
+          "resample": 0.0389,
+          "clusterTree": 0.0276,
+          "computeLabels": 0.0312,
+          "total": 0.0977
+        }
+      },
+      {
+        "run_id": 22,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10477558302227408,
+        "timers": {
+          "resample": 0.0312,
+          "clusterTree": 0.0416,
+          "computeLabels": 0.0319,
+          "total": 0.1047
+        }
+      },
+      {
+        "run_id": 23,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.15846749901538715,
+        "timers": {
+          "resample": 0.0273,
+          "clusterTree": 0.095,
+          "computeLabels": 0.0361,
+          "total": 0.1584
+        }
+      },
+      {
+        "run_id": 24,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09677193302195519,
+        "timers": {
+          "resample": 0.0239,
+          "clusterTree": 0.0402,
+          "computeLabels": 0.0325,
+          "total": 0.0967
+        }
+      },
+      {
+        "run_id": 25,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08382898400304839,
+        "timers": {
+          "resample": 0.0209,
+          "clusterTree": 0.0313,
+          "computeLabels": 0.0315,
+          "total": 0.0838
+        }
+      },
+      {
+        "run_id": 26,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09811304300092161,
+        "timers": {
+          "resample": 0.0187,
+          "clusterTree": 0.0376,
+          "computeLabels": 0.0418,
+          "total": 0.0981
+        }
+      },
+      {
+        "run_id": 27,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09443178400397301,
+        "timers": {
+          "resample": 0.0177,
+          "clusterTree": 0.0453,
+          "computeLabels": 0.0314,
+          "total": 0.0944
+        }
+      },
+      {
+        "run_id": 28,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08297182398382574,
+        "timers": {
+          "resample": 0.016,
+          "clusterTree": 0.0349,
+          "computeLabels": 0.0321,
+          "total": 0.0829
+        }
+      },
+      {
+        "run_id": 29,
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08145221398444846,
+        "timers": {
+          "resample": 0.0155,
+          "clusterTree": 0.0344,
+          "computeLabels": 0.0315,
+          "total": 0.0814
+        }
+      },
+      {
+        "run_id": 30,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.44274588499683887,
+        "timers": {
+          "resample": 0.3683,
+          "clusterTree": 0.0398,
+          "computeLabels": 0.0347,
+          "total": 0.4427
+        }
+      },
+      {
+        "run_id": 31,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1597008039825596,
+        "timers": {
+          "resample": 0.0778,
+          "clusterTree": 0.0451,
+          "computeLabels": 0.0368,
+          "total": 0.1597
+        }
+      },
+      {
+        "run_id": 32,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10297393100336194,
+        "timers": {
+          "resample": 0.0365,
+          "clusterTree": 0.0371,
+          "computeLabels": 0.0294,
+          "total": 0.1029
+        }
+      },
+      {
+        "run_id": 33,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.080976445984561,
+        "timers": {
+          "resample": 0.0218,
+          "clusterTree": 0.0294,
+          "computeLabels": 0.0298,
+          "total": 0.0809
+        }
+      },
+      {
+        "run_id": 34,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07422597095137462,
+        "timers": {
+          "resample": 0.0151,
+          "clusterTree": 0.0296,
+          "computeLabels": 0.0295,
+          "total": 0.0742
+        }
+      },
+      {
+        "run_id": 35,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07566171896178275,
+        "timers": {
+          "resample": 0.0115,
+          "clusterTree": 0.0282,
+          "computeLabels": 0.0359,
+          "total": 0.0756
+        }
+      },
+      {
+        "run_id": 36,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08297826501075178,
+        "timers": {
+          "resample": 0.0095,
+          "clusterTree": 0.0371,
+          "computeLabels": 0.0363,
+          "total": 0.0829
+        }
+      },
+      {
+        "run_id": 37,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07655260903993621,
+        "timers": {
+          "resample": 0.0074,
+          "clusterTree": 0.0364,
+          "computeLabels": 0.0327,
+          "total": 0.0765
+        }
+      },
+      {
+        "run_id": 38,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.06944808398839086,
+        "timers": {
+          "resample": 0.0071,
+          "clusterTree": 0.0294,
+          "computeLabels": 0.0329,
+          "total": 0.0694
+        }
+      },
+      {
+        "run_id": 39,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08995851001236588,
+        "timers": {
+          "resample": 0.0059,
+          "clusterTree": 0.0469,
+          "computeLabels": 0.0371,
+          "total": 0.0899
+        }
+      },
+      {
+        "run_id": 40,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.0765191990067251,
+        "timers": {
+          "resample": 0.0051,
+          "clusterTree": 0.0417,
+          "computeLabels": 0.0297,
+          "total": 0.0765
+        }
+      },
+      {
+        "run_id": 41,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07246012100949883,
+        "timers": {
+          "resample": 0.0049,
+          "clusterTree": 0.0319,
+          "computeLabels": 0.0357,
+          "total": 0.0724
+        }
+      },
+      {
+        "run_id": 42,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07490919099655002,
+        "timers": {
+          "resample": 0.0046,
+          "clusterTree": 0.0332,
+          "computeLabels": 0.0371,
+          "total": 0.0749
+        }
+      },
+      {
+        "run_id": 43,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.06643955502659082,
+        "timers": {
+          "resample": 0.0042,
+          "clusterTree": 0.0326,
+          "computeLabels": 0.0296,
+          "total": 0.0664
+        }
+      },
+      {
+        "run_id": 44,
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07462573103839532,
+        "timers": {
+          "resample": 0.0042,
+          "clusterTree": 0.0341,
+          "computeLabels": 0.0362,
+          "total": 0.0746
+        }
+      },
+      {
+        "run_id": 45,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5777117150137201,
+        "timers": {
+          "resample": 0.5139,
+          "clusterTree": 0.0298,
+          "computeLabels": 0.0339,
+          "total": 0.5777
+        }
+      },
+      {
+        "run_id": 46,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.19323760096449405,
+        "timers": {
+          "resample": 0.1096,
+          "clusterTree": 0.0536,
+          "computeLabels": 0.03,
+          "total": 0.1932
+        }
+      },
+      {
+        "run_id": 47,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10987507703248411,
+        "timers": {
+          "resample": 0.0513,
+          "clusterTree": 0.0285,
+          "computeLabels": 0.03,
+          "total": 0.1098
+        }
+      },
+      {
+        "run_id": 48,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08945867099100724,
+        "timers": {
+          "resample": 0.0303,
+          "clusterTree": 0.029,
+          "computeLabels": 0.0301,
+          "total": 0.0894
+        }
+      },
+      {
+        "run_id": 49,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08058509597321972,
+        "timers": {
+          "resample": 0.0213,
+          "clusterTree": 0.0285,
+          "computeLabels": 0.0307,
+          "total": 0.0805
+        }
+      },
+      {
+        "run_id": 50,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.079386527009774,
+        "timers": {
+          "resample": 0.0162,
+          "clusterTree": 0.0331,
+          "computeLabels": 0.0301,
+          "total": 0.0794
+        }
+      },
+      {
+        "run_id": 51,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08311608497751877,
+        "timers": {
+          "resample": 0.013,
+          "clusterTree": 0.0401,
+          "computeLabels": 0.03,
+          "total": 0.0831
+        }
+      },
+      {
+        "run_id": 52,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07158382202032954,
+        "timers": {
+          "resample": 0.0108,
+          "clusterTree": 0.0296,
+          "computeLabels": 0.0311,
+          "total": 0.0715
+        }
+      },
+      {
+        "run_id": 53,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.06913831399288028,
+        "timers": {
+          "resample": 0.0094,
+          "clusterTree": 0.0296,
+          "computeLabels": 0.0301,
+          "total": 0.0691
+        }
+      },
+      {
+        "run_id": 54,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08162780501879752,
+        "timers": {
+          "resample": 0.0083,
+          "clusterTree": 0.036,
+          "computeLabels": 0.0373,
+          "total": 0.0816
+        }
+      },
+      {
+        "run_id": 55,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10205002297880128,
+        "timers": {
+          "resample": 0.0076,
+          "clusterTree": 0.0573,
+          "computeLabels": 0.0371,
+          "total": 0.102
+        }
+      },
+      {
+        "run_id": 56,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10388475999934599,
+        "timers": {
+          "resample": 0.007,
+          "clusterTree": 0.0591,
+          "computeLabels": 0.0378,
+          "total": 0.1038
+        }
+      },
+      {
+        "run_id": 57,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07551694998983294,
+        "timers": {
+          "resample": 0.0069,
+          "clusterTree": 0.0377,
+          "computeLabels": 0.0309,
+          "total": 0.0755
+        }
+      },
+      {
+        "run_id": 58,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09449114702874795,
+        "timers": {
+          "resample": 0.0064,
+          "clusterTree": 0.0485,
+          "computeLabels": 0.0395,
+          "total": 0.0945
+        }
+      },
+      {
+        "run_id": 59,
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07167506200494245,
+        "timers": {
+          "resample": 0.0058,
+          "clusterTree": 0.0358,
+          "computeLabels": 0.03,
+          "total": 0.0716
+        }
+      },
+      {
+        "run_id": 60,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.737032538978383,
+        "timers": {
+          "resample": 0.6726,
+          "clusterTree": 0.0331,
+          "computeLabels": 0.0312,
+          "total": 0.737
+        }
+      },
+      {
+        "run_id": 61,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.20645809202687815,
+        "timers": {
+          "resample": 0.1462,
+          "clusterTree": 0.0286,
+          "computeLabels": 0.0316,
+          "total": 0.2064
+        }
+      },
+      {
+        "run_id": 62,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12336658796994016,
+        "timers": {
+          "resample": 0.0659,
+          "clusterTree": 0.027,
+          "computeLabels": 0.0304,
+          "total": 0.1233
+        }
+      },
+      {
+        "run_id": 63,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10369700100272894,
+        "timers": {
+          "resample": 0.0406,
+          "clusterTree": 0.0331,
+          "computeLabels": 0.03,
+          "total": 0.1036
+        }
+      },
+      {
+        "run_id": 64,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09736660495400429,
+        "timers": {
+          "resample": 0.0276,
+          "clusterTree": 0.0284,
+          "computeLabels": 0.0413,
+          "total": 0.0973
+        }
+      },
+      {
+        "run_id": 65,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11445877398364246,
+        "timers": {
+          "resample": 0.0206,
+          "clusterTree": 0.0565,
+          "computeLabels": 0.0373,
+          "total": 0.1144
+        }
+      },
+      {
+        "run_id": 66,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07367999095004052,
+        "timers": {
+          "resample": 0.0168,
+          "clusterTree": 0.0269,
+          "computeLabels": 0.0299,
+          "total": 0.0736
+        }
+      },
+      {
+        "run_id": 67,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07539975002873689,
+        "timers": {
+          "resample": 0.0139,
+          "clusterTree": 0.0274,
+          "computeLabels": 0.0341,
+          "total": 0.0754
+        }
+      },
+      {
+        "run_id": 68,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.06998517300235108,
+        "timers": {
+          "resample": 0.012,
+          "clusterTree": 0.028,
+          "computeLabels": 0.0299,
+          "total": 0.0699
+        }
+      },
+      {
+        "run_id": 69,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07669789902865887,
+        "timers": {
+          "resample": 0.0106,
+          "clusterTree": 0.0288,
+          "computeLabels": 0.0372,
+          "total": 0.0767
+        }
+      },
+      {
+        "run_id": 70,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09428045700769871,
+        "timers": {
+          "resample": 0.0117,
+          "clusterTree": 0.0523,
+          "computeLabels": 0.0302,
+          "total": 0.0942
+        }
+      },
+      {
+        "run_id": 71,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07683956902474165,
+        "timers": {
+          "resample": 0.0085,
+          "clusterTree": 0.0324,
+          "computeLabels": 0.0359,
+          "total": 0.0768
+        }
+      },
+      {
+        "run_id": 72,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1133994740084745,
+        "timers": {
+          "resample": 0.0081,
+          "clusterTree": 0.0747,
+          "computeLabels": 0.0305,
+          "total": 0.1134
+        }
+      },
+      {
+        "run_id": 73,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07955580699490383,
+        "timers": {
+          "resample": 0.0075,
+          "clusterTree": 0.0347,
+          "computeLabels": 0.0373,
+          "total": 0.0795
+        }
+      },
+      {
+        "run_id": 74,
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10101159301120788,
+        "timers": {
+          "resample": 0.0079,
+          "clusterTree": 0.061,
+          "computeLabels": 0.032,
+          "total": 0.101
+        }
+      },
+      {
+        "run_id": 75,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.9281943079549819,
+        "timers": {
+          "resample": 0.8056,
+          "clusterTree": 0.0917,
+          "computeLabels": 0.0309,
+          "total": 0.9281
+        }
+      },
+      {
+        "run_id": 76,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2529910760349594,
+        "timers": {
+          "resample": 0.1699,
+          "clusterTree": 0.0448,
+          "computeLabels": 0.0382,
+          "total": 0.2529
+        }
+      },
+      {
+        "run_id": 77,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1539070940343663,
+        "timers": {
+          "resample": 0.0799,
+          "clusterTree": 0.0377,
+          "computeLabels": 0.0363,
+          "total": 0.1539
+        }
+      },
+      {
+        "run_id": 78,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11294920998625457,
+        "timers": {
+          "resample": 0.0485,
+          "clusterTree": 0.031,
+          "computeLabels": 0.0334,
+          "total": 0.1129
+        }
+      },
+      {
+        "run_id": 79,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13496193004539236,
+        "timers": {
+          "resample": 0.0322,
+          "clusterTree": 0.073,
+          "computeLabels": 0.0296,
+          "total": 0.1349
+        }
+      },
+      {
+        "run_id": 80,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11900229495950043,
+        "timers": {
+          "resample": 0.0238,
+          "clusterTree": 0.0588,
+          "computeLabels": 0.0363,
+          "total": 0.119
+        }
+      },
+      {
+        "run_id": 81,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08196691697230563,
+        "timers": {
+          "resample": 0.019,
+          "clusterTree": 0.0298,
+          "computeLabels": 0.0332,
+          "total": 0.0819
+        }
+      },
+      {
+        "run_id": 82,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07803935097763315,
+        "timers": {
+          "resample": 0.0163,
+          "clusterTree": 0.0276,
+          "computeLabels": 0.0341,
+          "total": 0.078
+        }
+      },
+      {
+        "run_id": 83,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08594038401497528,
+        "timers": {
+          "resample": 0.0145,
+          "clusterTree": 0.0379,
+          "computeLabels": 0.0335,
+          "total": 0.0859
+        }
+      },
+      {
+        "run_id": 84,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07669846201315522,
+        "timers": {
+          "resample": 0.0125,
+          "clusterTree": 0.0344,
+          "computeLabels": 0.0298,
+          "total": 0.0767
+        }
+      },
+      {
+        "run_id": 85,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.0730506150284782,
+        "timers": {
+          "resample": 0.0113,
+          "clusterTree": 0.0318,
+          "computeLabels": 0.0299,
+          "total": 0.073
+        }
+      },
+      {
+        "run_id": 86,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08121216902509332,
+        "timers": {
+          "resample": 0.0101,
+          "clusterTree": 0.0384,
+          "computeLabels": 0.0327,
+          "total": 0.0812
+        }
+      },
+      {
+        "run_id": 87,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08322598604718223,
+        "timers": {
+          "resample": 0.0097,
+          "clusterTree": 0.0428,
+          "computeLabels": 0.0307,
+          "total": 0.0832
+        }
+      },
+      {
+        "run_id": 88,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07849024998722598,
+        "timers": {
+          "resample": 0.0088,
+          "clusterTree": 0.0369,
+          "computeLabels": 0.0327,
+          "total": 0.0784
+        }
+      },
+      {
+        "run_id": 89,
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07503899396397173,
+        "timers": {
+          "resample": 0.0083,
+          "clusterTree": 0.0361,
+          "computeLabels": 0.0304,
+          "total": 0.0747
+        }
+      },
+      {
+        "run_id": 90,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.067573625012301,
+        "timers": {
+          "resample": 0.9978,
+          "clusterTree": 0.0286,
+          "computeLabels": 0.0411,
+          "total": 1.0675
+        }
+      },
+      {
+        "run_id": 91,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.28497392701683566,
+        "timers": {
+          "resample": 0.2133,
+          "clusterTree": 0.0398,
+          "computeLabels": 0.0318,
+          "total": 0.2849
+        }
+      },
+      {
+        "run_id": 92,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.16556842403952032,
+        "timers": {
+          "resample": 0.0967,
+          "clusterTree": 0.0382,
+          "computeLabels": 0.0306,
+          "total": 0.1655
+        }
+      },
+      {
+        "run_id": 93,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11790954502066597,
+        "timers": {
+          "resample": 0.0586,
+          "clusterTree": 0.0277,
+          "computeLabels": 0.0315,
+          "total": 0.1179
+        }
+      },
+      {
+        "run_id": 94,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.15193324600113556,
+        "timers": {
+          "resample": 0.0407,
+          "clusterTree": 0.071,
+          "computeLabels": 0.0402,
+          "total": 0.1519
+        }
+      },
+      {
+        "run_id": 95,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10092463000910357,
+        "timers": {
+          "resample": 0.0302,
+          "clusterTree": 0.0326,
+          "computeLabels": 0.038,
+          "total": 0.1009
+        }
+      },
+      {
+        "run_id": 96,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12799587700283155,
+        "timers": {
+          "resample": 0.0236,
+          "clusterTree": 0.0666,
+          "computeLabels": 0.0378,
+          "total": 0.128
+        }
+      },
+      {
+        "run_id": 97,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11377794900909066,
+        "timers": {
+          "resample": 0.0199,
+          "clusterTree": 0.063,
+          "computeLabels": 0.0308,
+          "total": 0.1137
+        }
+      },
+      {
+        "run_id": 98,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07619099301518872,
+        "timers": {
+          "resample": 0.0172,
+          "clusterTree": 0.0284,
+          "computeLabels": 0.0306,
+          "total": 0.0762
+        }
+      },
+      {
+        "run_id": 99,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09574337501544505,
+        "timers": {
+          "resample": 0.0153,
+          "clusterTree": 0.0498,
+          "computeLabels": 0.0307,
+          "total": 0.0957
+        }
+      },
+      {
+        "run_id": 100,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07517819298664108,
+        "timers": {
+          "resample": 0.0129,
+          "clusterTree": 0.0313,
+          "computeLabels": 0.0309,
+          "total": 0.0751
+        }
+      },
+      {
+        "run_id": 101,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09486317599657923,
+        "timers": {
+          "resample": 0.012,
+          "clusterTree": 0.044,
+          "computeLabels": 0.0387,
+          "total": 0.0948
+        }
+      },
+      {
+        "run_id": 102,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09082679002312943,
+        "timers": {
+          "resample": 0.0112,
+          "clusterTree": 0.0379,
+          "computeLabels": 0.0416,
+          "total": 0.0908
+        }
+      },
+      {
+        "run_id": 103,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08041983901057392,
+        "timers": {
+          "resample": 0.0096,
+          "clusterTree": 0.0401,
+          "computeLabels": 0.0306,
+          "total": 0.0804
+        }
+      },
+      {
+        "run_id": 104,
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08466020500054583,
+        "timers": {
+          "resample": 0.0099,
+          "clusterTree": 0.0438,
+          "computeLabels": 0.0309,
+          "total": 0.0846
+        }
+      },
+      {
+        "run_id": 105,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.2542449639877304,
+        "timers": {
+          "resample": 1.1788,
+          "clusterTree": 0.0446,
+          "computeLabels": 0.0308,
+          "total": 1.2542
+        }
+      },
+      {
+        "run_id": 106,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.31463098496897146,
+        "timers": {
+          "resample": 0.2504,
+          "clusterTree": 0.0324,
+          "computeLabels": 0.0318,
+          "total": 0.3146
+        }
+      },
+      {
+        "run_id": 107,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1828921140404418,
+        "timers": {
+          "resample": 0.1148,
+          "clusterTree": 0.0368,
+          "computeLabels": 0.0312,
+          "total": 0.1828
+        }
+      },
+      {
+        "run_id": 108,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.14516354899387807,
+        "timers": {
+          "resample": 0.0686,
+          "clusterTree": 0.0384,
+          "computeLabels": 0.0381,
+          "total": 0.1451
+        }
+      },
+      {
+        "run_id": 109,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12320881796767935,
+        "timers": {
+          "resample": 0.0477,
+          "clusterTree": 0.0397,
+          "computeLabels": 0.0335,
+          "total": 0.1231
+        }
+      },
+      {
+        "run_id": 110,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1412131719989702,
+        "timers": {
+          "resample": 0.035,
+          "clusterTree": 0.0681,
+          "computeLabels": 0.038,
+          "total": 0.1412
+        }
+      },
+      {
+        "run_id": 111,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.137321735965088,
+        "timers": {
+          "resample": 0.0275,
+          "clusterTree": 0.0715,
+          "computeLabels": 0.0383,
+          "total": 0.1373
+        }
+      },
+      {
+        "run_id": 112,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09916012000758201,
+        "timers": {
+          "resample": 0.0221,
+          "clusterTree": 0.0432,
+          "computeLabels": 0.0339,
+          "total": 0.0991
+        }
+      },
+      {
+        "run_id": 113,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08298455498879775,
+        "timers": {
+          "resample": 0.02,
+          "clusterTree": 0.03,
+          "computeLabels": 0.0329,
+          "total": 0.0829
+        }
+      },
+      {
+        "run_id": 114,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10498320503393188,
+        "timers": {
+          "resample": 0.0175,
+          "clusterTree": 0.0502,
+          "computeLabels": 0.0373,
+          "total": 0.1049
+        }
+      },
+      {
+        "run_id": 115,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13730636500986293,
+        "timers": {
+          "resample": 0.0151,
+          "clusterTree": 0.088,
+          "computeLabels": 0.0342,
+          "total": 0.1373
+        }
+      },
+      {
+        "run_id": 116,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.07416813296731561,
+        "timers": {
+          "resample": 0.0137,
+          "clusterTree": 0.0298,
+          "computeLabels": 0.0306,
+          "total": 0.0741
+        }
+      },
+      {
+        "run_id": 117,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08231688500382006,
+        "timers": {
+          "resample": 0.0133,
+          "clusterTree": 0.0312,
+          "computeLabels": 0.0378,
+          "total": 0.0823
+        }
+      },
+      {
+        "run_id": 118,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08202268602326512,
+        "timers": {
+          "resample": 0.0117,
+          "clusterTree": 0.0395,
+          "computeLabels": 0.0308,
+          "total": 0.082
+        }
+      },
+      {
+        "run_id": 119,
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08446157397702336,
+        "timers": {
+          "resample": 0.0114,
+          "clusterTree": 0.0347,
+          "computeLabels": 0.0383,
+          "total": 0.0844
+        }
+      },
+      {
+        "run_id": 120,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.3993298329878598,
+        "timers": {
+          "resample": 1.3255,
+          "clusterTree": 0.0355,
+          "computeLabels": 0.0383,
+          "total": 1.3993
+        }
+      },
+      {
+        "run_id": 121,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3636776799685322,
+        "timers": {
+          "resample": 0.281,
+          "clusterTree": 0.0429,
+          "computeLabels": 0.0397,
+          "total": 0.3636
+        }
+      },
+      {
+        "run_id": 122,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.22867622302146628,
+        "timers": {
+          "resample": 0.1284,
+          "clusterTree": 0.0687,
+          "computeLabels": 0.0315,
+          "total": 0.2286
+        }
+      },
+      {
+        "run_id": 123,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.16266145295230672,
+        "timers": {
+          "resample": 0.0764,
+          "clusterTree": 0.0511,
+          "computeLabels": 0.0351,
+          "total": 0.1626
+        }
+      },
+      {
+        "run_id": 124,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12491825700271875,
+        "timers": {
+          "resample": 0.0534,
+          "clusterTree": 0.0368,
+          "computeLabels": 0.0347,
+          "total": 0.1249
+        }
+      },
+      {
+        "run_id": 125,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09962197998538613,
+        "timers": {
+          "resample": 0.0398,
+          "clusterTree": 0.0271,
+          "computeLabels": 0.0317,
+          "total": 0.0996
+        }
+      },
+      {
+        "run_id": 126,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10137674800353125,
+        "timers": {
+          "resample": 0.0313,
+          "clusterTree": 0.0383,
+          "computeLabels": 0.0318,
+          "total": 0.1013
+        }
+      },
+      {
+        "run_id": 127,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09385391499381512,
+        "timers": {
+          "resample": 0.0255,
+          "clusterTree": 0.0364,
+          "computeLabels": 0.0319,
+          "total": 0.0938
+        }
+      },
+      {
+        "run_id": 128,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08259961497969925,
+        "timers": {
+          "resample": 0.0224,
+          "clusterTree": 0.0281,
+          "computeLabels": 0.032,
+          "total": 0.0826
+        }
+      },
+      {
+        "run_id": 129,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09106328699272126,
+        "timers": {
+          "resample": 0.0194,
+          "clusterTree": 0.0283,
+          "computeLabels": 0.0433,
+          "total": 0.091
+        }
+      },
+      {
+        "run_id": 130,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09444674500264227,
+        "timers": {
+          "resample": 0.0184,
+          "clusterTree": 0.0445,
+          "computeLabels": 0.0315,
+          "total": 0.0944
+        }
+      },
+      {
+        "run_id": 131,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08451682300074026,
+        "timers": {
+          "resample": 0.0156,
+          "clusterTree": 0.0305,
+          "computeLabels": 0.0384,
+          "total": 0.0845
+        }
+      },
+      {
+        "run_id": 132,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09132175700506195,
+        "timers": {
+          "resample": 0.0142,
+          "clusterTree": 0.039,
+          "computeLabels": 0.0381,
+          "total": 0.0913
+        }
+      },
+      {
+        "run_id": 133,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.0891914700041525,
+        "timers": {
+          "resample": 0.0139,
+          "clusterTree": 0.0422,
+          "computeLabels": 0.033,
+          "total": 0.0891
+        }
+      },
+      {
+        "run_id": 134,
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08479858300415799,
+        "timers": {
+          "resample": 0.0129,
+          "clusterTree": 0.0339,
+          "computeLabels": 0.0379,
+          "total": 0.0847
+        }
+      },
+      {
+        "run_id": 135,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.5814397770445794,
+        "timers": {
+          "resample": 1.4979,
+          "clusterTree": 0.0518,
+          "computeLabels": 0.0316,
+          "total": 1.5814
+        }
+      },
+      {
+        "run_id": 136,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.41793667298043147,
+        "timers": {
+          "resample": 0.3204,
+          "clusterTree": 0.058,
+          "computeLabels": 0.0394,
+          "total": 0.4179
+        }
+      },
+      {
+        "run_id": 137,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.20723175798775628,
+        "timers": {
+          "resample": 0.1439,
+          "clusterTree": 0.0315,
+          "computeLabels": 0.0317,
+          "total": 0.2072
+        }
+      },
+      {
+        "run_id": 138,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.15718208497855812,
+        "timers": {
+          "resample": 0.0874,
+          "clusterTree": 0.0362,
+          "computeLabels": 0.0336,
+          "total": 0.1571
+        }
+      },
+      {
+        "run_id": 139,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13804553198860958,
+        "timers": {
+          "resample": 0.0598,
+          "clusterTree": 0.0411,
+          "computeLabels": 0.0371,
+          "total": 0.138
+        }
+      },
+      {
+        "run_id": 140,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11203067598398775,
+        "timers": {
+          "resample": 0.0443,
+          "clusterTree": 0.0332,
+          "computeLabels": 0.0345,
+          "total": 0.112
+        }
+      },
+      {
+        "run_id": 141,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11448939400725067,
+        "timers": {
+          "resample": 0.035,
+          "clusterTree": 0.0456,
+          "computeLabels": 0.0338,
+          "total": 0.1144
+        }
+      },
+      {
+        "run_id": 142,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08741371898213401,
+        "timers": {
+          "resample": 0.0286,
+          "clusterTree": 0.0277,
+          "computeLabels": 0.031,
+          "total": 0.0874
+        }
+      },
+      {
+        "run_id": 143,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08392296300735325,
+        "timers": {
+          "resample": 0.0251,
+          "clusterTree": 0.0278,
+          "computeLabels": 0.031,
+          "total": 0.0839
+        }
+      },
+      {
+        "run_id": 144,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08177245402475819,
+        "timers": {
+          "resample": 0.0219,
+          "clusterTree": 0.0287,
+          "computeLabels": 0.0311,
+          "total": 0.0817
+        }
+      },
+      {
+        "run_id": 145,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08282353304093704,
+        "timers": {
+          "resample": 0.0189,
+          "clusterTree": 0.0289,
+          "computeLabels": 0.035,
+          "total": 0.0828
+        }
+      },
+      {
+        "run_id": 146,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.0791861469624564,
+        "timers": {
+          "resample": 0.0169,
+          "clusterTree": 0.0311,
+          "computeLabels": 0.0312,
+          "total": 0.0791
+        }
+      },
+      {
+        "run_id": 147,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08188031398458406,
+        "timers": {
+          "resample": 0.0163,
+          "clusterTree": 0.0343,
+          "computeLabels": 0.0312,
+          "total": 0.0818
+        }
+      },
+      {
+        "run_id": 148,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08077046496327966,
+        "timers": {
+          "resample": 0.0149,
+          "clusterTree": 0.0347,
+          "computeLabels": 0.0311,
+          "total": 0.0807
+        }
+      },
+      {
+        "run_id": 149,
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.0811390450107865,
+        "timers": {
+          "resample": 0.0143,
+          "clusterTree": 0.0356,
+          "computeLabels": 0.0312,
+          "total": 0.0811
+        }
+      },
+      {
+        "run_id": 150,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 1.9408223019563593,
+        "timers": {
+          "resample": 1.8803,
+          "clusterTree": 0.0284,
+          "computeLabels": 0.0321,
+          "total": 1.9408
+        }
+      },
+      {
+        "run_id": 151,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.4626990570104681,
+        "timers": {
+          "resample": 0.3903,
+          "clusterTree": 0.0349,
+          "computeLabels": 0.0359,
+          "total": 0.4626
+        }
+      },
+      {
+        "run_id": 152,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.24280938395531848,
+        "timers": {
+          "resample": 0.182,
+          "clusterTree": 0.0288,
+          "computeLabels": 0.0319,
+          "total": 0.2428
+        }
+      },
+      {
+        "run_id": 153,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1660298290080391,
+        "timers": {
+          "resample": 0.1056,
+          "clusterTree": 0.0288,
+          "computeLabels": 0.0315,
+          "total": 0.166
+        }
+      },
+      {
+        "run_id": 154,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.15866196498973295,
+        "timers": {
+          "resample": 0.0737,
+          "clusterTree": 0.0448,
+          "computeLabels": 0.0401,
+          "total": 0.1586
+        }
+      },
+      {
+        "run_id": 155,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12822886096546426,
+        "timers": {
+          "resample": 0.0541,
+          "clusterTree": 0.039,
+          "computeLabels": 0.0351,
+          "total": 0.1282
+        }
+      },
+      {
+        "run_id": 156,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11148963595042005,
+        "timers": {
+          "resample": 0.0437,
+          "clusterTree": 0.0356,
+          "computeLabels": 0.0322,
+          "total": 0.1114
+        }
+      },
+      {
+        "run_id": 157,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10690533003071323,
+        "timers": {
+          "resample": 0.0341,
+          "clusterTree": 0.0338,
+          "computeLabels": 0.0389,
+          "total": 0.1068
+        }
+      },
+      {
+        "run_id": 158,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09135456202784553,
+        "timers": {
+          "resample": 0.0298,
+          "clusterTree": 0.029,
+          "computeLabels": 0.0325,
+          "total": 0.0913
+        }
+      },
+      {
+        "run_id": 159,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09350330103188753,
+        "timers": {
+          "resample": 0.0264,
+          "clusterTree": 0.0279,
+          "computeLabels": 0.0392,
+          "total": 0.0935
+        }
+      },
+      {
+        "run_id": 160,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09061550302430987,
+        "timers": {
+          "resample": 0.0225,
+          "clusterTree": 0.0363,
+          "computeLabels": 0.0317,
+          "total": 0.0906
+        }
+      },
+      {
+        "run_id": 161,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10063719400204718,
+        "timers": {
+          "resample": 0.021,
+          "clusterTree": 0.0477,
+          "computeLabels": 0.0319,
+          "total": 0.1006
+        }
+      },
+      {
+        "run_id": 162,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11149477498838678,
+        "timers": {
+          "resample": 0.0204,
+          "clusterTree": 0.0527,
+          "computeLabels": 0.0384,
+          "total": 0.1114
+        }
+      },
+      {
+        "run_id": 163,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08836229599546641,
+        "timers": {
+          "resample": 0.0176,
+          "clusterTree": 0.0367,
+          "computeLabels": 0.034,
+          "total": 0.0883
+        }
+      },
+      {
+        "run_id": 164,
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.08649061602773145,
+        "timers": {
+          "resample": 0.0174,
+          "clusterTree": 0.035,
+          "computeLabels": 0.0341,
+          "total": 0.0864
+        }
+      },
+      {
+        "run_id": 165,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 2.0939995819935575,
+        "timers": {
+          "resample": 2.0321,
+          "clusterTree": 0.0286,
+          "computeLabels": 0.0332,
+          "total": 2.0939
+        }
+      },
+      {
+        "run_id": 166,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5021878719562665,
+        "timers": {
+          "resample": 0.423,
+          "clusterTree": 0.0381,
+          "computeLabels": 0.041,
+          "total": 0.5021
+        }
+      },
+      {
+        "run_id": 167,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.27872708899667487,
+        "timers": {
+          "resample": 0.1966,
+          "clusterTree": 0.0501,
+          "computeLabels": 0.0319,
+          "total": 0.2787
+        }
+      },
+      {
+        "run_id": 168,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1765147810219787,
+        "timers": {
+          "resample": 0.1144,
+          "clusterTree": 0.03,
+          "computeLabels": 0.032,
+          "total": 0.1765
+        }
+      },
+      {
+        "run_id": 169,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.16823130595730618,
+        "timers": {
+          "resample": 0.0795,
+          "clusterTree": 0.0512,
+          "computeLabels": 0.0374,
+          "total": 0.1682
+        }
+      },
+      {
+        "run_id": 170,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12289586302358657,
+        "timers": {
+          "resample": 0.0589,
+          "clusterTree": 0.0284,
+          "computeLabels": 0.0346,
+          "total": 0.1228
+        }
+      },
+      {
+        "run_id": 171,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11274059099378064,
+        "timers": {
+          "resample": 0.0463,
+          "clusterTree": 0.0342,
+          "computeLabels": 0.0322,
+          "total": 0.1127
+        }
+      },
+      {
+        "run_id": 172,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10324383800616488,
+        "timers": {
+          "resample": 0.0375,
+          "clusterTree": 0.0278,
+          "computeLabels": 0.0379,
+          "total": 0.1032
+        }
+      },
+      {
+        "run_id": 173,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10597525601042435,
+        "timers": {
+          "resample": 0.0324,
+          "clusterTree": 0.0353,
+          "computeLabels": 0.0381,
+          "total": 0.1059
+        }
+      },
+      {
+        "run_id": 174,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09176258702063933,
+        "timers": {
+          "resample": 0.0287,
+          "clusterTree": 0.0312,
+          "computeLabels": 0.0318,
+          "total": 0.0917
+        }
+      },
+      {
+        "run_id": 175,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10140579001745209,
+        "timers": {
+          "resample": 0.0248,
+          "clusterTree": 0.0369,
+          "computeLabels": 0.0396,
+          "total": 0.1014
+        }
+      },
+      {
+        "run_id": 176,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1017310390016064,
+        "timers": {
+          "resample": 0.0219,
+          "clusterTree": 0.0439,
+          "computeLabels": 0.0358,
+          "total": 0.1017
+        }
+      },
+      {
+        "run_id": 177,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11633627803530544,
+        "timers": {
+          "resample": 0.0229,
+          "clusterTree": 0.0529,
+          "computeLabels": 0.0404,
+          "total": 0.1163
+        }
+      },
+      {
+        "run_id": 178,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10104028001660481,
+        "timers": {
+          "resample": 0.0213,
+          "clusterTree": 0.0476,
+          "computeLabels": 0.0321,
+          "total": 0.101
+        }
+      },
+      {
+        "run_id": 179,
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10187430900987238,
+        "timers": {
+          "resample": 0.0186,
+          "clusterTree": 0.044,
+          "computeLabels": 0.0392,
+          "total": 0.1018
+        }
+      },
+      {
+        "run_id": 180,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 2.2384012839756906,
+        "timers": {
+          "resample": 2.1713,
+          "clusterTree": 0.028,
+          "computeLabels": 0.039,
+          "total": 2.2384
+        }
+      },
+      {
+        "run_id": 181,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5498260989552364,
+        "timers": {
+          "resample": 0.4568,
+          "clusterTree": 0.0525,
+          "computeLabels": 0.0398,
+          "total": 0.5498
+        }
+      },
+      {
+        "run_id": 182,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2961829269770533,
+        "timers": {
+          "resample": 0.2068,
+          "clusterTree": 0.0514,
+          "computeLabels": 0.0379,
+          "total": 0.2961
+        }
+      },
+      {
+        "run_id": 183,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.20202572201378644,
+        "timers": {
+          "resample": 0.1231,
+          "clusterTree": 0.0395,
+          "computeLabels": 0.0393,
+          "total": 0.202
+        }
+      },
+      {
+        "run_id": 184,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1905171599937603,
+        "timers": {
+          "resample": 0.0851,
+          "clusterTree": 0.0624,
+          "computeLabels": 0.043,
+          "total": 0.1905
+        }
+      },
+      {
+        "run_id": 185,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12616356101352721,
+        "timers": {
+          "resample": 0.0634,
+          "clusterTree": 0.0306,
+          "computeLabels": 0.0321,
+          "total": 0.1261
+        }
+      },
+      {
+        "run_id": 186,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11621069896500558,
+        "timers": {
+          "resample": 0.0499,
+          "clusterTree": 0.0297,
+          "computeLabels": 0.0365,
+          "total": 0.1162
+        }
+      },
+      {
+        "run_id": 187,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13195310602895916,
+        "timers": {
+          "resample": 0.04,
+          "clusterTree": 0.0536,
+          "computeLabels": 0.0383,
+          "total": 0.1319
+        }
+      },
+      {
+        "run_id": 188,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1375500020221807,
+        "timers": {
+          "resample": 0.0352,
+          "clusterTree": 0.0698,
+          "computeLabels": 0.0324,
+          "total": 0.1375
+        }
+      },
+      {
+        "run_id": 189,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09744003403466195,
+        "timers": {
+          "resample": 0.0307,
+          "clusterTree": 0.0276,
+          "computeLabels": 0.039,
+          "total": 0.0974
+        }
+      },
+      {
+        "run_id": 190,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1068344660452567,
+        "timers": {
+          "resample": 0.0265,
+          "clusterTree": 0.0479,
+          "computeLabels": 0.0323,
+          "total": 0.1068
+        }
+      },
+      {
+        "run_id": 191,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.14777321397559717,
+        "timers": {
+          "resample": 0.0241,
+          "clusterTree": 0.0882,
+          "computeLabels": 0.0354,
+          "total": 0.1477
+        }
+      },
+      {
+        "run_id": 192,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13832839200040326,
+        "timers": {
+          "resample": 0.0232,
+          "clusterTree": 0.0765,
+          "computeLabels": 0.0386,
+          "total": 0.1383
+        }
+      },
+      {
+        "run_id": 193,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13184627599548548,
+        "timers": {
+          "resample": 0.0205,
+          "clusterTree": 0.0791,
+          "computeLabels": 0.0321,
+          "total": 0.1318
+        }
+      },
+      {
+        "run_id": 194,
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09350738703506067,
+        "timers": {
+          "resample": 0.02,
+          "clusterTree": 0.0344,
+          "computeLabels": 0.039,
+          "total": 0.0935
+        }
+      },
+      {
+        "run_id": 195,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 2.437080498028081,
+        "timers": {
+          "resample": 2.3534,
+          "clusterTree": 0.0448,
+          "computeLabels": 0.0387,
+          "total": 2.437
+        }
+      },
+      {
+        "run_id": 196,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.5850388460094109,
+        "timers": {
+          "resample": 0.5107,
+          "clusterTree": 0.04,
+          "computeLabels": 0.0343,
+          "total": 0.585
+        }
+      },
+      {
+        "run_id": 197,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2884879300254397,
+        "timers": {
+          "resample": 0.228,
+          "clusterTree": 0.0283,
+          "computeLabels": 0.0322,
+          "total": 0.2884
+        }
+      },
+      {
+        "run_id": 198,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.20135472697438672,
+        "timers": {
+          "resample": 0.1339,
+          "clusterTree": 0.0283,
+          "computeLabels": 0.0391,
+          "total": 0.2013
+        }
+      },
+      {
+        "run_id": 199,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1637975460034795,
+        "timers": {
+          "resample": 0.0919,
+          "clusterTree": 0.0329,
+          "computeLabels": 0.0389,
+          "total": 0.1637
+        }
+      },
+      {
+        "run_id": 200,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13848590501584113,
+        "timers": {
+          "resample": 0.0679,
+          "clusterTree": 0.0384,
+          "computeLabels": 0.0321,
+          "total": 0.1384
+        }
+      },
+      {
+        "run_id": 201,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12519307399634272,
+        "timers": {
+          "resample": 0.0539,
+          "clusterTree": 0.0384,
+          "computeLabels": 0.0328,
+          "total": 0.1251
+        }
+      },
+      {
+        "run_id": 202,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.15475838299607858,
+        "timers": {
+          "resample": 0.0434,
+          "clusterTree": 0.079,
+          "computeLabels": 0.0323,
+          "total": 0.1547
+        }
+      },
+      {
+        "run_id": 203,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11660721100633964,
+        "timers": {
+          "resample": 0.0381,
+          "clusterTree": 0.0393,
+          "computeLabels": 0.0392,
+          "total": 0.1166
+        }
+      },
+      {
+        "run_id": 204,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11136098502902314,
+        "timers": {
+          "resample": 0.0332,
+          "clusterTree": 0.0386,
+          "computeLabels": 0.0394,
+          "total": 0.1113
+        }
+      },
+      {
+        "run_id": 205,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12808202300220728,
+        "timers": {
+          "resample": 0.028,
+          "clusterTree": 0.0675,
+          "computeLabels": 0.0325,
+          "total": 0.128
+        }
+      },
+      {
+        "run_id": 206,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1284933520364575,
+        "timers": {
+          "resample": 0.0258,
+          "clusterTree": 0.063,
+          "computeLabels": 0.0396,
+          "total": 0.1284
+        }
+      },
+      {
+        "run_id": 207,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09266318997833878,
+        "timers": {
+          "resample": 0.0245,
+          "clusterTree": 0.0362,
+          "computeLabels": 0.0319,
+          "total": 0.0926
+        }
+      },
+      {
+        "run_id": 208,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1019283119821921,
+        "timers": {
+          "resample": 0.0222,
+          "clusterTree": 0.0464,
+          "computeLabels": 0.0332,
+          "total": 0.1019
+        }
+      },
+      {
+        "run_id": 209,
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11977155902422965,
+        "timers": {
+          "resample": 0.0219,
+          "clusterTree": 0.0655,
+          "computeLabels": 0.0323,
+          "total": 0.1197
+        }
+      },
+      {
+        "run_id": 210,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 2.606174226035364,
+        "timers": {
+          "resample": 2.5437,
+          "clusterTree": 0.0301,
+          "computeLabels": 0.0323,
+          "total": 2.6061
+        }
+      },
+      {
+        "run_id": 211,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.6138738400186412,
+        "timers": {
+          "resample": 0.5452,
+          "clusterTree": 0.0334,
+          "computeLabels": 0.0352,
+          "total": 0.6138
+        }
+      },
+      {
+        "run_id": 212,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.33803987299324945,
+        "timers": {
+          "resample": 0.2447,
+          "clusterTree": 0.0539,
+          "computeLabels": 0.0394,
+          "total": 0.338
+        }
+      },
+      {
+        "run_id": 213,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.21809795999433845,
+        "timers": {
+          "resample": 0.1424,
+          "clusterTree": 0.0387,
+          "computeLabels": 0.0369,
+          "total": 0.218
+        }
+      },
+      {
+        "run_id": 214,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.18190278700785711,
+        "timers": {
+          "resample": 0.0989,
+          "clusterTree": 0.0505,
+          "computeLabels": 0.0324,
+          "total": 0.1818
+        }
+      },
+      {
+        "run_id": 215,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.14186090603470802,
+        "timers": {
+          "resample": 0.0736,
+          "clusterTree": 0.0287,
+          "computeLabels": 0.0395,
+          "total": 0.1418
+        }
+      },
+      {
+        "run_id": 216,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.19116041000233963,
+        "timers": {
+          "resample": 0.0579,
+          "clusterTree": 0.1009,
+          "computeLabels": 0.0323,
+          "total": 0.1911
+        }
+      },
+      {
+        "run_id": 217,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11882871302077547,
+        "timers": {
+          "resample": 0.0459,
+          "clusterTree": 0.037,
+          "computeLabels": 0.0358,
+          "total": 0.1188
+        }
+      },
+      {
+        "run_id": 218,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1660143790068105,
+        "timers": {
+          "resample": 0.0403,
+          "clusterTree": 0.0878,
+          "computeLabels": 0.0379,
+          "total": 0.166
+        }
+      },
+      {
+        "run_id": 219,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11618323501897976,
+        "timers": {
+          "resample": 0.0355,
+          "clusterTree": 0.0415,
+          "computeLabels": 0.0391,
+          "total": 0.1161
+        }
+      },
+      {
+        "run_id": 220,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10998985904734582,
+        "timers": {
+          "resample": 0.0304,
+          "clusterTree": 0.0472,
+          "computeLabels": 0.0324,
+          "total": 0.1099
+        }
+      },
+      {
+        "run_id": 221,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12122809101128951,
+        "timers": {
+          "resample": 0.0276,
+          "clusterTree": 0.0538,
+          "computeLabels": 0.0398,
+          "total": 0.1212
+        }
+      },
+      {
+        "run_id": 222,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11255939799593762,
+        "timers": {
+          "resample": 0.0267,
+          "clusterTree": 0.053,
+          "computeLabels": 0.0329,
+          "total": 0.1125
+        }
+      },
+      {
+        "run_id": 223,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09682156902272254,
+        "timers": {
+          "resample": 0.0237,
+          "clusterTree": 0.0335,
+          "computeLabels": 0.0395,
+          "total": 0.0968
+        }
+      },
+      {
+        "run_id": 224,
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09128006297396496,
+        "timers": {
+          "resample": 0.0229,
+          "clusterTree": 0.0351,
+          "computeLabels": 0.0332,
+          "total": 0.0912
+        }
+      },
+      {
+        "run_id": 225,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 2.730223909020424,
+        "timers": {
+          "resample": 2.6626,
+          "clusterTree": 0.0324,
+          "computeLabels": 0.0351,
+          "total": 2.7302
+        }
+      },
+      {
+        "run_id": 226,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.6570316079887562,
+        "timers": {
+          "resample": 0.5825,
+          "clusterTree": 0.0414,
+          "computeLabels": 0.0331,
+          "total": 0.657
+        }
+      },
+      {
+        "run_id": 227,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.32180448301369324,
+        "timers": {
+          "resample": 0.2562,
+          "clusterTree": 0.0272,
+          "computeLabels": 0.0384,
+          "total": 0.3218
+        }
+      },
+      {
+        "run_id": 228,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.25508622103370726,
+        "timers": {
+          "resample": 0.152,
+          "clusterTree": 0.0619,
+          "computeLabels": 0.0411,
+          "total": 0.255
+        }
+      },
+      {
+        "run_id": 229,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.21999640198191628,
+        "timers": {
+          "resample": 0.1003,
+          "clusterTree": 0.0782,
+          "computeLabels": 0.0414,
+          "total": 0.2199
+        }
+      },
+      {
+        "run_id": 230,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.15995438705431297,
+        "timers": {
+          "resample": 0.0769,
+          "clusterTree": 0.0417,
+          "computeLabels": 0.0413,
+          "total": 0.1599
+        }
+      },
+      {
+        "run_id": 231,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13087573397206143,
+        "timers": {
+          "resample": 0.0583,
+          "clusterTree": 0.0341,
+          "computeLabels": 0.0384,
+          "total": 0.1308
+        }
+      },
+      {
+        "run_id": 232,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.15688478795345873,
+        "timers": {
+          "resample": 0.0495,
+          "clusterTree": 0.0679,
+          "computeLabels": 0.0394,
+          "total": 0.1568
+        }
+      },
+      {
+        "run_id": 233,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1061165879946202,
+        "timers": {
+          "resample": 0.0426,
+          "clusterTree": 0.0308,
+          "computeLabels": 0.0326,
+          "total": 0.1061
+        }
+      },
+      {
+        "run_id": 234,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11299267504364252,
+        "timers": {
+          "resample": 0.0375,
+          "clusterTree": 0.0405,
+          "computeLabels": 0.0349,
+          "total": 0.1129
+        }
+      },
+      {
+        "run_id": 235,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11796377098653466,
+        "timers": {
+          "resample": 0.0328,
+          "clusterTree": 0.0454,
+          "computeLabels": 0.0397,
+          "total": 0.1179
+        }
+      },
+      {
+        "run_id": 236,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09725592302856967,
+        "timers": {
+          "resample": 0.029,
+          "clusterTree": 0.0328,
+          "computeLabels": 0.0354,
+          "total": 0.0972
+        }
+      },
+      {
+        "run_id": 237,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09596186398994178,
+        "timers": {
+          "resample": 0.0283,
+          "clusterTree": 0.0351,
+          "computeLabels": 0.0325,
+          "total": 0.0959
+        }
+      },
+      {
+        "run_id": 238,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09297525597503409,
+        "timers": {
+          "resample": 0.025,
+          "clusterTree": 0.0345,
+          "computeLabels": 0.0334,
+          "total": 0.0929
+        }
+      },
+      {
+        "run_id": 239,
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10208764101844281,
+        "timers": {
+          "resample": 0.0244,
+          "clusterTree": 0.0442,
+          "computeLabels": 0.0334,
+          "total": 0.102
+        }
+      },
+      {
+        "run_id": 240,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 2.953519591013901,
+        "timers": {
+          "resample": 2.8812,
+          "clusterTree": 0.0361,
+          "computeLabels": 0.0362,
+          "total": 2.9535
+        }
+      },
+      {
+        "run_id": 241,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.696432430006098,
+        "timers": {
+          "resample": 0.617,
+          "clusterTree": 0.0397,
+          "computeLabels": 0.0396,
+          "total": 0.6964
+        }
+      },
+      {
+        "run_id": 242,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.37156975897960365,
+        "timers": {
+          "resample": 0.2806,
+          "clusterTree": 0.051,
+          "computeLabels": 0.0399,
+          "total": 0.3715
+        }
+      },
+      {
+        "run_id": 243,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.23756034398684278,
+        "timers": {
+          "resample": 0.1607,
+          "clusterTree": 0.0435,
+          "computeLabels": 0.0333,
+          "total": 0.2375
+        }
+      },
+      {
+        "run_id": 244,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.18937853805255145,
+        "timers": {
+          "resample": 0.1128,
+          "clusterTree": 0.0364,
+          "computeLabels": 0.0401,
+          "total": 0.1893
+        }
+      },
+      {
+        "run_id": 245,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.15789775300072506,
+        "timers": {
+          "resample": 0.0825,
+          "clusterTree": 0.0424,
+          "computeLabels": 0.033,
+          "total": 0.1578
+        }
+      },
+      {
+        "run_id": 246,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13762238301569596,
+        "timers": {
+          "resample": 0.0655,
+          "clusterTree": 0.0385,
+          "computeLabels": 0.0335,
+          "total": 0.1376
+        }
+      },
+      {
+        "run_id": 247,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13240624498575926,
+        "timers": {
+          "resample": 0.0522,
+          "clusterTree": 0.0393,
+          "computeLabels": 0.0408,
+          "total": 0.1324
+        }
+      },
+      {
+        "run_id": 248,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12394596997182816,
+        "timers": {
+          "resample": 0.0469,
+          "clusterTree": 0.0358,
+          "computeLabels": 0.0398,
+          "total": 0.1239
+        }
+      },
+      {
+        "run_id": 249,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12356460996670648,
+        "timers": {
+          "resample": 0.0399,
+          "clusterTree": 0.0503,
+          "computeLabels": 0.0333,
+          "total": 0.1235
+        }
+      },
+      {
+        "run_id": 250,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10825086699333042,
+        "timers": {
+          "resample": 0.0351,
+          "clusterTree": 0.0398,
+          "computeLabels": 0.0333,
+          "total": 0.1082
+        }
+      },
+      {
+        "run_id": 251,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.14993088704068214,
+        "timers": {
+          "resample": 0.0312,
+          "clusterTree": 0.0751,
+          "computeLabels": 0.0435,
+          "total": 0.1499
+        }
+      },
+      {
+        "run_id": 252,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1615768110495992,
+        "timers": {
+          "resample": 0.0297,
+          "clusterTree": 0.0918,
+          "computeLabels": 0.04,
+          "total": 0.1615
+        }
+      },
+      {
+        "run_id": 253,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.15468806499848142,
+        "timers": {
+          "resample": 0.0261,
+          "clusterTree": 0.0863,
+          "computeLabels": 0.0422,
+          "total": 0.1546
+        }
+      },
+      {
+        "run_id": 254,
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10063201101729646,
+        "timers": {
+          "resample": 0.0263,
+          "clusterTree": 0.041,
+          "computeLabels": 0.0332,
+          "total": 0.1006
+        }
+      },
+      {
+        "run_id": 255,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 3.091627671965398,
+        "timers": {
+          "resample": 3.005,
+          "clusterTree": 0.0531,
+          "computeLabels": 0.0335,
+          "total": 3.0916
+        }
+      },
+      {
+        "run_id": 256,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.7192222549929284,
+        "timers": {
+          "resample": 0.6476,
+          "clusterTree": 0.0338,
+          "computeLabels": 0.0366,
+          "total": 0.7192
+        }
+      },
+      {
+        "run_id": 257,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.35199987702071667,
+        "timers": {
+          "resample": 0.2881,
+          "clusterTree": 0.0305,
+          "computeLabels": 0.0334,
+          "total": 0.3519
+        }
+      },
+      {
+        "run_id": 258,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2660617330111563,
+        "timers": {
+          "resample": 0.1688,
+          "clusterTree": 0.0539,
+          "computeLabels": 0.0432,
+          "total": 0.266
+        }
+      },
+      {
+        "run_id": 259,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.18965831596869975,
+        "timers": {
+          "resample": 0.1176,
+          "clusterTree": 0.0374,
+          "computeLabels": 0.0345,
+          "total": 0.1896
+        }
+      },
+      {
+        "run_id": 260,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1679241579840891,
+        "timers": {
+          "resample": 0.0876,
+          "clusterTree": 0.0445,
+          "computeLabels": 0.0358,
+          "total": 0.1679
+        }
+      },
+      {
+        "run_id": 261,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1342828360502608,
+        "timers": {
+          "resample": 0.0691,
+          "clusterTree": 0.029,
+          "computeLabels": 0.036,
+          "total": 0.1342
+        }
+      },
+      {
+        "run_id": 262,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12410598201677203,
+        "timers": {
+          "resample": 0.0542,
+          "clusterTree": 0.0363,
+          "computeLabels": 0.0334,
+          "total": 0.124
+        }
+      },
+      {
+        "run_id": 263,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10996852995594963,
+        "timers": {
+          "resample": 0.0485,
+          "clusterTree": 0.0285,
+          "computeLabels": 0.0329,
+          "total": 0.1099
+        }
+      },
+      {
+        "run_id": 264,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10494042199570686,
+        "timers": {
+          "resample": 0.0428,
+          "clusterTree": 0.0288,
+          "computeLabels": 0.0332,
+          "total": 0.1049
+        }
+      },
+      {
+        "run_id": 265,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09882181603461504,
+        "timers": {
+          "resample": 0.0358,
+          "clusterTree": 0.0299,
+          "computeLabels": 0.0331,
+          "total": 0.0988
+        }
+      },
+      {
+        "run_id": 266,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09608607698464766,
+        "timers": {
+          "resample": 0.0327,
+          "clusterTree": 0.0303,
+          "computeLabels": 0.033,
+          "total": 0.096
+        }
+      },
+      {
+        "run_id": 267,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10403823299566284,
+        "timers": {
+          "resample": 0.0318,
+          "clusterTree": 0.0391,
+          "computeLabels": 0.0331,
+          "total": 0.104
+        }
+      },
+      {
+        "run_id": 268,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09792937600286677,
+        "timers": {
+          "resample": 0.0283,
+          "clusterTree": 0.0364,
+          "computeLabels": 0.0331,
+          "total": 0.0979
+        }
+      },
+      {
+        "run_id": 269,
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.09892330598086119,
+        "timers": {
+          "resample": 0.0276,
+          "clusterTree": 0.0382,
+          "computeLabels": 0.033,
+          "total": 0.0989
+        }
+      },
+      {
+        "run_id": 270,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 3.2512392179924063,
+        "timers": {
+          "resample": 3.1897,
+          "clusterTree": 0.0282,
+          "computeLabels": 0.0332,
+          "total": 3.2512
+        }
+      },
+      {
+        "run_id": 271,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.7502681839978322,
+        "timers": {
+          "resample": 0.6839,
+          "clusterTree": 0.0302,
+          "computeLabels": 0.0361,
+          "total": 0.7502
+        }
+      },
+      {
+        "run_id": 272,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3839355380041525,
+        "timers": {
+          "resample": 0.3059,
+          "clusterTree": 0.0378,
+          "computeLabels": 0.0402,
+          "total": 0.3839
+        }
+      },
+      {
+        "run_id": 273,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.24991034099366516,
+        "timers": {
+          "resample": 0.1807,
+          "clusterTree": 0.0296,
+          "computeLabels": 0.0395,
+          "total": 0.2499
+        }
+      },
+      {
+        "run_id": 274,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.2000867750030011,
+        "timers": {
+          "resample": 0.1257,
+          "clusterTree": 0.0358,
+          "computeLabels": 0.0384,
+          "total": 0.2
+        }
+      },
+      {
+        "run_id": 275,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1717285190243274,
+        "timers": {
+          "resample": 0.0932,
+          "clusterTree": 0.0412,
+          "computeLabels": 0.0372,
+          "total": 0.1717
+        }
+      },
+      {
+        "run_id": 276,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.14063575299223885,
+        "timers": {
+          "resample": 0.0733,
+          "clusterTree": 0.0299,
+          "computeLabels": 0.0374,
+          "total": 0.1406
+        }
+      },
+      {
+        "run_id": 277,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1300659790285863,
+        "timers": {
+          "resample": 0.0587,
+          "clusterTree": 0.0376,
+          "computeLabels": 0.0337,
+          "total": 0.13
+        }
+      },
+      {
+        "run_id": 278,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.14040923299035057,
+        "timers": {
+          "resample": 0.0519,
+          "clusterTree": 0.0477,
+          "computeLabels": 0.0407,
+          "total": 0.1404
+        }
+      },
+      {
+        "run_id": 279,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.1208223330322653,
+        "timers": {
+          "resample": 0.0443,
+          "clusterTree": 0.0362,
+          "computeLabels": 0.0403,
+          "total": 0.1208
+        }
+      },
+      {
+        "run_id": 280,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.12612816999899223,
+        "timers": {
+          "resample": 0.0383,
+          "clusterTree": 0.0474,
+          "computeLabels": 0.0403,
+          "total": 0.1261
+        }
+      },
+      {
+        "run_id": 281,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11168244696455076,
+        "timers": {
+          "resample": 0.0347,
+          "clusterTree": 0.0368,
+          "computeLabels": 0.0401,
+          "total": 0.1116
+        }
+      },
+      {
+        "run_id": 282,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10124465200351551,
+        "timers": {
+          "resample": 0.0335,
+          "clusterTree": 0.0331,
+          "computeLabels": 0.0336,
+          "total": 0.1012
+        }
+      },
+      {
+        "run_id": 283,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10802610800601542,
+        "timers": {
+          "resample": 0.0299,
+          "clusterTree": 0.0354,
+          "computeLabels": 0.0426,
+          "total": 0.108
+        }
+      },
+      {
+        "run_id": 284,
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10880350897787139,
+        "timers": {
+          "resample": 0.0288,
+          "clusterTree": 0.0401,
+          "computeLabels": 0.0398,
+          "total": 0.1087
+        }
+      },
+      {
+        "run_id": 285,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 10,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 3.395178314007353,
+        "timers": {
+          "resample": 3.3331,
+          "clusterTree": 0.0283,
+          "computeLabels": 0.0336,
+          "total": 3.3951
+        }
+      },
+      {
+        "run_id": 286,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 20,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.7748097099829465,
+        "timers": {
+          "resample": 0.7119,
+          "clusterTree": 0.0291,
+          "computeLabels": 0.0337,
+          "total": 0.7748
+        }
+      },
+      {
+        "run_id": 287,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 30,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.389844854013063,
+        "timers": {
+          "resample": 0.32,
+          "clusterTree": 0.029,
+          "computeLabels": 0.0408,
+          "total": 0.3898
+        }
+      },
+      {
+        "run_id": 288,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 40,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.3110650169546716,
+        "timers": {
+          "resample": 0.1878,
+          "clusterTree": 0.0823,
+          "computeLabels": 0.0409,
+          "total": 0.311
+        }
+      },
+      {
+        "run_id": 289,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 50,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.23597899900050834,
+        "timers": {
+          "resample": 0.1333,
+          "clusterTree": 0.0617,
+          "computeLabels": 0.0409,
+          "total": 0.2359
+        }
+      },
+      {
+        "run_id": 290,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 60,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.17603987199254334,
+        "timers": {
+          "resample": 0.0966,
+          "clusterTree": 0.0432,
+          "computeLabels": 0.0361,
+          "total": 0.176
+        }
+      },
+      {
+        "run_id": 291,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 70,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13985229301033542,
+        "timers": {
+          "resample": 0.0766,
+          "clusterTree": 0.0286,
+          "computeLabels": 0.0346,
+          "total": 0.1398
+        }
+      },
+      {
+        "run_id": 292,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 80,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13751650298945606,
+        "timers": {
+          "resample": 0.0611,
+          "clusterTree": 0.0368,
+          "computeLabels": 0.0396,
+          "total": 0.1375
+        }
+      },
+      {
+        "run_id": 293,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 90,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.13640547497197986,
+        "timers": {
+          "resample": 0.054,
+          "clusterTree": 0.0418,
+          "computeLabels": 0.0405,
+          "total": 0.1363
+        }
+      },
+      {
+        "run_id": 294,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 100,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11112049798248336,
+        "timers": {
+          "resample": 0.0467,
+          "clusterTree": 0.0303,
+          "computeLabels": 0.034,
+          "total": 0.1111
+        }
+      },
+      {
+        "run_id": 295,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 110,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10880561999510974,
+        "timers": {
+          "resample": 0.0401,
+          "clusterTree": 0.0349,
+          "computeLabels": 0.0337,
+          "total": 0.1088
+        }
+      },
+      {
+        "run_id": 296,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 120,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.11000751901883632,
+        "timers": {
+          "resample": 0.0365,
+          "clusterTree": 0.0323,
+          "computeLabels": 0.0411,
+          "total": 0.11
+        }
+      },
+      {
+        "run_id": 297,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 130,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10108338296413422,
+        "timers": {
+          "resample": 0.0348,
+          "clusterTree": 0.0324,
+          "computeLabels": 0.0338,
+          "total": 0.101
+        }
+      },
+      {
+        "run_id": 298,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 140,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10113204404478893,
+        "timers": {
+          "resample": 0.0311,
+          "clusterTree": 0.0341,
+          "computeLabels": 0.0358,
+          "total": 0.1011
+        }
+      },
+      {
+        "run_id": 299,
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "alpha": 150,
+          "resolution": 512,
+          "kernel": "gaussian"
+        },
+        "time_s": 0.10695645096711814,
+        "timers": {
+          "resample": 0.0312,
+          "clusterTree": 0.0411,
+          "computeLabels": 0.0337,
+          "total": 0.1069
+        }
+      }
+    ],
+    "hdbscan": [
+      {
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 0.7446388190146536
+      },
+      {
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 0.6085221079993062
+      },
+      {
+        "dataset": "blobs_grid_100",
+        "n_points": 100000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 0.6582955040503293
+      },
+      {
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 27.122597324021626
+      },
+      {
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 11.926267383969389
+      },
+      {
+        "dataset": "blobs_grid_1000",
+        "n_points": 1000000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 12.337808320007753
+      },
+      {
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 1.8628683089627884
+      },
+      {
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 1.4374375520274043
+      },
+      {
+        "dataset": "blobs_grid_200",
+        "n_points": 200000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 1.52083707699785
+      },
+      {
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 3.287134639977012
+      },
+      {
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 2.1928731889929622
+      },
+      {
+        "dataset": "blobs_grid_300",
+        "n_points": 300000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 2.3552729910006747
+      },
+      {
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 5.487678794015665
+      },
+      {
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 3.6229378739953972
+      },
+      {
+        "dataset": "blobs_grid_400",
+        "n_points": 400000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 3.8017825540155172
+      },
+      {
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 7.918112449988257
+      },
+      {
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 4.427185659995303
+      },
+      {
+        "dataset": "blobs_grid_500",
+        "n_points": 500000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 4.66647144901799
+      },
+      {
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 9.078319371968973
+      },
+      {
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 5.3412281420314685
+      },
+      {
+        "dataset": "blobs_grid_600",
+        "n_points": 600000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 5.668514457007404
+      },
+      {
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 16.3432714479859
+      },
+      {
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 9.251865510013886
+      },
+      {
+        "dataset": "blobs_grid_700",
+        "n_points": 700000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 9.537997341016307
+      },
+      {
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 18.969434479018673
+      },
+      {
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 10.186375026009046
+      },
+      {
+        "dataset": "blobs_grid_800",
+        "n_points": 800000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 10.344880778051447
+      },
+      {
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 22.813611522957217
+      },
+      {
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 11.024233689997345
+      },
+      {
+        "dataset": "blobs_grid_900",
+        "n_points": 900000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 11.397553784016054
+      },
+      {
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 31.140362486999948
+      },
+      {
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 13.038625865010545
+      },
+      {
+        "dataset": "blobs_grid_1100",
+        "n_points": 1100000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 13.516506135987584
+      },
+      {
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 34.54783423000481
+      },
+      {
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 13.99804914399283
+      },
+      {
+        "dataset": "blobs_grid_1200",
+        "n_points": 1200000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 14.602674500027206
+      },
+      {
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 40.43086394597776
+      },
+      {
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 15.197494170977734
+      },
+      {
+        "dataset": "blobs_grid_1300",
+        "n_points": 1300000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 15.862056932994165
+      },
+      {
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 60.32161105499836
+      },
+      {
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 31.435746540955734
+      },
+      {
+        "dataset": "blobs_grid_1400",
+        "n_points": 1400000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 31.616319439024664
+      },
+      {
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 65.76233533100458
+      },
+      {
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 31.62698764097877
+      },
+      {
+        "dataset": "blobs_grid_1500",
+        "n_points": 1500000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 31.825568612955976
+      },
+      {
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 71.02638341201236
+      },
+      {
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 32.76318257802632
+      },
+      {
+        "dataset": "blobs_grid_1600",
+        "n_points": 1600000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 33.04803618899314
+      },
+      {
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 77.67068415298127
+      },
+      {
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 33.65875901700929
+      },
+      {
+        "dataset": "blobs_grid_1700",
+        "n_points": 1700000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 34.32914161100052
+      },
+      {
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 83.03921933897072
+      },
+      {
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 35.38944688701304
+      },
+      {
+        "dataset": "blobs_grid_1800",
+        "n_points": 1800000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 35.05293751397403
+      },
+      {
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 90.07200739299878
+      },
+      {
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 36.797867572982796
+      },
+      {
+        "dataset": "blobs_grid_1900",
+        "n_points": 1900000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 36.81793984002434
+      },
+      {
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "minpts": 5
+        },
+        "time_s": 97.47544021700742
+      },
+      {
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "minpts": 20
+        },
+        "time_s": 37.415922463987954
+      },
+      {
+        "dataset": "blobs_grid_2000",
+        "n_points": 2000000,
+        "parameters": {
+          "minpts": 50
+        },
+        "time_s": 37.23422078898875
+      }
+    ]
+  }
+}
