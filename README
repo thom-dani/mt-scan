@@ -4,7 +4,9 @@ Build the Docker image mt-scan-base (without  cuda) : `docker build -t mt-scan-b
 
 Build the Docker image mt-scan  : `docker build -t mt-scan -f docker/Dockerfile --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) .`
 
-Enter container: `docker run -it --rm -v ~/mt-scan:/workspace mt-scan`
+Enter container (with GPU access): `docker run -it --rm --gpus all -v /opt/mt-scan:/workspace mt-scan`
+
+Enter container (without GPU access): `docker run -it --rm -v ~/mt-scan:/workspace mt-scan`
 
 Build the project (without CUDA): `cmake -S . -B build -GNinja && cmake --build build`
 

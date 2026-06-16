@@ -1,7 +1,7 @@
 FROM mt-scan-base:latest
 
-ARG UID=1000
-ARG GID=1000
+ARG UID=20054
+ARG GID=65563
 
 RUN groupadd -g $GID appuser && \
     useradd -u $UID -g $GID -m appuser
